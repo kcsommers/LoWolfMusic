@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  template: `
+    <lo-app-shell-root></lo-app-shell-root>
+  `
 })
 export class AppComponent {
-  title = 'lowolf-client';
 }
