@@ -1,4 +1,5 @@
-@import 'variables';
+@import '_variables';
+@import '_reset';
 
 h1,
 h2,
@@ -15,4 +16,10 @@ textarea,
 label,
 div {
     font-family: $font-primary;
+    color: $dark;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
 }

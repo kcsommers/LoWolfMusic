@@ -1,0 +1,35 @@
+:host {
+    display: block;
+    height: 70px;
+    .header {
+        background-color: red;
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        height: 70px;
+        left: 0;
+        right: 0;
+        padding: 0 0.5rem;
+    }
+    nav.header-nav,
+    a.header-nav-link,
+    a.header-logo-link {
+        display: flex;
+    }
+    a.header-nav-link,
+    a.header-logo-link {
+        background-color: goldenrod;
+        align-items: center;
+        padding: 0 1rem;
+        >fa-icon {
+            font-size: 1.3rem;
+        }
+    }
+    a.header-nav-link {
+        margin: 0 0.25rem;
+    }
+    a.header-logo-link {
+        font-size: 1.5rem;
+    }
+}
