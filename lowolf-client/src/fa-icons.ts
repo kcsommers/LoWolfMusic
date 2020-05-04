@@ -1,4 +1,8 @@
 import {
+  faAngleLeft,
+  faAngleRight
+} from '@fortawesome/free-solid-svg-icons';
+import {
   faFacebook,
   faInstagram,
   faFacebookF,
@@ -17,7 +21,9 @@ export class FaIcons {
       faCopyright,
       faInstagram,
       faFacebookF,
-      faTwitter
+      faTwitter,
+      faAngleRight,
+      faAngleLeft
     );
   }
 }

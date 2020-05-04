@@ -19,7 +19,12 @@
       "dom"
     ],
     "paths": {
-      "@lo/app": []
+      "@lo/widgets": [
+        "projects/widgets/src/public-api.ts"
+      ],
+      "@lo/core": [
+        "projects/core/src/public-api.ts"
+      ]
     }
   },
   "angularCompilerOptions": {

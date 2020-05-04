@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@lo/widgets": [
+        "projects/widgets/src/public-api.ts"
+      ],
+      "@lo/core": [
+        "projects/core/src/public-api.ts"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

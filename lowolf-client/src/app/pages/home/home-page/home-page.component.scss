@@ -1,0 +1,42 @@
+@import '_variables';
+:host {
+    display: block;
+}
+.landing-section {
+    overflow: hidden;
+}
+.landing-wrap-inner {
+    position: relative;
+}
+.landing-intro {
+    text-align: right;
+    padding: 15% 20% 25% 20%;
+}
+.landing-cta {
+    text-align: center;
+    transform: translateX(28%);
+    position: relative;
+    z-index: 800;
+}
+h3.landing-album-name {
+    margin: -0.5rem 0 0.5rem 0;
+}
+.landing-bg-wrap {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+img.landing-bg {
+    width: 100%;
+    min-width: 900px;
+}
+
+.videos-section {
+    background-color: $white;
+    position: relative;
+    z-index: 800;
+    text-align: center;
+    padding: 4rem 0;
+}

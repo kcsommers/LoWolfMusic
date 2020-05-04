@@ -1,0 +1,45 @@
+@import '_variables';
+:host {
+    display: block;
+}
+.video-container {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.video-slider {
+    border: 20px solid $primary;
+    width: 800px;
+    height: 450px;
+    position: relative;
+    display: inline-block;
+}
+.video-slider-arrow {
+    position: absolute;
+    top: 50%;
+    font-size: 3rem;
+    background-color: $dark;
+    transform: translateY(-50%);
+    display: inline-block;
+    padding: 0 1rem;
+    transition: all 0.2s ease;
+    opacity: 0.3;
+    cursor: pointer;
+    z-index: 700;
+    >fa-icon {
+        color: $light;
+    }
+    &.left {
+        left: -20px;
+    }
+    &.right {
+        right: -20px;
+    }
+    &:hover {
+        opacity: 0.75
+    }
+    &:active {
+        transform: translateY(-50%) scale(0.95);
+    }
+}
+

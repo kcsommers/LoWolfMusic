@@ -1,6 +1,9 @@
 :host {
-    .footer {
-        background-color: hotpink;
-        height: 100px;
-    }
+  display: block;
+}
+.footer {
+    background-color: hotpink;
+    height: 100px;
+    position: relative;
+    z-index: 900;
 }

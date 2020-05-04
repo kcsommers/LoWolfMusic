@@ -1,9 +1,9 @@
 :host {
     display: flex;
     flex-direction: column;
-    // justify-content: space-between;
     height: 100vh;
     min-height: 400px;
+    min-width: 800px;
 }
 .app-main-wrap {
     flex: 1;
