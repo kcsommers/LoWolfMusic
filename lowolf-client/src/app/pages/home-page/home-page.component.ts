@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ViewContainerRef, AfterViewInit, TemplateRef } from '@angular/core';
-import { reviews } from '../../../../fake-data';
+import { reviews } from '../../../fake-data';
 import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 import { VideoComponent } from '@lo/widgets';
 

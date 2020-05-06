@@ -32,11 +32,17 @@ img.landing-bg {
     width: 100%;
     min-width: 900px;
 }
-
 .videos-section {
-    background-color: $white;
-    position: relative;
-    z-index: 800;
     text-align: center;
-    padding: 4rem 0;
+    padding: 4rem 2rem;
+}
+.more-videos-btn {
+    margin-top: 2rem;
+}
+.signup-form-wrap {
+    width: 800px;
+    margin: 0 auto;
+}
+.signup-section {
+    padding: 4rem 2rem 7rem 2rem;
 }

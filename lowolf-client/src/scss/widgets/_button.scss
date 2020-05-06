@@ -7,7 +7,9 @@ button {
     margin: 0;
     text-decoration: none;
     background: none;
-    color: #ffffff;
+    background-color: $pink;
+    border-radius: 3px;
+    color: $light;
     font-family: $font-primary;
     font-size: 1.2rem;
     cursor: pointer;
@@ -21,6 +23,7 @@ button {
 
 button.lo-btn-outline {
     border: 2px solid $dark;
+    background-color: rgba(0,0,0,0);
     color: $dark;
     &:hover,
     &:focus {
@@ -31,12 +34,7 @@ button.lo-btn-outline {
 
 button:hover,
 button:focus {
-    background: #0053ba;
-}
-
-button:focus {
-    outline: 1px solid #fff;
-    outline-offset: -4px;
+    background-color: darken($pink, 10%);
 }
 
 button:active {

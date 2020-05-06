@@ -2,6 +2,13 @@
 @import '_reset';
 @import './widgets/widgets.scss';
 
+* {
+    box-sizing: border-box;
+    &:focus {
+        outline: none;
+    }
+}
+
 h1,
 h2,
 h3,
@@ -53,3 +60,19 @@ strong {
     font-weight: 900;
 }
 
+section {
+    background-color: $white;
+    position: relative;
+    z-index: 800;
+}
+
+input[type=text],
+input[type=email] {
+    border: none;
+    background-color: $light;
+    color: $dark;
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 0.5rem 1rem;
+}

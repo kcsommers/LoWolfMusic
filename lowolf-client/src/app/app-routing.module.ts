@@ -9,7 +9,15 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        loadChildren: () => import('./pages/home/home-page/home-page.module').then(m => m.HomePageModule)
+        loadChildren: () => import('./pages/home-page/home-page.module').then(m => m.HomePageModule)
+      },
+      {
+        path: 'music',
+        loadChildren: () => import('./pages/music-page/music-page.module').then(m => m.MusicPageModule)
+      },
+      {
+        path: 'videos',
+        loadChildren: () => import('./pages/videos-page/videos-page.module').then(m => m.VideosPageModule)
       }
     ]
   }
