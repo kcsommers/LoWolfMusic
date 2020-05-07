@@ -6,10 +6,6 @@
     width: 100%;
     background-color: $light;
     overflow: hidden;
-    >fa-icon {
-        animation: spinPulse 1s linear infinite;
-        color: $dark;
-    }
 }
 .spinner-wrap,
 .instagram-img-wrap {
@@ -20,6 +16,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    >fa-icon {
+        animation: spinPulse 1s linear infinite;
+        color: $dark;
+    }
 }
 img.instagram-img {
     height: 100%;

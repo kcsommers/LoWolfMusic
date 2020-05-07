@@ -1,0 +1,15 @@
+@import 'variables';
+:host {
+    display: block;
+    padding-top: calc(70px + 4rem);
+    padding-bottom: 4rem;
+}
+.about-wrap {
+    background-image: url(../../../assets/images/lo-stage.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10rem 5rem;
+}
+.bio {
+    color: $light;
+}

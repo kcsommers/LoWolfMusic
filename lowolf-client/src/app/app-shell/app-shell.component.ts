@@ -4,9 +4,9 @@ import { Component } from '@angular/core';
   selector: 'lo-app-shell',
   template: `
     <lo-header></lo-header>
-        <section class="app-main-wrap">
-            <router-outlet></router-outlet>
-        </section>
+    <section class="app-main-wrap">
+        <router-outlet></router-outlet>
+    </section>
     <lo-footer></lo-footer>
   `,
   styleUrls: ['./app-shell.component.scss']
