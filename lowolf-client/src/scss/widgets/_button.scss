@@ -5,9 +5,10 @@ button {
     border: none;
     padding: 1rem 2rem;
     margin: 0;
+    margin-top: 1rem;
     text-decoration: none;
     background: none;
-    background-color: $pink;
+    background-color: $teal;
     border-radius: 3px;
     color: $light;
     font-family: $font-primary;
@@ -19,6 +20,11 @@ button {
                 border-color 250ms ease-in-out;
     -webkit-appearance: none;
     -moz-appearance: none;
+}
+
+button.lo-btn-sm {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
 }
 
 button.lo-btn-outline {
@@ -34,7 +40,7 @@ button.lo-btn-outline {
 
 button:hover,
 button:focus {
-    background-color: darken($pink, 10%);
+    background-color: $pink;
 }
 
 button:active {

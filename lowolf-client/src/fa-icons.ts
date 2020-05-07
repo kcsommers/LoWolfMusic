@@ -7,7 +7,10 @@ import {
   faFacebook,
   faInstagram,
   faFacebookF,
-  faTwitter
+  faTwitter,
+  faSpotify,
+  faBandcamp,
+  faItunes
 } from '@fortawesome/free-brands-svg-icons';
 import {
   faCopyright
@@ -25,7 +28,10 @@ export class FaIcons {
       faTwitter,
       faAngleRight,
       faAngleLeft,
-      faSpinner
+      faSpinner,
+      faSpotify,
+      faBandcamp,
+      faItunes
     );
   }
 }

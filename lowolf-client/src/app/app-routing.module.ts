@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AppShellComponent } from './app-shell/app-shell.component';
+import { AppShellComponent, AppShellSolidHeaderComponent } from './app-shell/app-shell.component';
 
 const routes: Routes = [
   {
@@ -10,7 +10,13 @@ const routes: Routes = [
       {
         path: '',
         loadChildren: () => import('./pages/home-page/home-page.module').then(m => m.HomePageModule)
-      },
+      }
+    ]
+  },
+  {
+    path: '',
+    component: AppShellSolidHeaderComponent,
+    children: [
       {
         path: 'music',
         loadChildren: () => import('./pages/music-page/music-page.module').then(m => m.MusicPageModule)

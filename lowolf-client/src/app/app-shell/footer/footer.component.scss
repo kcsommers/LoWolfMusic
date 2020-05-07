@@ -3,7 +3,7 @@
   display: block;
 }
 .footer {
-    background-color: $pink;
+    background-color: $beige;
     height: 200px;
     position: relative;
     z-index: 900;
@@ -12,5 +12,5 @@
     justify-content: center;
 }
 h4.footer-title {
-    color: $light;
+    color: darken($teal, 20%);
 }

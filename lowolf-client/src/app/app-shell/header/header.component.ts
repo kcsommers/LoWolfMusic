@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, HostListener } from '@angular/core';
+import { Component, ChangeDetectionStrategy, HostListener, Input } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 @Component({
@@ -7,7 +7,7 @@ import { BehaviorSubject } from 'rxjs';
   styleUrls: ['./header.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 
   public headerSolid$ = new BehaviorSubject(false);
 
@@ -21,9 +21,15 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
 }
+
+@Component({
+  selector: 'lo-header-solid',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
+})
+export class HeaderSolidComponent {
+  public headerSolid$ = new BehaviorSubject(true);
+}
+

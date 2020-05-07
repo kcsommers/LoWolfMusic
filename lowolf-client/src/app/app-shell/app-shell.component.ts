@@ -1,15 +1,31 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'lo-app-shell',
-  templateUrl: './app-shell.component.html',
+  template: `
+    <lo-header></lo-header>
+        <section class="app-main-wrap">
+            <router-outlet></router-outlet>
+        </section>
+    <lo-footer></lo-footer>
+  `,
   styleUrls: ['./app-shell.component.scss']
 })
-export class AppShellComponent implements OnInit {
+export class AppShellComponent {
 
-  constructor() { }
+}
 
-  ngOnInit() {
-  }
+@Component({
+  selector: 'lo-app-shell-solid-header',
+  template: `
+    <lo-header-solid></lo-header-solid>
+        <section class="app-main-wrap">
+            <router-outlet></router-outlet>
+        </section>
+    <lo-footer></lo-footer>
+  `,
+  styleUrls: ['./app-shell.component.scss']
+})
+export class AppShellSolidHeaderComponent {
 
 }

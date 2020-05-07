@@ -1,1 +1,9 @@
-<p>videos-page works!</p>
+<h4 class="page-title">Videos</h4>
+<div class="videos-container">
+    <div
+        *ngFor="let src of videoUrls"
+        class="video-wrap lo-box-shadow"
+    >
+        <lo-video [src]="src"></lo-video>
+    </div>
+</div>
