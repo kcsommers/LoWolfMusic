@@ -24,6 +24,18 @@ const routes: Routes = [
       {
         path: 'videos',
         loadChildren: () => import('./pages/videos-page/videos-page.module').then(m => m.VideosPageModule)
+      },
+      {
+        path: 'shows',
+        loadChildren: () => import('./pages/shows-page/shows-page.module').then(m => m.ShowsPageModule)
+      },
+      {
+        path: 'about',
+        loadChildren: () => import('./pages/about-page/about-page.module').then(m => m.AboutPageModule)
+      },
+      {
+        path: 'contact',
+        loadChildren: () => import('./pages/contact-page/contact-page.module').then(m => m.ContactPageModule)
       }
     ]
   }
