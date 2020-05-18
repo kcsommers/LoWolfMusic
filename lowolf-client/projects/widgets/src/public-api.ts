@@ -11,3 +11,7 @@ export { SignupFormComponentModule } from './lib/signup-form/signup-form.compone
 export { SignupFormComponent } from './lib/signup-form/signup-form.component';
 export { InstagramFeedComponentModule } from './lib/instagram-feed/instagram-feed.component.module';
 export { InstagramFeedComponent } from './lib/instagram-feed/instagram-feed.component';
+export { ParallaxBgComponent } from './lib/parallax-bg/parallax-bg.component';
+export { ParallaxBgComponentModule } from './lib/parallax-bg/parallax-bg.module';
+export { ShowsComponent } from './lib/shows/shows.component';
+export { ShowsComponentModule } from './lib/shows/shows.component.module';

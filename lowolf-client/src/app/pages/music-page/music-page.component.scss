@@ -5,12 +5,12 @@
 .albums-container {
     width: 85%;
     margin: 0 auto;
-    position: relative;
-    z-index: 700;
 }
 .album-wrap {
-    margin-bottom: 4rem;
     display: flex;
+    &:not(:last-child) {
+        margin-bottom: 4rem;
+    }
     >span {
         display: inline-block;
     }

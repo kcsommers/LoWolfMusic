@@ -3,10 +3,7 @@
         *ngIf="!(images$ | async)"
         class="spinner-wrap"
     >
-        <fa-icon
-            [icon]="'spinner'"
-            [size]="'2x'"
-        ></fa-icon>
+        <lo-spinner [color]="'dark'"></lo-spinner>
     </div>
     <a
         *ngFor="let img of (images$ | async)"

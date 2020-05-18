@@ -1,0 +1,22 @@
+<div class="calendar-wrap lo-card">
+    <div
+        *ngIf="loading$ | async"
+        class="spinner-wrap"
+    >
+        <lo-spinner [color]="'light'"></lo-spinner>
+    </div>
+    <h4
+        *ngIf="noShows$ | async"
+        class="no-shows-title"
+    >
+        No Upcoming Shows
+    </h4>
+    <div
+        *ngFor="let show of (shows$ | async)"
+        class="show-wrap"
+    >
+        <span>{{show.date}}</span>
+        <span>{{show.date}}</span>
+        <button class="lo-btn">Buy Tickets</button>
+    </div>
+</div>

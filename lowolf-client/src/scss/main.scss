@@ -1,6 +1,7 @@
 @import '_variables';
 @import '_reset';
 @import './widgets/widgets.scss';
+@import '_animations.scss';
 
 * {
     box-sizing: border-box;
@@ -83,4 +84,5 @@ input[type=email] {
 
 .max-width-container {
     max-width: 940px;
+    margin: 0 auto;
 }

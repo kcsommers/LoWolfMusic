@@ -17,7 +17,7 @@ export class ParallaxBgDirective implements OnInit {
   private position: 'center' | 'top' | 'bottom' = 'center';
 
   @HostBinding('style.position')
-  public positionBinding = 'relative';
+  public positionBinding = 'fixed';
 
   @HostBinding('style.overflow')
   public overflow = 'hidden'
@@ -35,8 +35,8 @@ export class ParallaxBgDirective implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.setOffset();
-    this.appendParallaxDiv();
+    // this.setOffset();
+    // this.appendParallaxDiv();
   }
 
   private setOffset() {

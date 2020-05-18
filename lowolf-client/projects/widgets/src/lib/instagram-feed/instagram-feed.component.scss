@@ -18,23 +18,7 @@
     align-items: center;
     justify-content: center;
     padding: 2rem 0;
-    >fa-icon {
-        animation: spinPulse 1s linear infinite;
-        color: $dark;
-    }
 }
 img.instagram-img {
     width: 100%;
-}
-
-@keyframes spinPulse {
-    0% {
-        transform: rotate(0deg) scale(0.75);
-    }
-    50% {
-        transform: rotate(180deg) scale(1.25);
-    }
-    100% {
-        transform: rotate(360deg) scale(0.75);
-    }
 }
