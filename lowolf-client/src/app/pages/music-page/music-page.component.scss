@@ -1,12 +1,12 @@
 @import 'variables';
 :host {
     display: block;
-    padding-top: calc(70px + 4rem);
-    padding-bottom: 6rem;
 }
 .albums-container {
     width: 85%;
     margin: 0 auto;
+    position: relative;
+    z-index: 700;
 }
 .album-wrap {
     margin-bottom: 4rem;

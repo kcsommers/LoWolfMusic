@@ -6,23 +6,25 @@
     width: 100%;
     background-color: $light;
     overflow: hidden;
+    position: relative;
+    z-index: 800;
 }
 .spinner-wrap,
 .instagram-img-wrap {
     flex: 1;
-    height: 180px;
 }
 .spinner-wrap {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 2rem 0;
     >fa-icon {
         animation: spinPulse 1s linear infinite;
         color: $dark;
     }
 }
 img.instagram-img {
-    height: 100%;
+    width: 100%;
 }
 
 @keyframes spinPulse {

@@ -1,9 +1,11 @@
 @import '_variables';
 :host {
     display: block;
+    background-color: $white;
 }
 .landing-section {
     overflow: hidden;
+    position: relative;
 }
 .landing-wrap-inner {
     position: relative;
@@ -33,6 +35,8 @@ img.landing-bg {
 }
 .videos-section {
     text-align: center;
+    position: relative;
+    z-index: 800;
     padding: 4rem 2rem;
 }
 .more-videos-btn {
@@ -41,7 +45,16 @@ img.landing-bg {
 .signup-form-wrap {
     width: 800px;
     margin: 0 auto;
+    position: relative;
+    z-index: 801;
 }
 .signup-section {
     padding: 4rem 2rem 7rem 2rem;
+    position: relative;
+}
+img.paisley2-img {
+    position: absolute;
+    top: 75%;
+    left: -10%;
+    z-index: 100;
 }

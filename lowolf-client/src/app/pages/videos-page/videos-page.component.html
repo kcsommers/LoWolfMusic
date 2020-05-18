@@ -1,9 +1,14 @@
-<h4 class="page-title">Videos</h4>
-<div class="videos-container">
-    <div
-        *ngFor="let src of videoUrls"
-        class="video-wrap lo-box-shadow"
-    >
-        <lo-video [src]="src"></lo-video>
+<div
+    loParallaxBg="'assets/images/tusk1-2.jpg'"
+    [position]="'top'"
+>
+    <h4 class="page-title">Videos</h4>
+    <div class="videos-container max-width-container">
+        <div
+            *ngFor="let src of videoUrls"
+            class="video-wrap lo-box-shadow"
+        >
+            <lo-video [src]="src"></lo-video>
+        </div>
     </div>
 </div>

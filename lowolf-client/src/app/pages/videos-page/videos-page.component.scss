@@ -1,7 +1,5 @@
 :host {
     display: block;
-    padding-top: calc(70px + 4rem);
-    padding-bottom: 6rem;
 }
 .videos-container {
     display: grid;
@@ -11,6 +9,9 @@
     row-gap: 4rem;
     width: 85%;
     margin: 0 auto;
+    position: relative;
+    margin-bottom: 6rem;
+    z-index: 700;
 }
 .video-wrap {
     content: "";
