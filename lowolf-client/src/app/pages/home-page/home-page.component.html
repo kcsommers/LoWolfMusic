@@ -8,27 +8,68 @@
             </div>
         </div>
     </div>
-    <div class="landing-bg-wrap">
-        <img
-            class="landing-bg"
-            src="assets/images/lo_paisley.png"
-            alt="Lo Paisley"
-        >
-    </div>
+    <img
+        class="landing-bg"
+        src="assets/images/lo_paisley.png"
+        alt="Lo Paisley"
+    >
 </section>
 <section class="videos-section">
-    <img
-        class="paisley2-img"
-        src="assets/images/paisley2_yellow.png"
-        alt="Paisley"
-    >
-    <div class="lo-z8">
-        <lo-video-slider [slides]="videoUrls"></lo-video-slider>
-        <button class="more-videos-btn">More Videos</button>
+    <div class="max-width-container">
+        <h2 class="section-title">Videos</h2>
+        <div class="width-85 video-slider-wrap">
+            <lo-video-slider [slides]="videoUrls"></lo-video-slider>
+            <button class="more-videos-btn">More Videos</button>
+        </div>
+    </div>
+</section>
+<section class="music-section">
+    <div class="max-width-container">
+        <h2 class="section-title">Music</h2>
+        <div class="albums-grid-wrap width-85">
+            <span class="album-wrap">
+                <span class="album-title">Singe</span>
+                <img
+                    class="album-cover-img"
+                    src="assets/images/new-cover.jpeg"
+                    alt="Singe"
+                >
+                <button class="lo-btn-sm lo-btn-full-width">Buy/Listen</button>
+            </span>
+            <span class="album-wrap">
+                <span class="album-title">Country Pop Hit EP</span>
+                <img
+                    class="album-cover-img"
+                    src="assets/images/country-pop-hit-cover.png"
+                    alt="Country Pop Hit EP"
+                >
+                <button class="lo-btn-sm lo-btn-full-width">Buy/Listen</button>
+            </span>
+            <span class="album-wrap">
+                <span class="album-title">Singe</span>
+                <img
+                    class="album-cover-img"
+                    src="assets/images/new-cover.jpeg"
+                    alt="Singe"
+                >
+                <button class="lo-btn-sm lo-btn-full-width">Buy/Listen</button>
+            </span>
+            <span class="album-wrap">
+                <span class="album-title">Country Pop Hit EP</span>
+                <img
+                    class="album-cover-img"
+                    src="assets/images/country-pop-hit-cover.png"
+                    alt="Country Pop Hit EP"
+                >
+                <button class="lo-btn-sm lo-btn-full-width">Buy/Listen</button>
+            </span>
+        </div>
     </div>
 </section>
 <section class="signup-section">
-    <div class="signup-form-wrap">
-        <lo-signup-form></lo-signup-form>
+    <div class="max-width-container">
+        <div class="signup-form-wrap width-85">
+            <lo-signup-form></lo-signup-form>
+        </div>
     </div>
 </section>

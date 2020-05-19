@@ -6,6 +6,8 @@
 .landing-section {
     overflow: hidden;
     position: relative;
+    height: 100vh;
+    min-height: 500px;
 }
 .landing-wrap-inner {
     position: relative;
@@ -23,38 +25,43 @@
 h3.landing-album-name {
     margin: -0.5rem 0 0.5rem 0;
 }
-.landing-bg-wrap {
+img.landing-bg {
     position: absolute;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 100;
+    min-width: 1000px;
 }
-img.landing-bg {
+
+section.videos-section {
+    padding: 3rem 0;
+}
+div.video-slider-wrap {
+    text-align: center;
+}
+
+section.music-section {
+    padding: 3rem 0;
+    background-image: url(../../../assets/images/tusk1-2.jpg);
+    background-attachment: fixed;
+    width: 100%;
+    background-size: cover;
+}
+div.albums-grid-wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    place-items: start;
+    column-gap: 4rem;
+    row-gap: 4rem;
+}
+img.album-cover-img {
     width: 100%;
 }
-.videos-section {
-    text-align: center;
-    position: relative;
-    z-index: 800;
-    padding: 4rem 2rem;
+span.album-wrap >button {
+    margin-top: 1rem;
 }
-.more-videos-btn {
-    margin-top: 2rem;
-}
-.signup-form-wrap {
-    width: 800px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 801;
-}
+
 .signup-section {
-    padding: 4rem 2rem 7rem 2rem;
-    position: relative;
-}
-img.paisley2-img {
-    position: absolute;
-    top: 75%;
-    left: -10%;
-    z-index: 100;
+    padding: 4rem 0;
 }

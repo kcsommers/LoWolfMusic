@@ -7,7 +7,7 @@ import { VideoComponent } from '../video/video.component';
   styleUrls: ['./video-slider.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class VideoSliderComponent implements AfterViewInit {
+export class VideoSliderComponent {
 
   private _currentIndex = 0;
 
@@ -20,12 +20,6 @@ export class VideoSliderComponent implements AfterViewInit {
   private _videoContainer: ViewContainerRef;
 
   constructor(private _cfr: ComponentFactoryResolver, private _renderer: Renderer2) { }
-
-  ngAfterViewInit() {
-    setTimeout(() => {
-      console.log(this._videoContainer.length)
-    }, 1000)
-  }
 
   public next(): void {
     if (!this._sliding) {
@@ -58,7 +52,7 @@ export class VideoSliderComponent implements AfterViewInit {
       this._renderer.removeClass(video.instance.el.nativeElement, className);
       const first = document.querySelector('.first-video');
       if (first) {
-        document.querySelector('.video-container').removeChild(first);
+        document.querySelector('.video-wrap').removeChild(first);
       } else {
         this._videoContainer.remove(0);
       }

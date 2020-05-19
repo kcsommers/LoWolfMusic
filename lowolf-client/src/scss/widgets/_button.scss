@@ -5,7 +5,7 @@ button {
     border: none;
     padding: 1rem 2rem;
     margin: 0;
-    margin-top: 1rem;
+    margin-top: 2rem;
     text-decoration: none;
     background: none;
     background-color: $teal;
@@ -37,6 +37,10 @@ button.lo-btn-outline {
         border-color: rgba($dark, 0);
     }
 }
+
+ button.lo-btn-full-width {
+    width: 100%;
+ }
 
 button:hover,
 button:focus {

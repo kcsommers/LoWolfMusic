@@ -1,20 +1,16 @@
 @import '_variables';
 :host {
     display: block;
+    position: relative;
 }
-.video-container {
-    height: 100%;
+.video-wrap {
+    height: 0;
+    padding-bottom: 56.25%;
     position: relative;
     overflow: hidden;
-}
-.video-slider {
     border: 20px solid $beige;
-    width: 800px;
-    height: 450px;
-    position: relative;
-    display: inline-block;
 }
-.video-slider-arrow {
+.slider-arrow {
     position: absolute;
     top: 50%;
     font-size: 3rem;
@@ -30,10 +26,10 @@
         color: $light;
     }
     &.left {
-        left: -20px;
+        left: 0px;
     }
     &.right {
-        right: -20px;
+        right: 0px;
     }
     &:hover {
         opacity: 0.75

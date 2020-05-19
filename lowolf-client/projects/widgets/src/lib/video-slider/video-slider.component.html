@@ -1,22 +1,20 @@
-<div class="video-slider">
-    <span
-        class="video-slider-arrow left"
-        (click)="prev()"
-    >
-        <fa-icon [icon]="'angle-left'"></fa-icon>
-    </span>
-    <span
-        class="video-slider-arrow right"
-        (click)="next()"
-    >
-        <fa-icon [icon]="'angle-right'"></fa-icon>
-    </span>
-    <div class="video-container">
-        <ng-container #VideoContainer>
-            <lo-video
-                class="slider-video first-video"
-                [src]="slides[0]"
-            ></lo-video>
-        </ng-container>
-    </div>
+<span
+    class="slider-arrow left"
+    (click)="prev()"
+>
+    <fa-icon [icon]="'angle-left'"></fa-icon>
+</span>
+<span
+    class="slider-arrow right"
+    (click)="next()"
+>
+    <fa-icon [icon]="'angle-right'"></fa-icon>
+</span>
+<div class="video-wrap">
+    <ng-container #VideoContainer>
+        <lo-video
+            class="slider-video first-video"
+            [src]="slides[0]"
+        ></lo-video>
+    </ng-container>
 </div>
