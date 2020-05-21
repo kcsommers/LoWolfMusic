@@ -1,0 +1,49 @@
+<div class="max-width-container">
+    <ng-container *ngIf="album">
+        <div class="album-wrap lo-card">
+            <span class="album-cover-wrap">
+                <img
+                    class="album-cover-img"
+                    src="{{album.coverUrl}}"
+                    alt="{{album.title}}"
+                >
+            </span>
+            <span class="album-info">
+                <span class="album-title">
+                    {{album.title}}
+                    <em>{{album.year}}</em>
+                </span>
+                <div class="album-links-container">
+                    <a
+                        class="album-link"
+                        href="#"
+                    >
+                        <fa-icon [icon]="['fab', 'spotify']"></fa-icon>
+                    </a>
+                    <a
+                        class="album-link"
+                        href="#"
+                    >
+                        <fa-icon [icon]="['fab', 'bandcamp']"></fa-icon>
+                    </a>
+                    <a
+                        class="album-link"
+                        href="#"
+                    >
+                        <fa-icon [icon]="['fab', 'itunes']"></fa-icon>
+                    </a>
+                </div>
+                <div class="tracklist">
+                    <span
+                        *ngFor="let track of album.tracklist"
+                        class="track-title"
+                    >
+                        {{track}}
+                    </span>
+                </div>
+                <button class="lo-btn-sm">Buy/Listen</button>
+            </span>
+        </div>
+    </ng-container>
+
+</div>

@@ -21,7 +21,7 @@ input,
 textarea,
 label,
 em,
-strong
+strong,
 div {
     font-family: $font-primary;
     color: $dark;
@@ -50,7 +50,7 @@ h2 {
 }
 
 h2.section-title {
-    font-family: Amatic SC;
+    font-family: $font-secondary;
     text-align: center;
     margin-bottom: 3rem;
 }
@@ -66,10 +66,12 @@ h4 {
 
 em {
     font-style: italic;
+    color: inherit;
 }
 
 strong {
     font-weight: 900;
+    color: inherit;
 }
 
 input[type=text],
@@ -83,12 +85,6 @@ input[type=email] {
     padding: 0.5rem 1rem;
 }
 
-.page-title {
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 4rem;
-    padding-top: calc(70px + 2rem);
-    position: relative;
-    z-index: 700;
+.color-light {
+    color: $light;
 }
-

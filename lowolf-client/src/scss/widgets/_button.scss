@@ -15,11 +15,15 @@ button {
     font-size: 1.2rem;
     cursor: pointer;
     text-align: center;
-    transition: background 250ms ease-in-out,
-                transform 150ms ease,
-                border-color 250ms ease-in-out;
+    // transition: background 250ms ease-in-out,
+    //             transform 150ms ease,
+    //             border-color 250ms ease-in-out;
+    transition: all 0.2s ease;
     -webkit-appearance: none;
     -moz-appearance: none;
+    >a {
+        color: inherit;
+    }
 }
 
 button.lo-btn-sm {
@@ -35,6 +39,7 @@ button.lo-btn-outline {
     &:focus {
         background: $white;
         border-color: rgba($dark, 0);
+        box-shadow: $box-shadow;
     }
 }
 
@@ -45,6 +50,7 @@ button.lo-btn-outline {
 button:hover,
 button:focus {
     background-color: $pink;
+    box-shadow: $box-shadow;
 }
 
 button:active {

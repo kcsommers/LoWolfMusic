@@ -17,17 +17,17 @@ const routes: Routes = [
     path: '',
     component: AppShellSolidHeaderComponent,
     children: [
-      // {
-      //   path: 'music',
-      //   loadChildren: () => import('./pages/music-page/music-page.module').then(m => m.MusicPageModule)
-      // },
-      // {
-      //   path: 'videos',
-      //   loadChildren: () => import('./pages/videos-page/videos-page.module').then(m => m.VideosPageModule)
-      // },
       {
-        path: '',
-        loadChildren: () => import('./pages/page-wrappers/music-video-wrapper/music-video-wrapper.module').then(m => m.MusicVideoWrapperModule)
+        path: 'music',
+        loadChildren: () => import('./pages/music-page/music-page.module').then(m => m.MusicPageModule)
+      },
+      {
+        path: 'albums/:id',
+        loadChildren: () => import('./pages/album-page/album-page.module').then(m => m.AlbumPageModule)
+      },
+      {
+        path: 'videos',
+        loadChildren: () => import('./pages/videos-page/videos-page.module').then(m => m.VideosPageModule)
       },
       {
         path: 'shows',

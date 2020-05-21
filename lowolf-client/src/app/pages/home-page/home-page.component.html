@@ -19,7 +19,12 @@
         <h2 class="section-title">Videos</h2>
         <div class="width-85 video-slider-wrap">
             <lo-video-slider [slides]="videoUrls"></lo-video-slider>
-            <button class="more-videos-btn">More Videos</button>
+            <button
+                class="more-videos-btn"
+                [routerLink]="'videos'"
+            >
+                More Videos
+            </button>
         </div>
     </div>
 </section>
@@ -27,42 +32,33 @@
     <div class="max-width-container">
         <h2 class="section-title">Music</h2>
         <div class="albums-grid-wrap width-85">
-            <span class="album-wrap">
-                <span class="album-title">Singe</span>
-                <img
-                    class="album-cover-img"
-                    src="assets/images/new-cover.jpeg"
-                    alt="Singe"
-                >
+            <span
+                *ngFor="let album of albums"
+                class="album-wrap"
+            >
+                <div class="album-title-wrap">
+                    <div class="album-title">{{album.title}}</div>
+                    <div class="album-year">
+                        <em>{{album.year}}</em>
+                    </div>
+                </div>
+                <a [routerLink]="'albums/' + album.id">
+                    <img
+                        class="album-cover-img"
+                        src="{{album.coverUrl}}"
+                        alt="{{album.title}}"
+                    >
+                </a>
                 <button class="lo-btn-sm lo-btn-full-width">Buy/Listen</button>
             </span>
-            <span class="album-wrap">
-                <span class="album-title">Country Pop Hit EP</span>
-                <img
-                    class="album-cover-img"
-                    src="assets/images/country-pop-hit-cover.png"
-                    alt="Country Pop Hit EP"
-                >
-                <button class="lo-btn-sm lo-btn-full-width">Buy/Listen</button>
-            </span>
-            <span class="album-wrap">
-                <span class="album-title">Singe</span>
-                <img
-                    class="album-cover-img"
-                    src="assets/images/new-cover.jpeg"
-                    alt="Singe"
-                >
-                <button class="lo-btn-sm lo-btn-full-width">Buy/Listen</button>
-            </span>
-            <span class="album-wrap">
-                <span class="album-title">Country Pop Hit EP</span>
-                <img
-                    class="album-cover-img"
-                    src="assets/images/country-pop-hit-cover.png"
-                    alt="Country Pop Hit EP"
-                >
-                <button class="lo-btn-sm lo-btn-full-width">Buy/Listen</button>
-            </span>
+        </div>
+    </div>
+</section>
+<section class="shows-section">
+    <div class="max-width-container">
+        <h2 class="section-title">Shows</h2>
+        <div class="shows-calendar-wrap width-85">
+            <lo-shows></lo-shows>
         </div>
     </div>
 </section>
@@ -72,4 +68,9 @@
             <lo-signup-form></lo-signup-form>
         </div>
     </div>
+    <img
+        class="signup-bg"
+        src="assets/images/paisley2_yellow.png"
+        alt="Lo Paisley"
+    >
 </section>

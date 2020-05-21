@@ -2,12 +2,13 @@
 
 :host {
     display: block;
-    padding-bottom: 6rem;
 }
 .calendar-wrap {
-    background-color: rgba($dark, 0.65);
+    // background-color: rgba($dark, 0.65);
+    // background-color: $light;
+    // background: linear-gradient(135deg, $white, $light);
     margin: 0 auto;
-    color: $white;
+    padding: 0rem 6rem;
 }
 h4.no-shows-title,
 .spinner-wrap {
@@ -15,3 +16,37 @@ h4.no-shows-title,
     text-align: center;
     padding: 4rem 0;
 }
+.show-wrap {
+    // border-bottom: 1px solid $light;
+    border-bottom: 1px solid $dark;
+    display: flex;
+    align-items: center;
+    >button {
+        margin-top: 0;
+    }
+}
+a.show-info-tag {
+    padding: 1.5rem 0;
+    flex: 1;
+    &:hover {
+        >span.show-info-wrap {
+            transform: scale(1.1);
+        }
+    }
+}
+span.show-info-wrap {
+    transition: transform 0.2s linear;
+    display: inline-flex;
+    flex-direction: column;
+}
+.show-date {
+    font-size: 2.5rem;
+    font-family: $font-secondary;
+}
+.show-venue {
+    font-size: 1.5rem;
+}
+div.show-all-btn-wrap {
+    text-align: center;
+}
+

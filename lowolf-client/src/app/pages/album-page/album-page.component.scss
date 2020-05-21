@@ -1,0 +1,36 @@
+@import '_variables';
+
+:host {
+    display: block;
+    padding: calc(5rem + 70px) 0 5rem 0;
+}
+.album-wrap {
+    display: flex;
+    &:not(:last-child) {
+        margin-bottom: 4rem;
+    }
+    >span {
+        display: inline-block;
+    }
+}
+.album-cover-wrap {
+    margin-right: 3rem;
+}
+img.album-cover-img {
+    width: 300px;
+}
+span.album-title {
+    display: inline-block;
+    font-size: 1.5rem;
+}
+span.track-title {
+    display: block;
+    line-height: 2rem;
+}
+a.album-link {
+    color: $pink;
+    margin-right: 0.5rem;
+    fa-icon {
+        font-size: 2rem;
+    }
+}

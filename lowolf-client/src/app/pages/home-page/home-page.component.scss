@@ -61,7 +61,39 @@ img.album-cover-img {
 span.album-wrap >button {
     margin-top: 1rem;
 }
+div.album-title-wrap {
+    text-align: center;
+    padding: 0.25rem 0;
+}
+div.album-title {
+    font-size: 1.2rem;
+}
 
-.signup-section {
-    padding: 4rem 0;
+section.shows-section {
+    padding: 3rem 0;
+    // background-image: url(../../../assets/images/lo-busk.jpg);
+    background-attachment: fixed;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    >div.max-width-container {
+        position: relative;
+        z-index: 800;
+    }
+}
+
+section.signup-section {
+    padding: 4rem 0 6rem 0;
+    position: relative;
+    >div.max-width-container {
+        position: relative;
+        z-index: 800;
+    }
+}
+img.signup-bg {
+    position: absolute;
+    top: -30%;
+    left: -15%;
+    width: 100%;
+    z-index: 200;
 }

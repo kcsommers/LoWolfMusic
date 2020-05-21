@@ -1,4 +1,5 @@
 import { ReviewModel, ShowModel } from '@lo/core';
+import { AlbumModel } from 'projects/core/src/lib/model/music/albums';
 
 export const reviews: ReviewModel[] = [
   {
@@ -26,24 +27,79 @@ export const shows: ShowModel[] = [
     date: '02/25/2020',
     venue: 'The Bywater',
     id: Math.floor(Math.random() * 10000).toString(),
-    link: 'https://google.com'
+    link: 'https://google.com',
+    city: 'Asheville, NC'
   },
   {
     date: '02/25/2020',
     venue: 'The Bywater',
     id: Math.floor(Math.random() * 10000).toString(),
-    link: 'https://google.com'
+    link: 'https://google.com',
+    city: 'Asheville, NC'
   },
   {
     date: '02/25/2020',
     venue: 'The Bywater',
     id: Math.floor(Math.random() * 10000).toString(),
-    link: 'https://google.com'
+    link: 'https://google.com',
+    city: 'Asheville, NC'
   },
   {
     date: '02/25/2020',
     venue: 'The Bywater',
     id: Math.floor(Math.random() * 10000).toString(),
-    link: 'https://google.com'
+    link: 'https://google.com',
+    city: 'Asheville, NC'
   }
+];
+
+export const albums: AlbumModel[] = [
+  {
+    title: 'Singe',
+    year: '2020',
+    coverUrl: 'assets/images/new-cover.jpeg',
+    id: '1',
+    tracklist: [
+      'Kill No More',
+      'Plug in the Iron',
+      'Dog 1',
+      'Gone are the Days'
+    ]
+  },
+  {
+    title: 'Country Pop Hit EP',
+    year: '2018',
+    coverUrl: 'assets/images/country-pop-hit-cover.png',
+    id: '2',
+    tracklist: [
+      'Kill No More',
+      'Plug in the Iron',
+      'Dog 1',
+      'Gone are the Days'
+    ]
+  },
+  {
+    title: 'Singe',
+    year: '2020',
+    coverUrl: 'assets/images/new-cover.jpeg',
+    id: '3',
+    tracklist: [
+      'Kill No More',
+      'Plug in the Iron',
+      'Dog 1',
+      'Gone are the Days'
+    ]
+  },
+  {
+    title: 'Country Pop Hit EP',
+    year: '2018',
+    coverUrl: 'assets/images/country-pop-hit-cover.png',
+    id: '4',
+    tracklist: [
+      'Kill No More',
+      'Plug in the Iron',
+      'Dog 1',
+      'Gone are the Days'
+    ]
+  },
 ]

@@ -1,5 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { reviews } from '../../../fake-data';
+import { reviews, albums } from '../../../fake-data';
 import { videoUrls } from '@lo/core';
 
 @Component({
@@ -9,9 +9,11 @@ import { videoUrls } from '@lo/core';
 })
 export class HomePageComponent implements OnInit, AfterViewInit {
 
-  public reviews = reviews
+  public reviews = reviews;
 
   public videoUrls = videoUrls;
+
+  public albums = albums;
 
   constructor() { }
 
