@@ -57,7 +57,7 @@ export const albums: AlbumModel[] = [
   {
     title: 'Singe',
     year: '2020',
-    coverUrl: 'assets/images/new-cover.jpeg',
+    coverUrl: 'assets/images/singe-cover.jpeg',
     id: '1',
     tracklist: [
       'Kill No More',
@@ -81,7 +81,7 @@ export const albums: AlbumModel[] = [
   {
     title: 'Singe',
     year: '2020',
-    coverUrl: 'assets/images/new-cover.jpeg',
+    coverUrl: 'assets/images/singe-cover.jpeg',
     id: '3',
     tracklist: [
       'Kill No More',

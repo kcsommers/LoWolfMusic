@@ -1,0 +1,47 @@
+@import '_variables';
+:host {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba($teal, .9);
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.5s linear;
+    &.hidden {
+        opacity: 0;
+    }
+}
+.album-wrap {
+    width: 700px;
+    min-width: 700px;
+    display: flex;
+    padding: 2rem;
+    background-color: rgba($light, 0.75);
+    background-image: url(../../../assets/images/singe-cover-zoom.jpg);
+    background-size: cover;
+}
+img.album-cover {
+    width: 50%;
+}
+span.album-details {
+    flex: 1;
+    padding: 1rem 2rem;
+}
+p.tagline {
+    font-size: 1.2rem;
+    margin-top: 0.75rem;
+}
+h4.continue {
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: color 0.3s ease;
+    &:hover {
+        color: $pink;
+    }
+}

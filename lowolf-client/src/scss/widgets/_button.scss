@@ -1,6 +1,7 @@
 @import '_variables';
 
-button {
+button,
+a.ada-btn {
     display: inline-block;
     border: none;
     padding: 1rem 2rem;
@@ -26,12 +27,14 @@ button {
     }
 }
 
-button.lo-btn-sm {
+button.lo-btn-sm,
+a.lo-btn-sm {
     font-size: 1rem;
     padding: 0.75rem 1.5rem;
 }
 
-button.lo-btn-outline {
+button.lo-btn-outline,
+a.lo-btn-outline {
     border: 2px solid $dark;
     background-color: rgba(0,0,0,0);
     color: $dark;
@@ -43,16 +46,20 @@ button.lo-btn-outline {
     }
 }
 
- button.lo-btn-full-width {
+ button.lo-btn-full-width,
+ a.lo-btn-full-width {
     width: 100%;
  }
 
 button:hover,
-button:focus {
+button:focus,
+a.ada-btn:hover,
+a.ada-btn:focus {
     background-color: $pink;
     box-shadow: $box-shadow;
 }
 
-button:active {
+button:active,
+a.ada-btn:active {
     transform: scale(0.95);
 }
