@@ -36,6 +36,7 @@ img.landing-bg {
 
 section.videos-section {
     padding: 3rem 0;
+    position: relative;
 }
 div.video-slider-wrap {
     text-align: center;
@@ -47,6 +48,7 @@ section.music-section {
     background-attachment: fixed;
     width: 100%;
     background-size: cover;
+    position: relative;
 }
 div.albums-grid-wrap {
     display: grid;
@@ -76,6 +78,7 @@ section.shows-section {
     width: 100%;
     background-size: cover;
     background-position: center;
+    position: relative;
     >div.max-width-container {
         position: relative;
         z-index: 800;
