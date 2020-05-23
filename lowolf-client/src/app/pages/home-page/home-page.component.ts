@@ -56,6 +56,9 @@ export class HomePageComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnInit() {
+    setTimeout(() => {
+      document.querySelector('html').classList.add('smooth-scroll')
+    });
 
     // if (!localStorage.getItem(AlbumPopupComponent.POPUP_KEY)) {
     //   localStorage.setItem(AlbumPopupComponent.POPUP_KEY, 'true');
@@ -72,6 +75,7 @@ export class HomePageComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy() {
+    document.querySelector('html').classList.remove('smooth-scroll')
     this._unsubscribe.next(false);
     this._unsubscribe.complete();
   }

@@ -7,7 +7,7 @@
     background-image: url(../../../assets/images/about-bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 400px;
+    height: 500px;
 }
 div.bio-wrap {
     width: 50%;
@@ -19,6 +19,6 @@ div.bio-wrap {
 .bio {
     color: $light;
     line-height: 2rem;
-    transform: translateX(20%);
+    transform: translateX(30%);
     font-size: 1.2rem;
 }
