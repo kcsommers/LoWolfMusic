@@ -18,10 +18,6 @@ const routes: Routes = [
     component: AppShellSolidHeaderComponent,
     children: [
       {
-        path: 'music',
-        loadChildren: () => import('./pages/music-page/music-page.module').then(m => m.MusicPageModule)
-      },
-      {
         path: 'albums/:id',
         loadChildren: () => import('./pages/album-page/album-page.module').then(m => m.AlbumPageModule)
       },
@@ -46,7 +42,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { onSameUrlNavigation: 'reload' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

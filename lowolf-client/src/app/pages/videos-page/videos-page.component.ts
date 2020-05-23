@@ -14,6 +14,7 @@ export class VideosPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    window.scrollTo({ top: 0 });
   }
 
 }

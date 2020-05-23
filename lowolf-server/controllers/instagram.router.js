@@ -1,6 +1,5 @@
 require('dotenv').config();
-const router = require('express').Router();
-const axios = require('axios');
+const router = require('express').Router(); const axios = require('axios');
 
 const apiBaseUrl = 'https://graph.instagram.com';
 

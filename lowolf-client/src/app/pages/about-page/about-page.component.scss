@@ -1,15 +1,24 @@
 @import 'variables';
 :host {
     display: block;
-    padding-top: calc(70px + 4rem);
-    padding-bottom: 4rem;
+    padding: 70px 0 5rem 0;
 }
-.about-wrap {
-    background-image: url(../../../assets/images/lo-stage.jpg);
+.bio-section {
+    background-image: url(../../../assets/images/about-bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 10rem 5rem;
+    height: 400px;
+}
+div.bio-wrap {
+    width: 50%;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 .bio {
     color: $light;
+    line-height: 2rem;
+    transform: translateX(20%);
+    font-size: 1.2rem;
 }
