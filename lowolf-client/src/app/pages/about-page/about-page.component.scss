@@ -1,7 +1,7 @@
 @import 'variables';
 :host {
     display: block;
-    padding: 70px 0 5rem 0;
+    padding-top: 70px;
 }
 .bio-section {
     background-image: url(../../../assets/images/about-bg.jpg);
@@ -21,4 +21,30 @@ div.bio-wrap {
     line-height: 2rem;
     transform: translateX(30%);
     font-size: 1.2rem;
+}
+div.review-carousel-wrap {
+    width: 85%;
+    height: 300px;
+}
+div.review-wrap {
+    position: relative;
+    padding: 1rem 3rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    >fa-icon {
+        position: absolute;
+        top: 12%;
+        left: 2rem;
+        font-size: 4rem;
+        color: $dark;
+        opacity: 0.2;
+    }
+}
+p.review-content {
+    line-height: 2rem;
+}
+p.review-author {
+    text-align: right;
 }

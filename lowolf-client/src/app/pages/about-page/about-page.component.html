@@ -5,11 +5,21 @@
         </p>
     </div>
 </section>
-<lo-carousel>
-    <ng-template
-        #CarouselItem
-        let-review
-    >
-        <span>{{review.author}}</span>
-    </ng-template>
-</lo-carousel>
+<section class="reviews-section">
+    <div class="review-carousel-wrap max-width-container">
+        <lo-carousel [context]="reviews">
+            <ng-template
+                #CarouselItemTemplate
+                let-review
+            >
+                <div class="review-wrap">
+                    <fa-icon [icon]="'quote-left'"></fa-icon>
+                    <p class="review-content">{{review.content}}</p>
+                    <p class="review-author">
+                        <em>-{{review.author}}</em>
+                    </p>
+                </div>
+            </ng-template>
+        </lo-carousel>
+    </div>
+</section>
