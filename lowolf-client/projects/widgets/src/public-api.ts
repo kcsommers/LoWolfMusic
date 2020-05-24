@@ -15,3 +15,5 @@ export { ParallaxBgComponent } from './lib/parallax-bg/parallax-bg.component';
 export { ParallaxBgComponentModule } from './lib/parallax-bg/parallax-bg.module';
 export { ShowsComponent } from './lib/shows/shows.component';
 export { ShowsComponentModule } from './lib/shows/shows.component.module';
+export { CarouselComponentModule } from './lib/carousel/carousel.component.module';
+export { CarouselComponent } from './lib/carousel/carousel.component';
