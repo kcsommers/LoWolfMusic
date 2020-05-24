@@ -4,12 +4,8 @@ import { Component } from '@angular/core';
   selector: 'lo-app-shell',
   template: `
     <lo-header></lo-header>
-    <section class="app-main-wrap">
-        <router-outlet></router-outlet>
-    </section>
-    <lo-footer></lo-footer>
+    <router-outlet></router-outlet>
   `,
-  styleUrls: ['./app-shell.component.scss']
 })
 export class AppShellComponent {
 
@@ -19,12 +15,8 @@ export class AppShellComponent {
   selector: 'lo-app-shell-solid-header',
   template: `
     <lo-header-solid></lo-header-solid>
-        <section class="app-main-wrap">
-            <router-outlet></router-outlet>
-        </section>
-    <lo-footer></lo-footer>
+    <router-outlet></router-outlet>
   `,
-  styleUrls: ['./app-shell.component.scss']
 })
 export class AppShellSolidHeaderComponent {
 

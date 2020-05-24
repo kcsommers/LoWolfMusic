@@ -1,0 +1,26 @@
+:host {
+    display: block;
+    padding: calc(70px + 4rem) 0 4rem 0;
+}
+div.contact-page-wrap {
+    width: 85%;
+}
+section.contact-info-section {
+    margin: 1rem 0;
+    >p {
+        line-height: 2.2rem;
+        display: flex;
+        align-items: center;
+        >fa-icon {
+            font-size: 1.75rem;
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+    }
+}
+.contact-form {
+    width: 65%;
+}
+button.submit-btn {
+    margin-top: 0.5rem;
+}

@@ -24,7 +24,7 @@ import { InstagramFeedComponentModule } from '@lo/widgets';
     InstagramFeedComponentModule
   ],
   exports: [
-    AppShellRootComponent
+    AppShellRootComponent,
   ]
 })
 export class AppShellModule { }
