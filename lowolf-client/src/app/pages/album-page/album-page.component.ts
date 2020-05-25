@@ -28,6 +28,7 @@ export class AlbumPageComponent implements OnInit {
   }
 
   ngOnInit() {
+    window.scrollTo({ top: 0 });
   }
 
 }

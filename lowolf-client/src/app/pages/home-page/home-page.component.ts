@@ -60,14 +60,14 @@ export class HomePageComponent implements OnInit, AfterViewInit, OnDestroy {
       document.querySelector('html').classList.add('smooth-scroll')
     });
 
-    // if (!localStorage.getItem(AlbumPopupComponent.POPUP_KEY)) {
-    //   localStorage.setItem(AlbumPopupComponent.POPUP_KEY, 'true');
-    //   const albumPopupFactory = this._cfr.resolveComponentFactory(AlbumPopupComponent);
-    //   const albumPopupRef = this._popupContainer.createComponent(albumPopupFactory);
-    //   albumPopupRef.instance.isOpenChange
-    //     .pipe(take(1))
-    //     .subscribe(isOpen => this.closeAlbumPopup());
-    // }
+    if (!localStorage.getItem(AlbumPopupComponent.POPUP_KEY)) {
+      localStorage.setItem(AlbumPopupComponent.POPUP_KEY, 'true');
+      const albumPopupFactory = this._cfr.resolveComponentFactory(AlbumPopupComponent);
+      const albumPopupRef = this._popupContainer.createComponent(albumPopupFactory);
+      albumPopupRef.instance.isOpenChange
+        .pipe(take(1))
+        .subscribe(isOpen => this.closeAlbumPopup());
+    }
 
   }
 

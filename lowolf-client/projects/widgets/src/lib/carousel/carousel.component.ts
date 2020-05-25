@@ -72,8 +72,6 @@ export class CarouselComponent implements AfterViewInit {
     const currentItem = this._itemMap.get(this._currentIndex);
     currentItem.instance.isVisible = false;
 
-    console.log('Curr', currentItem)
-
     setTimeout(() => {
       this._carouselContainer.detach(0);
     }, 500);
