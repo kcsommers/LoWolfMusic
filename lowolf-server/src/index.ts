@@ -1,15 +1,9 @@
 require('dotenv').config();
-const express = require('express');
+import express from 'express';
 const port = process.env.PORT || 3000;
-const cors = require('cors');
+import cors from 'cors';
 const app = express();
-const bp = require('body-parser');
-
-const parseFolder = folder => {
-  // 2K Homecare/painting
-  const segments = folder.split('/');
-  return segments[segments.length - 1];
-};
+import bp from 'body-parser';
 
 app.use(cors());
 app.use(bp.json());
