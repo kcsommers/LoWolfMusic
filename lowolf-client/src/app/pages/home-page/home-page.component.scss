@@ -8,19 +8,19 @@
     position: relative;
     height: 100vh;
     min-height: 500px;
-}
-.landing-wrap-inner {
-    position: relative;
-}
-.landing-intro {
-    text-align: right;
-    padding: 15% 20% 25% 20%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-image: url(../../../assets/images/lo_paisley.png);
+    background-size: cover;
+    background-attachment: fixed;
 }
 .landing-cta {
+    display: inline-block;
     text-align: center;
-    transform: translateX(28%);
     position: relative;
     z-index: 800;
+    margin-right: 15%;
 }
 h3.landing-album-name {
     margin: -0.5rem 0 0.5rem 0;
@@ -44,7 +44,7 @@ div.video-slider-wrap {
 
 section.music-section {
     padding: 3rem 0;
-    background-image: url(../../../assets/images/laura-laura.jpg);
+    background-image: url(../../../assets/images/laura-laura-2.jpg);
     background-attachment: fixed;
     width: 100%;
     background-size: cover;
@@ -59,9 +59,6 @@ div.albums-grid-wrap {
 }
 img.album-cover-img {
     width: 100%;
-}
-span.album-wrap >button {
-    margin-top: 1rem;
 }
 div.album-title-wrap {
     text-align: center;

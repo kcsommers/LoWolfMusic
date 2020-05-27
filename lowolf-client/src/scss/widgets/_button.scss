@@ -6,7 +6,7 @@ a.ada-btn {
     border: none;
     padding: 1rem 2rem;
     margin: 0;
-    margin-top: 2rem;
+    margin-top: 1rem;
     text-decoration: none;
     background: none;
     background-color: $teal;
@@ -30,7 +30,7 @@ a.ada-btn {
 button.lo-btn-sm,
 a.lo-btn-sm {
     font-size: 1rem;
-    padding: 0.75rem 1.5rem;
+    padding: 0.5rem 1.5rem;
 }
 
 button.lo-btn-outline,
@@ -44,6 +44,12 @@ a.lo-btn-outline {
         border-color: rgba($dark, 0);
         box-shadow: $box-shadow;
     }
+}
+
+button.lo-btn-brown,
+a.lo-btn-brown {
+    background-color: $brown;
+    color: $light;
 }
 
  button.lo-btn-full-width,
