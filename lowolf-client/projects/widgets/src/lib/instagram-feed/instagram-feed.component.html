@@ -1,4 +1,4 @@
-<ng-container *ngIf="!(feedError$ | async)">
+<ng-container *ngIf="!(instagramService?.error$ | async)">
     <div
         *ngIf="!(images$ | async)"
         class="spinner-wrap"

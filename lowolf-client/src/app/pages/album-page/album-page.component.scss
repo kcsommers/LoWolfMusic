@@ -3,6 +3,9 @@
 :host {
     display: block;
     padding: calc(5rem + 70px) 0 5rem 0;
+    background-image: url(../../../assets/images/tusk1-2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
 }
 .album-wrap {
     display: flex;

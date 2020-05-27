@@ -8,6 +8,7 @@ import { Component, HostBinding } from '@angular/core';
     <main class="app-main-wrap">
       <router-outlet></router-outlet>
     </main>
+    <lo-footer></lo-footer>
   `,
 })
 export class AppShellComponent {
@@ -21,6 +22,7 @@ export class AppShellComponent {
     <main class="app-main-wrap">
       <router-outlet></router-outlet>
     </main>
+    <lo-footer></lo-footer>
   `,
 })
 export class AppShellSolidHeaderComponent {

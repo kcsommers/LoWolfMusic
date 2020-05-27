@@ -11,6 +11,11 @@ html.smooth-scroll {
     scroll-behavior: smooth;
 }
 
+app-root {
+    display: block;
+    min-height: 100vh;
+}
+
 h1,
 h2,
 h3,

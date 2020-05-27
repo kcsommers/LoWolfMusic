@@ -1,9 +1,12 @@
 :host {
     display: block;
     padding: calc(70px + 4rem) 0 4rem 0;
+    position: relative;
 }
 div.contact-page-wrap {
     width: 85%;
+    position: relative;
+    z-index: 700;
 }
 section.contact-info-section {
     margin: 1rem 0;
@@ -23,4 +26,17 @@ section.contact-info-section {
 }
 button.submit-btn {
     margin-top: 0.5rem;
+}
+span.contact-img-wrap {
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 50%;
+    z-index: 100;
+    min-width: 500px;
+}
+img.contact-img {
+    width: 100%;
 }

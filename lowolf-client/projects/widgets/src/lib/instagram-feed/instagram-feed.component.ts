@@ -1,27 +1,7 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
-import { take } from 'rxjs/operators';
-import { BehaviorSubject } from 'rxjs';
-
-interface InstagramImage {
-  id: string;
-  username: string;
-  media_url: string;
-  permalink: string;
-  caption: string;
-}
-
-interface InstagramResponse {
-  data: InstagramImage[];
-  paging: {
-    cursors: {
-      before: string;
-      after: string;
-    };
-    next: string;
-  }
-}
+import { Component, OnInit, ChangeDetectionStrategy, OnDestroy } from '@angular/core';
+import { take, takeUntil } from 'rxjs/operators';
+import { BehaviorSubject, Subject } from 'rxjs';
+import { InstagramImage, InstagramResponse, InstagramFeedService } from './instagram-feed-service';
 
 @Component({
   selector: 'lo-instagram-feed',
@@ -29,32 +9,23 @@ interface InstagramResponse {
   styleUrls: ['./instagram-feed.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class InstagramFeedComponent implements OnInit {
+export class InstagramFeedComponent implements OnInit, OnDestroy {
 
   public images$ = new BehaviorSubject<InstagramImage[]>(null);
 
-  public feedError$ = new BehaviorSubject(false);
+  private _unsubscribe = new Subject();
 
-  constructor(private _http: HttpClient) { }
+  constructor(public instagramService: InstagramFeedService) { }
 
   ngOnInit() {
-    this._http.get(`${environment.apiUrl}/instagram`)
-      .pipe(take(1))
-      .subscribe(
-        (res: InstagramResponse) => {
-          console.log('RESP', res);
-          if (!res || !res.data || !res.data.length) {
-            this.feedError$.next(true);
-            return;
-          }
-          this.images$.next(res.data.slice(0, 8))
-        },
-        err => {
-          this.feedError$.next(true);
-          console.error(err);
-        }
-      )
+    this.instagramService.images$
+      .pipe(takeUntil(this._unsubscribe))
+      .subscribe(imgs => this.images$.next(imgs.slice(0, 8)));
+  }
 
+  ngOnDestroy() {
+    this._unsubscribe.next(false);
+    this._unsubscribe.complete();
   }
 
 }

@@ -1,6 +1,9 @@
 :host {
     display: block;
     padding: calc(3rem + 70px) 0 5rem 0;
+    background-image: url(../../../assets/images/tusk1-2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
 }
 .videos-container {
     display: grid;

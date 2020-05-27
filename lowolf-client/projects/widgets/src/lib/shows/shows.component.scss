@@ -28,11 +28,6 @@ h4.no-shows-title,
 a.show-info-tag {
     padding: 1.5rem 0;
     flex: 1;
-    &:hover {
-        >span.show-info-wrap {
-            transform: scale(1.1);
-        }
-    }
 }
 span.show-info-wrap {
     transition: transform 0.2s linear;
