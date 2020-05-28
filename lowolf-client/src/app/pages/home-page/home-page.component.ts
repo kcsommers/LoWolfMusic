@@ -76,7 +76,6 @@ export class HomePageComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    document.querySelector('html').classList.remove('smooth-scroll')
     this._unsubscribe.next(false);
     this._unsubscribe.complete();
   }
