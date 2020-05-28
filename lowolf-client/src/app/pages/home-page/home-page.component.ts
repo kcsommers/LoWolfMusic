@@ -41,6 +41,9 @@ export class HomePageComponent implements OnInit, AfterViewInit, OnDestroy {
       .subscribe(() => {
         this._route.fragment
           .subscribe(hash => {
+            if (!hash) {
+              window.scrollTo(0, 0);
+            }
             if (hash === 'videos') {
               this._videosTag.nativeElement.click();
             }

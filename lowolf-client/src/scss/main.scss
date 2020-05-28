@@ -9,6 +9,7 @@
 
 html.smooth-scroll {
     scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
 }
 
 app-root {
