@@ -27,7 +27,9 @@
     "@fortawesome/free-brands-svg-icons": "^5.13.0",
     "@fortawesome/free-regular-svg-icons": "^5.13.0",
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
+    "@types/smoothscroll-polyfill": "^0.3.1",
     "rxjs": "~6.4.0",
+    "smoothscroll-polyfill": "^0.4.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
   },

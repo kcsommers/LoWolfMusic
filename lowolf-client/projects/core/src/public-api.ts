@@ -8,3 +8,4 @@ export { videoUrls } from './lib/data/videos';
 export { ShowModel } from './lib/model/shows/shows';
 export { AlbumModel } from './lib/model/music/albums';
 export * from './lib/data/fake-data';
+export * from './lib/utils';
