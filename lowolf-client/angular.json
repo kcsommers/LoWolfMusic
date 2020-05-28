@@ -60,7 +60,7 @@
               "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true,
+              "buildOptimizer": false,
               "budgets": [
                 {
                   "type": "initial",
@@ -148,6 +148,11 @@
           "options": {
             "tsConfig": "projects/widgets/tsconfig.lib.json",
             "project": "projects/widgets/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/widgets/ng-package.prod.json"
+            }
           }
         },
         "test": {
@@ -183,6 +188,11 @@
           "options": {
             "tsConfig": "projects/core/tsconfig.lib.json",
             "project": "projects/core/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/core/ng-package.prod.json"
+            }
           }
         },
         "test": {

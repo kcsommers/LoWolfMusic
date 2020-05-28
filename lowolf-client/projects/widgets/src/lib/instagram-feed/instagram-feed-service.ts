@@ -1,6 +1,5 @@
-import { Injectable, OnDestroy } from '@angular/core';
+import { Injectable, OnDestroy, Inject } from '@angular/core';
 import { BehaviorSubject, ReplaySubject } from 'rxjs';
-import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { take } from 'rxjs/operators';
 
@@ -43,7 +42,7 @@ export class InstagramFeedService implements OnDestroy {
     return this._images$;
   }
 
-  constructor(private _http: HttpClient) {
+  constructor(private _http: HttpClient, @Inject('ENVIRONMENT') private environment) {
     this._refreshInterval = window.setInterval(this.getImages.bind(this), 600000);
   }
 
@@ -52,7 +51,7 @@ export class InstagramFeedService implements OnDestroy {
   }
 
   private getImages() {
-    this._http.get<InstagramResponse>(`${environment.apiUrl}/instagram`)
+    this._http.get<InstagramResponse>(`${this.environment.apiUrl}/instagram`)
       .pipe(take(1))
       .subscribe(
         (res: InstagramResponse) => {

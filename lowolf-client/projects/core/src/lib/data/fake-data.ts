@@ -1,5 +1,6 @@
-import { ReviewModel, ShowModel } from '@lo/core';
-import { AlbumModel } from 'projects/core/src/lib/model/music/albums';
+import { ReviewModel } from '../model/reviews/reviews';
+import { AlbumModel } from '../model/music/albums';
+import { ShowModel } from '../model/shows/shows';
 
 export const reviews: ReviewModel[] = [
   {

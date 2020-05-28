@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy, ViewChild, TemplateRef, ViewContainerRef } from '@angular/core';
-import { reviews } from '../../../fake-data';
+import { reviews } from '@lo/core';
 
 @Component({
   selector: 'lo-about-page',

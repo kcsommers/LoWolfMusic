@@ -17,7 +17,6 @@ export class VideoComponent implements OnInit {
   constructor(private _sanitizer: DomSanitizer, public el: ElementRef) { }
 
   ngOnInit() {
-    console.log('SRC', this.src)
     this.safeSrc = this._sanitizer.bypassSecurityTrustResourceUrl(this.src);
   }
 

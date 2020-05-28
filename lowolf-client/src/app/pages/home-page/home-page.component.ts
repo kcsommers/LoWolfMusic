@@ -1,9 +1,8 @@
 import { Component, OnInit, AfterViewInit, ViewChild, ViewContainerRef, ComponentFactoryResolver, HostListener, OnDestroy, ElementRef } from '@angular/core';
-import { reviews, albums } from '../../../fake-data';
-import { videoUrls } from '@lo/core';
+import { reviews, albums, videoUrls } from '@lo/core';
 import { AlbumPopupComponent } from '../../components/album-popup/album-popup.component';
 import { take, takeUntil, filter } from 'rxjs/operators';
-import { ActivatedRoute, Router, NavigationEnd, NavigationStart } from '@angular/router';
+import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { Subject } from 'rxjs';
 
 @Component({

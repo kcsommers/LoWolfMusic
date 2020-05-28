@@ -1,8 +1,8 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { take } from 'rxjs/operators';
-import { albums } from 'src/fake-data';
-import { AlbumModel } from 'projects/core/src/lib/model/music/albums';
+import { albums } from '@lo/core';
+import { AlbumModel } from '@lo/core';
 
 @Component({
   selector: 'lo-album-page',

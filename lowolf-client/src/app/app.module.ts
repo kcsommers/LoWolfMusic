@@ -6,6 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppShellModule } from './app-shell/app-shell.module';
 import { HttpClientModule } from '@angular/common/http';
+import { WidgetsModule } from '@lo/widgets';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -16,9 +18,15 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     AppShellModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    // WidgetsModule.forRoot(environment)
   ],
-  providers: [],
+  providers: [
+    {
+      provide: 'ENVIRONMENT',
+      useValue: environment
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

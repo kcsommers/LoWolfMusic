@@ -1,7 +1,6 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { ShowModel } from '@lo/core';
+import { ShowModel, shows } from '@lo/core';
 import { BehaviorSubject } from 'rxjs';
-import { shows } from 'src/fake-data';
 
 @Component({
   selector: 'lo-shows',
