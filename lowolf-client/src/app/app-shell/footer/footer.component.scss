@@ -14,3 +14,21 @@
 h4.footer-title {
     color: darken($teal, 20%);
 }
+div.footer-social-wrap {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+
+    fa-icon {
+        transition: all 0.2s ease;
+        display: inline-block;
+        font-size: 1.5rem;
+        color: lighten($dark, 5%);
+        &:hover {
+            transform: scale(1.3);
+        }
+    }
+}

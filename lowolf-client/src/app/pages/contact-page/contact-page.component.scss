@@ -1,3 +1,4 @@
+@import '_variables';
 :host {
     display: block;
     padding: calc(70px + 4rem) 5rem 4rem 5rem;
@@ -7,16 +8,21 @@
     background-size: cover;
 }
 div.contact-page-wrap {
-    width: 50%;
+    width: 60%;
     position: relative;
     z-index: 700;
 }
 section.contact-info-section {
     margin: 1rem 0;
+    background-color: rgba($brown, 0.75);
+    padding: 1rem;
+    border: 10px solid $light;
     >p {
-        line-height: 2.2rem;
+        line-height: 2.75rem;
         display: flex;
         align-items: center;
+        color: $light;
+        font-size: 1.2rem;
         >fa-icon {
             font-size: 1.75rem;
             display: inline-block;

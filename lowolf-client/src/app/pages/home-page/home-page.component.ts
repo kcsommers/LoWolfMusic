@@ -19,6 +19,8 @@ export class HomePageComponent implements OnInit, AfterViewInit, OnDestroy {
 
   public albums = albums;
 
+  public socialNavVisible = false;
+
   private _unsubscribe = new Subject();
 
   private _onHomePage = false;
@@ -90,4 +92,17 @@ export class HomePageComponent implements OnInit, AfterViewInit, OnDestroy {
   public onUnload() {
     localStorage.removeItem(AlbumPopupComponent.POPUP_KEY);
   }
+
+  @HostListener('window:scroll')
+  public onScroll() {
+    console.log('scorll', window.scrollY)
+    if (window.scrollY > 200) {
+      if (!this.socialNavVisible) {
+        this.socialNavVisible = true;
+      }
+    } else {
+      this.socialNavVisible = false;
+    }
+  }
 }
+

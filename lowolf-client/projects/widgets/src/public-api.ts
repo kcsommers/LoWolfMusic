@@ -17,3 +17,5 @@ export { ShowsComponent } from './lib/shows/shows.component';
 export { ShowsComponentModule } from './lib/shows/shows.component.module';
 export { CarouselComponentModule } from './lib/carousel/carousel.component.module';
 export { CarouselComponent } from './lib/carousel/carousel.component';
+export { SocialNavComponent } from './lib/social-nav/social-nav.component';
+export { SocialNavModule } from './lib/social-nav/social-nav.module';
