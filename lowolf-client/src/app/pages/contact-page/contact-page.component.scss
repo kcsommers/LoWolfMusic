@@ -2,6 +2,9 @@
     display: block;
     padding: calc(70px + 4rem) 5rem 4rem 5rem;
     position: relative;
+    background-image: url(../../../assets/images/lo-paisley-2.png);
+    background-attachment: fixed;
+    background-size: cover;
 }
 div.contact-page-wrap {
     width: 50%;
@@ -24,16 +27,23 @@ section.contact-info-section {
 button.submit-btn {
     margin-top: 0.5rem;
 }
-span.contact-img-wrap {
-    display: inline-block;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 100;
-    min-width: 500px;
-    min-height: 800px;
-}
-img.contact-img {
-    height: 100%;
+// span.contact-img-wrap {
+//     display: inline-block;
+//     position: fixed;
+//     top: 0;
+//     bottom: 0;
+//     right: 0;
+//     z-index: 100;
+//     min-width: 500px;
+//     min-height: 800px;
+// }
+// img.contact-img {
+//     height: 100%;
+// }
+img.contact-paisley {
+    position: absolute;
+    width: 600px;
+    top: 70px;
+    left: 0;
+    opacity: 0.2;
 }
