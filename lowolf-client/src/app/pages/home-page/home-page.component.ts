@@ -1,9 +1,10 @@
 import { Component, OnInit, AfterViewInit, ViewChild, ViewContainerRef, ComponentFactoryResolver, HostListener, OnDestroy, ElementRef } from '@angular/core';
-import { reviews, albums, videoUrls } from '@lo/core';
+import { reviews, albums, videoUrls, distanceToTop } from '@lo/core';
 import { AlbumPopupComponent } from '../../components/album-popup/album-popup.component';
 import { take, takeUntil, filter } from 'rxjs/operators';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { Subject } from 'rxjs';
+
 
 @Component({
   selector: 'lo-home-page',
@@ -19,6 +20,8 @@ export class HomePageComponent implements OnInit, AfterViewInit, OnDestroy {
   public albums = albums;
 
   private _unsubscribe = new Subject();
+
+  private _onHomePage = false;
 
   @ViewChild('PopupContainer', { static: true, read: ViewContainerRef })
   private _popupContainer: ViewContainerRef;
@@ -38,29 +41,25 @@ export class HomePageComponent implements OnInit, AfterViewInit, OnDestroy {
         takeUntil(this._unsubscribe),
         filter(ev => ev instanceof NavigationEnd)
       )
-      .subscribe(() => {
+      .subscribe((e) => {
         this._route.fragment
           .subscribe(hash => {
             if (!hash) {
-              window.scrollTo(0, 0);
+              window.scrollTo({ top: 0, left: 0, behavior: this._onHomePage ? 'smooth' : 'auto' });
+              return;
             }
-            if (hash === 'videos') {
-              this._videosTag.nativeElement.click();
-            }
-            if (hash === 'music') {
-              this._musicTag.nativeElement.click();
-            }
-            if (hash === 'shows') {
-              this._showsTag.nativeElement.click();
+            const scrollMark = document.querySelector(`#${hash}`);
+            if (scrollMark) {
+              const toTop = distanceToTop(scrollMark);
+              window.scrollBy({ top: toTop, left: 0, behavior: this._onHomePage ? 'smooth' : 'auto' })
             }
           })
       });
   }
 
   ngOnInit() {
-    setTimeout(() => {
-      document.querySelector('html').classList.add('smooth-scroll')
-    });
+
+    this._onHomePage = true;
 
     if (!localStorage.getItem(AlbumPopupComponent.POPUP_KEY)) {
       localStorage.setItem(AlbumPopupComponent.POPUP_KEY, 'true');
@@ -77,7 +76,6 @@ export class HomePageComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    document.querySelector('html').classList.remove('smooth-scroll')
     this._unsubscribe.next(false);
     this._unsubscribe.complete();
   }
@@ -92,5 +90,4 @@ export class HomePageComponent implements OnInit, AfterViewInit, OnDestroy {
   public onUnload() {
     localStorage.removeItem(AlbumPopupComponent.POPUP_KEY);
   }
-
 }
