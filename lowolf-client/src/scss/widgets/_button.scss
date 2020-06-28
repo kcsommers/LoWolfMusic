@@ -61,7 +61,7 @@ button:hover,
 button:focus,
 a.ada-btn:hover,
 a.ada-btn:focus {
-    background-color: $pink;
+    background-color: lighten($teal, 5%);
     box-shadow: $box-shadow;
 }
 

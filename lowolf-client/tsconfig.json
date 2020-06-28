@@ -20,10 +20,10 @@
     ],
     "paths": {
       "@lo/components": [
-        "src/components/public-api.ts"
+        "src/app/components/public-api.ts"
       ],
       "@lo/core": [
-        "src/core/public-api.ts"
+        "src/app/core/public-api.ts"
       ]
     }
   },
