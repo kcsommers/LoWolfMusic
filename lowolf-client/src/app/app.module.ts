@@ -6,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppShellModule } from './app-shell/app-shell.module';
 import { HttpClientModule } from '@angular/common/http';
-import { WidgetsModule } from '@lo/widgets';
 import { environment } from '../environments/environment';
 
 @NgModule({
@@ -18,8 +17,7 @@ import { environment } from '../environments/environment';
     BrowserModule,
     AppRoutingModule,
     AppShellModule,
-    FontAwesomeModule,
-    // WidgetsModule.forRoot(environment)
+    FontAwesomeModule
   ],
   providers: [
     {

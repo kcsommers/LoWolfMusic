@@ -6,7 +6,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AppShellRootComponent } from './app-shell-root.component';
 import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { InstagramFeedComponentModule } from '@lo/widgets';
+import { InstagramFeedComponentModule } from '@lo/components';
 
 @NgModule({
   declarations: [
