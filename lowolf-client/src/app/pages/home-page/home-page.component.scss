@@ -23,6 +23,7 @@ div.landing-cta-wrap {
     bottom: 0;
     left: 0;
     width: 100%;
+    max-height: 100vh;
     z-index: 800;
     transition: all 0.3s ease;
     padding: 0 2rem;
@@ -113,7 +114,6 @@ a.hidden-tag {
     img.landing-bg-img {
         height: 100vh;
         width: auto;
-        transform: translate(-10%, 0);
     }
     div.landing-cta-inner {
         margin-right: 0;
