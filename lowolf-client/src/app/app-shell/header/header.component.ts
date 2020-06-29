@@ -11,6 +11,8 @@ export class HeaderComponent {
 
   public headerSolid$ = new BehaviorSubject(false);
 
+  public mobileNavOpen = false;
+
   @HostListener('window:scroll')
   public onScroll() {
     if (window.scrollY > 50 && !this.headerSolid$.value) {

@@ -48,3 +48,9 @@ p.review-content {
 p.review-author {
     text-align: right;
 }
+@media only screen and (max-width: 767px) {
+    div.bio-wrap {
+        width: auto;
+        text-align: center;
+    }
+}

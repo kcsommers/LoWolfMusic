@@ -36,7 +36,7 @@ a.lo-btn-sm {
 button.lo-btn-outline,
 a.lo-btn-outline {
     border: 2px solid $dark;
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(#fff,0.4);
     color: $dark;
     &:hover,
     &:focus {

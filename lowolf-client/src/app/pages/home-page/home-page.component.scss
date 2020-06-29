@@ -3,22 +3,34 @@
     display: block;
     background-color: $white;
 }
-.landing-section {
-    overflow: hidden;
+section.landing-section {
+    background-color: $light;
+}
+div.landing-section-inner {
     position: relative;
+}
+img.landing-bg-img {
+    transition: all 0.3s ease;
+    width: 100%;
+    max-height: 767px;
+}
+div.landing-cta-wrap {
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    background-image: url(../../../assets/images/lo_paisley.png);
-    background-size: cover;
-    background-attachment: fixed;
-}
-.landing-cta {
-    display: inline-block;
-    text-align: center;
-    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     z-index: 800;
-    margin-right: 15%;
+    transition: all 0.3s ease;
+    padding: 0 2rem;
+}
+div.landing-cta-inner {
+    text-align: center;
+    transition: all 0.3s ease;
+    margin-right: 12%;
 }
 h3.landing-album-name {
     margin: -0.5rem 0 0.5rem 0;
@@ -67,7 +79,6 @@ div.album-title {
 
 section.shows-section {
     padding: 3rem 0;
-    // background-image: url(../../../assets/images/lo-busk.jpg);
     background-attachment: fixed;
     width: 100%;
     background-size: cover;
@@ -78,7 +89,6 @@ section.shows-section {
         z-index: 800;
     }
 }
-
 section.signup-section {
     padding: 4rem 0 6rem 0;
     position: relative;
@@ -94,16 +104,44 @@ img.signup-bg {
     width: 100%;
     z-index: 200;
     opacity: 0.7;
+    max-height: 767px;
 }
 a.hidden-tag {
     display: none;
 }
-lo-social-nav {
-    transition: all 0.3s ease;
-    opacity: 0;
-    transform: translate(-100%, -50%);
-    &.visible {
-        opacity: 1;
-        transform: translate(0, -50%);
+@media only screen and (max-width: 1024px) {
+    img.landing-bg-img {
+        height: 100vh;
+        width: auto;
+        transform: translate(-10%, 0);
+    }
+    div.landing-cta-inner {
+        margin-right: 0;
+        background-color: rgba(#fff, 0.85);
+        padding: 2rem;
+        border-radius: 3px;
+    }
+    div.landing-cta-wrap {
+        justify-content: center;
     }
 }
+@media only screen and (min-width: 767px) {
+    img.landing-bg-img,
+    img.signup-bg {
+        width: auto;
+    }
+}
+@media only screen and (max-width: 767px) {
+    h1.landing-title {
+        font-size: 5.5rem;
+    }
+    h3.landing-album-name {
+        font-size: 1.4rem
+    }
+    img.landing-bg-img {
+        height: 100vh;
+        width: auto;
+        transform: translate(-20%, 0);
+    }
+}
+

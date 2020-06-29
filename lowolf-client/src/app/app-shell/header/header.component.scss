@@ -28,6 +28,8 @@ a.header-logo-link {
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.6s ease;
+    font-family: $font-secondary;
+    font-size: 2.5rem;
 }
 nav.header-nav,
 a.header-nav-link,
@@ -38,34 +40,69 @@ a.header-nav-link,
 a.header-logo-link {
     align-items: center;
     padding: 0 1rem;
+    transition: all 0.2s ease;
     >fa-icon {
+        transition: all 0.2s ease;
         font-size: 1.3rem;
         color: $pink;
     }
 }
 a.header-nav-link {
     margin: 0 0.25rem;
+    &:hover {
+        color: lighten($dark, 15%);
+        >fa-icon {
+            color: lighten($pink, 10%);
+        }
+    }
 }
-a.header-logo-link {
-    font-size: 2rem;
+a.header-social-link {
+    padding: 0 0.5rem;
 }
 span.mobile-nav-trigger {
     display: none;
     font-size: 1.5rem;
+    margin-right: 2rem;
+    cursor: pointer;
+    >fa-icon {
+        transition: color 0.2s ease;
+    }
+    &:hover>fa-icon {
+        color: lighten($dark, 15%);
+    }
 }
-@media only screen and (max-width: 1024px) {
+div.mobile-nav-clickout {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba($dark, .5);
+    z-index: 899;
+    &.open {
+        display: block;
+    }
 }
 @media only screen and (max-width: 767px) {
+}
+@media only screen and (max-width: 1024px) {
     nav.header-nav {
         flex-direction: column;
         position: fixed;
+        transform: translateX(102%);
+        transition: transform 0.3s linear;
         top: 0;
         bottom: 0;
         right: 0;
         background-color: $beige;
-        width: 250px;
+        width: 300px;
         padding: 2rem 0rem;
         box-shadow: $box-shadow-left;
+        z-index: 2001;
+        &.open {
+            transform: translateX(0);
+        }
     }
     span.mobile-nav-trigger {
         display: inline-block;
@@ -74,13 +111,12 @@ span.mobile-nav-trigger {
         font-size: 1.2rem;
         padding: 1rem;
         &:hover {
-            background-color: darken($beige, 5%);
+            background-color: darken($beige, 2%);
         }
     }
     a.header-social-link {
         display: none;
     }
 }
-@media only screen and (max-width: 560px) {
-}
+
 

@@ -9,6 +9,7 @@
     position: relative;
     overflow: hidden;
     border: 20px solid $beige;
+    transition: all 0.2s ease;
 }
 .slider-arrow {
     position: absolute;
@@ -39,3 +40,11 @@
     }
 }
 
+@media only screen and (max-width: 560px) {
+    .video-wrap {
+        border: 10px solid $beige;
+    }
+    .slider-arrow {
+        font-size: 2rem;
+    }
+}

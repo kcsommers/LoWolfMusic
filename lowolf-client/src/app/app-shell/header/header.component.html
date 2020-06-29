@@ -2,16 +2,28 @@
     class="header"
     [class.header-solid]="headerSolid$ | async"
 >
+    <div
+        class="mobile-nav-clickout"
+        [class.open]="mobileNavOpen"
+        [class.fade-in]="mobileNavOpen"
+        (click)="mobileNavOpen = false"
+    ></div>
     <a
         class="header-logo-link"
         [routerLink]="'/'"
     >
         Lo Wolf
     </a>
-    <span class="mobile-nav-trigger">
+    <span
+        class="mobile-nav-trigger"
+        (click)="mobileNavOpen = true"
+    >
         <fa-icon [icon]="'bars'"></fa-icon>
     </span>
-    <nav class="header-nav">
+    <nav
+        class="header-nav"
+        [class.open]="mobileNavOpen"
+    >
         <a
             class="header-nav-link"
             [routerLink]="'/'"
