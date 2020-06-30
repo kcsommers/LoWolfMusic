@@ -1,27 +1,32 @@
 @import '_variables';
 :host {
     display: block;
-    padding: calc(70px + 4rem) 5rem 4rem 5rem;
+    padding: calc(70px + 4rem) 2rem 4rem 2rem;
     position: relative;
-    background-image: url(../../../assets/images/lo-paisley-2.png);
+    background-image: url(../../../assets/images/lo-paisley-4.png);
     background-attachment: fixed;
     background-size: cover;
+    background-position: right;
 }
 div.contact-page-wrap {
     width: 60%;
     position: relative;
     z-index: 700;
+    min-width: 400px;
+    max-width: 812px;
 }
 section.contact-info-section {
     margin: 1rem 0;
-    background-color: rgba($brown, 0.75);
+    background-color: $beige;
+    border-radius: 3px;
     padding: 1rem;
-    border: 10px solid $light;
+    box-shadow: $box-shadow;
+    border: 4px solid $light;
     >p {
         line-height: 2.75rem;
         display: flex;
         align-items: center;
-        color: $light;
+        // color: $dark;
         font-size: 1.2rem;
         >fa-icon {
             font-size: 1.75rem;
@@ -33,10 +38,15 @@ section.contact-info-section {
 button.submit-btn {
     margin-top: 0.5rem;
 }
-img.contact-paisley {
-    position: absolute;
-    width: 600px;
-    top: 70px;
-    left: 0;
-    opacity: 0.2;
+@media only screen and (max-width: 812px) {
+    div.contact-page-wrap {
+        width: 100%;
+        min-width: 0px;
+    }
+}
+@media only screen and (min-width: 1250px) {
+    :host {
+        display: block;
+        padding: calc(70px + 4rem) 5rem 4rem 5rem;
+    }
 }

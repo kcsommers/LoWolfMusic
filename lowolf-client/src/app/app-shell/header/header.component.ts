@@ -22,7 +22,6 @@ export class HeaderComponent {
       this.headerSolid$.next(false);
     }
   }
-
 }
 
 @Component({

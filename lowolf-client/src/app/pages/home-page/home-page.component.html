@@ -32,7 +32,7 @@
                 class="more-videos-btn"
                 [routerLink]="'videos'"
             >
-                More Videos
+                All Videos
             </button>
         </div>
     </div>
@@ -73,7 +73,7 @@
         class="scroll-mark"
     ></div>
     <div class="max-width-container">
-        <h2 class="section-title">Shows</h2>
+        <h2 class="section-title">Events</h2>
         <div class="shows-calendar-wrap width-85">
             <lo-shows></lo-shows>
         </div>
@@ -81,15 +81,15 @@
 </section>
 <section class="signup-section">
     <div class="max-width-container">
+        <img
+            class="signup-bg"
+            src="assets/images/paisley2_yellow.png"
+            alt="Lo Paisley"
+        >
         <div class="signup-form-wrap width-85">
             <lo-signup-form></lo-signup-form>
         </div>
     </div>
-    <img
-        class="signup-bg"
-        src="assets/images/paisley2_yellow.png"
-        alt="Lo Paisley"
-    >
 </section>
 <lo-social-nav [class.visible]="socialNavVisible"></lo-social-nav>
 <ng-container #PopupContainer></ng-container>

@@ -1,14 +1,14 @@
 <div class="max-width-container">
     <ng-container *ngIf="album">
         <div class="album-wrap lo-card">
-            <span class="album-cover-wrap">
+            <div class="album-cover-wrap">
                 <img
                     class="album-cover-img"
                     src="{{album.coverUrl}}"
                     alt="{{album.title}}"
                 >
-            </span>
-            <span class="album-info">
+            </div>
+            <div class="album-info">
                 <span class="album-title">
                     {{album.title}}
                     <em>{{album.year}}</em>
@@ -42,8 +42,9 @@
                     </span>
                 </div>
                 <button class="lo-btn-sm">Buy/Listen</button>
-            </span>
+            </div>
         </div>
     </ng-container>
+
 
 </div>

@@ -21,6 +21,7 @@
 .album-wrap {
     width: 100%;
     max-width: 700px;
+    max-height: 75vh;
     display: flex;
     padding: 1rem;
     align-items: center;
@@ -28,9 +29,11 @@
     background-color: rgba($light, 0.75);
     background-image: url(../../../assets/images/singe-cover-zoom.jpg);
     background-size: cover;
+    box-shadow: $box-shadow;
 }
 img.album-cover {
-    width: 50%;
+    max-width: 50%;
+    max-height: 100%;
 }
 span.album-details {
     flex: 1;
@@ -51,5 +54,8 @@ h4.continue {
 @media only screen and (max-width: 560px) {
     span.album-details {
         padding: 1rem;
+    }
+    p.tagline {
+        font-size: 1rem;
     }
 }

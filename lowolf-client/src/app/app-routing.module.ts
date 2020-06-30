@@ -27,6 +27,10 @@ const routes: Routes = [
         loadChildren: () => import('./pages/videos-page/videos-page.module').then(m => m.VideosPageModule)
       },
       {
+        path: 'photos',
+        loadChildren: () => import('./pages/photos-page/photos-page.module').then(m => m.PhotosPageModule)
+      },
+      {
         path: 'about',
         loadChildren: () => import('./pages/about-page/about-page.module').then(m => m.AboutPageModule)
       },

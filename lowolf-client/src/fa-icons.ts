@@ -3,7 +3,8 @@ import {
   faAngleRight,
   faSpinner,
   faQuoteLeft,
-  faBars
+  faBars,
+  faAngleDown
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faFacebook,
@@ -35,7 +36,9 @@ export class FaIcons {
       faBandcamp,
       faItunes,
       faQuoteLeft,
-      faBars
+      faBars,
+      faAngleDown,
+      faAngleLeft
     );
   }
 }

@@ -2,13 +2,19 @@
 
 :host {
     display: block;
-    padding: calc(5rem + 70px) 0 5rem 0;
+    padding: calc(5rem + 70px) 2rem 5rem 2rem;
     background-image: url(../../../assets/images/tusk1-2.jpg);
     background-size: cover;
     background-attachment: fixed;
     min-height: 100vh;
 }
-.album-wrap {
+
+div.album-cover-wrap,
+div.album-info {
+    flex: 1;
+}
+
+div.album-wrap {
     display: flex;
     &:not(:last-child) {
         margin-bottom: 4rem;
@@ -21,7 +27,7 @@
     margin-right: 3rem;
 }
 img.album-cover-img {
-    width: 300px;
+    width: 100%;
 }
 span.album-title {
     display: inline-block;
@@ -32,9 +38,23 @@ span.track-title {
     line-height: 2rem;
 }
 a.album-link {
-    color: $pink;
     margin-right: 0.5rem;
     fa-icon {
+        color: $teal;
         font-size: 2rem;
+        transition: color 0.2s ease;
+    }
+    &:hover>fa-icon {
+        color: darken($teal, 10%);
+    }
+}
+@media only screen and (max-width: 560px) {
+    div.album-wrap {
+        flex-direction: column;
+    }
+    .album-cover-wrap {
+        margin-right: 0;
+        margin-top: 2rem;
+        order: 2;
     }
 }

@@ -12,7 +12,7 @@ div.landing-section-inner {
 img.landing-bg-img {
     transition: all 0.3s ease;
     width: 100%;
-    max-height: 767px;
+    max-height: 812px;
 }
 div.landing-cta-wrap {
     position: absolute;
@@ -31,7 +31,7 @@ div.landing-cta-wrap {
 div.landing-cta-inner {
     text-align: center;
     transition: all 0.3s ease;
-    margin-right: 12%;
+    margin-right: 10%;
 }
 h3.landing-album-name {
     margin: -0.5rem 0 0.5rem 0;
@@ -92,46 +92,38 @@ section.shows-section {
 }
 section.signup-section {
     padding: 4rem 0 6rem 0;
-    position: relative;
     >div.max-width-container {
         position: relative;
-        z-index: 800;
     }
+}
+div.signup-form-wrap {
+    position: relative;
+    z-index: 201;
 }
 img.signup-bg {
     position: absolute;
-    top: -30%;
-    left: -15%;
-    width: 100%;
+    top: -13rem;
+    left: -14rem;
     z-index: 200;
     opacity: 0.7;
-    max-height: 767px;
+    max-height: 812px;
 }
 a.hidden-tag {
     display: none;
 }
 @media only screen and (max-width: 1024px) {
-    img.landing-bg-img {
-        height: 100vh;
-        width: auto;
-    }
-    div.landing-cta-inner {
-        margin-right: 0;
-        background-color: rgba(#fff, 0.85);
-        padding: 2rem;
-        border-radius: 3px;
-    }
     div.landing-cta-wrap {
         justify-content: center;
     }
-}
-@media only screen and (min-width: 767px) {
-    img.landing-bg-img,
-    img.signup-bg {
-        width: auto;
+    div.landing-cta-inner {
+        background-color: rgba(#fff, 0.85);
+        padding: 2rem;
+        border-radius: 3px;
+        margin-right: 0;
+        box-shadow: $box-shadow;
     }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 812px) {
     h1.landing-title {
         font-size: 5.5rem;
     }
@@ -144,4 +136,9 @@ a.hidden-tag {
         transform: translate(-20%, 0);
     }
 }
-
+@media only screen and (min-width: 1250px) {
+    img.landing-bg-img,
+    img.signup-bg {
+        width: auto;
+    }
+}

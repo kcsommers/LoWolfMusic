@@ -24,18 +24,39 @@
         class="header-nav"
         [class.open]="mobileNavOpen"
     >
-        <a
-            class="header-nav-link"
-            [routerLink]="'/'"
-            [fragment]="'videos'"
-            [state]="{smooth: false}"
-        >
-            Videos
-        </a>
+        <span class="header-nav-parent">
+            <fa-icon
+                class="angle-down"
+                [icon]="'angle-down'"
+            ></fa-icon>
+            <span class="angle-left-wrap">
+                <fa-icon [icon]="'angle-left'"></fa-icon>
+            </span>
+            Media
+            <div class="header-sub-menu">
+                <a
+                    class="header-nav-link"
+                    [routerLink]="'/'"
+                    [fragment]="'videos'"
+                    [state]="{smooth: false}"
+                    (click)="mobileNavOpen = false"
+                >
+                    Videos
+                </a>
+                <a
+                    class="header-nav-link"
+                    [routerLink]="'/photos'"
+                    (click)="mobileNavOpen = false"
+                >
+                    Photos
+                </a>
+            </div>
+        </span>
         <a
             class="header-nav-link"
             [routerLink]="'/'"
             [fragment]="'music'"
+            (click)="mobileNavOpen = false"
         >
             Music
         </a>
@@ -43,36 +64,42 @@
             class="header-nav-link"
             [routerLink]="'/'"
             [fragment]="'shows'"
+            (click)="mobileNavOpen = false"
         >
-            Shows
+            Events
         </a>
         <a
             class="header-nav-link"
             [routerLink]="'/about'"
+            (click)="mobileNavOpen = false"
         >
             About
         </a>
         <a
             class="header-nav-link"
             [routerLink]="'/contact'"
+            (click)="mobileNavOpen = false"
         >
             Contact
         </a>
         <a
             class="header-nav-link header-social-link"
             [routerLink]="'/'"
+            (click)="mobileNavOpen = false"
         >
             <fa-icon [icon]="['fab', 'facebook-f']"></fa-icon>
         </a>
         <a
             class="header-nav-link header-social-link"
             [routerLink]="'/'"
+            (click)="mobileNavOpen = false"
         >
             <fa-icon [icon]="['fab', 'instagram']"></fa-icon>
         </a>
         <a
             class="header-nav-link header-social-link"
             [routerLink]="'/'"
+            (click)="mobileNavOpen = false"
         >
             <fa-icon [icon]="['fab', 'twitter']"></fa-icon>
         </a>

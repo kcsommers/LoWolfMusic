@@ -5,16 +5,18 @@
     >
         <lo-spinner [color]="'dark'"></lo-spinner>
     </div>
-    <a
-        *ngFor="let img of (images$ | async)"
-        class="instagram-img-wrap"
-        href="{{img.permalink}}"
-    >
-        <img
-            class="instagram-img"
-            src="{{img.media_url}}"
-            alt="{{img.caption}}"
-            title="{{img.caption}}"
+    <ng-container *ngFor="let img of (images$ | async); let i = index">
+        <a
+            *ngIf="i <= indexLimit"
+            class="instagram-img-wrap"
+            href="{{img.permalink}}"
         >
-    </a>
+            <img
+                class="instagram-img"
+                src="{{img.media_url}}"
+                alt="{{img.caption}}"
+                title="{{img.caption}}"
+            >
+        </a>
+    </ng-container>
 </ng-container>

@@ -31,8 +31,51 @@ a.header-logo-link {
     font-family: $font-secondary;
     font-size: 2.5rem;
 }
+
+span.header-nav-parent {
+    position: relative;
+    cursor: pointer;
+    align-items: center;
+    padding: 0 1rem;
+    transition: all 0.2s ease;
+    >fa-icon {
+        margin-right: 0.25rem;
+    }
+    &:hover {
+        color: lighten($dark, 15%);
+        >div.header-sub-menu {
+            display: block;
+        }
+    }
+}
+div.header-sub-menu {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    width: 150px;
+    background-color: $beige;
+    padding: 0.5rem 0;
+    border-radius: 3px;
+    box-shadow: $box-shadow;
+    >a.header-nav-link {
+        padding: 1rem;
+        &:hover {
+            background-color: darken($beige, 2%);
+        }
+    }
+}
+span.angle-left-wrap {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+}
+
 nav.header-nav,
 a.header-nav-link,
+span.header-nav-parent,
 a.header-logo-link {
     display: flex;
 }
@@ -84,13 +127,11 @@ div.mobile-nav-clickout {
         display: block;
     }
 }
-@media only screen and (max-width: 767px) {
-}
 @media only screen and (max-width: 1024px) {
     nav.header-nav {
         flex-direction: column;
         position: fixed;
-        transform: translateX(102%);
+        transform: translateX(105%);
         transition: transform 0.3s linear;
         top: 0;
         bottom: 0;
@@ -107,9 +148,17 @@ div.mobile-nav-clickout {
     span.mobile-nav-trigger {
         display: inline-block;
     }
+    span.header-nav-parent {
+        &:hover>span.angle-left-wrap {
+            width: 35px;
+            opacity: 1;
+        }
+    }
+    span.header-nav-parent,
     a.header-nav-link {
         font-size: 1.2rem;
         padding: 1rem;
+        margin: 0;
         &:hover {
             background-color: darken($beige, 2%);
         }
@@ -117,6 +166,25 @@ div.mobile-nav-clickout {
     a.header-social-link {
         display: none;
     }
+    span.angle-left-wrap {
+        display: inline-flex;
+        width: 0;
+        overflow: hidden;
+        transition: all 0.2s ease;
+        opacity: 0;
+    }
+    fa-icon.angle-down {
+        display: none;
+    }
+    div.header-sub-menu {
+        top: 0;
+        bottom: auto;
+        transform: translateX(-100%);
+    }
 }
-
+@media only screen and (max-width: 812px) {
+    nav.header-nav {
+        width: 200px;
+    }
+}
 
