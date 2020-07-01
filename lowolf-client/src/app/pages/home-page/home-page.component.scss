@@ -54,18 +54,15 @@ div.video-slider-wrap {
 
 section.music-section {
     padding: 3rem 0;
-    background-image: url(../../../assets/images/laura-laura.jpg);
+    background-image: url(../../../assets/images/lo-white.jpg);
     background-attachment: fixed;
     width: 100%;
     background-size: cover;
     position: relative;
 }
-div.albums-grid-wrap {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    place-items: start;
-    column-gap: 4rem;
-    row-gap: 4rem;
+div.albums-wrap {
+    display: flex;
+    flex-direction: column;
 }
 img.album-cover-img {
     width: 100%;

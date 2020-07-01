@@ -78,29 +78,5 @@ export const albums: AlbumModel[] = [
       'Dog 1',
       'Gone are the Days'
     ]
-  },
-  {
-    title: 'Singe',
-    year: '2020',
-    coverUrl: 'assets/images/singe-cover.jpeg',
-    id: '3',
-    tracklist: [
-      'Kill No More',
-      'Plug in the Iron',
-      'Dog 1',
-      'Gone are the Days'
-    ]
-  },
-  {
-    title: 'Country Pop Hit EP',
-    year: '2018',
-    coverUrl: 'assets/images/country-pop-hit-cover.png',
-    id: '4',
-    tracklist: [
-      'Kill No More',
-      'Plug in the Iron',
-      'Dog 1',
-      'Gone are the Days'
-    ]
-  },
-]
+  }
+];
