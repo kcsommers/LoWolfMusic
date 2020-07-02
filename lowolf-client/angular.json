@@ -32,7 +32,8 @@
             "aot": false,
             "assets": [
               "src/guitar.ico",
-              "src/assets"
+              "src/assets",
+              "src/_redirects"
             ],
             "styles": [
               "src/scss/main.scss"
