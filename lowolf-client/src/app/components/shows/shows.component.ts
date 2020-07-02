@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, Output, EventEmitter } from '@angular/core';
 import { ShowModel, shows } from '@lo/core';
 import { BehaviorSubject } from 'rxjs';
 
@@ -15,7 +15,8 @@ export class ShowsComponent implements OnInit {
 
   public loading$ = new BehaviorSubject(true);
 
-  public modalOpen = false;
+  @Output()
+  public infoClick = new EventEmitter<boolean>();
 
   constructor() { }
 
@@ -23,11 +24,7 @@ export class ShowsComponent implements OnInit {
     setTimeout(() => {
       this.shows$.next(shows);
       this.loading$.next(false);
-    }, 2000)
-  }
-
-  public infoModal(): void {
-
+    }, 2000);
   }
 
 }

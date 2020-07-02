@@ -94,7 +94,7 @@ section.shows-section {
     }
 }
 section.signup-section {
-    padding: 4rem 0 6rem 0;
+    padding: 4rem 2rem 6rem 2rem;
     >div.max-width-container {
         position: relative;
     }
@@ -113,6 +113,23 @@ img.signup-bg {
 }
 a.hidden-tag {
     display: none;
+}
+div.info-modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba($dark, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 902;
+    padding: 4rem;
+}
+div.info-modal-content {
+    position: relative;
+    z-index: 903;
 }
 @media only screen and (max-width: 1024px) {
     div.landing-cta-wrap {
@@ -166,6 +183,9 @@ a.hidden-tag {
         >div.max-width-container {
             padding: 0rem;
         }
+    }
+    section.signup-section {
+        padding: 4rem 0rem 6rem 0rem;
     }
     div.albums-wrap {
         padding: 0rem;

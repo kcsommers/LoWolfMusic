@@ -7,6 +7,9 @@ html,
 body {
     overflow-x: hidden;
 }
+html.no-scroll {
+    overflow: hidden;
+}
 
 * {
     box-sizing: border-box;

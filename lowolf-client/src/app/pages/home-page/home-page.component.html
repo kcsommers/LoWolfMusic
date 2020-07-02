@@ -88,7 +88,7 @@
     <div class="max-width-container">
         <h2 class="section-title">Events</h2>
         <div class="shows-calendar-wrap width-85">
-            <lo-shows></lo-shows>
+            <lo-shows (infoClick)="modalOpen=true"></lo-shows>
         </div>
     </div>
 </section>
@@ -106,3 +106,24 @@
 </section>
 <lo-social-nav [class.visible]="socialNavVisible"></lo-social-nav>
 <ng-container #PopupContainer></ng-container>
+<div
+    *ngIf="modalOpen"
+    class="info-modal fade-in"
+    (click)="modalOpen = false"
+>
+    <div
+        class="info-modal-content lo-card"
+        (click)="$event.stopPropagation()"
+    >
+        <p>
+            Throughout the COVID-19 pandemic, Lo will be live streaming a full set on the 20th of every month for viewers on a donation basis. To receive a link on the day of the show, please make a donation and add your name to the list using the signup form below.
+        </p>
+        <a
+            class="lo-btn"
+            target="_blank"
+            href="https://www.paypal.me/lowolfmusic"
+        >
+            Donate to Lo Wolf
+        </a>
+    </div>
+</div>

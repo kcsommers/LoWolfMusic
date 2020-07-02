@@ -25,6 +25,8 @@ export class HomePageComponent implements OnInit, AfterViewInit, OnDestroy {
 
   private _onHomePage = false;
 
+  public modalOpen = false;
+
   @ViewChild('PopupContainer', { static: true, read: ViewContainerRef })
   private _popupContainer: ViewContainerRef;
 
@@ -44,10 +46,10 @@ export class HomePageComponent implements OnInit, AfterViewInit, OnDestroy {
             const scrollMark = document.querySelector(`#${hash}`);
             if (scrollMark) {
               const toTop = distanceToTop(scrollMark);
-              window.scrollBy({ top: toTop, left: 0, behavior: this._onHomePage ? 'smooth' : 'auto' })
+              window.scrollBy({ top: toTop, left: 0, behavior: this._onHomePage ? 'smooth' : 'auto' });
             }
 
-          })
+          });
       });
   }
 
@@ -58,6 +60,7 @@ export class HomePageComponent implements OnInit, AfterViewInit, OnDestroy {
     if (!localStorage.getItem(AlbumPopupComponent.POPUP_KEY)) {
       localStorage.setItem(AlbumPopupComponent.POPUP_KEY, 'true');
       const albumPopupFactory = this._cfr.resolveComponentFactory(AlbumPopupComponent);
+      document.querySelector('html').classList.add('no-scroll');
       const albumPopupRef = this._popupContainer.createComponent(albumPopupFactory);
       albumPopupRef.instance.isOpenChange
         .pipe(take(1))
@@ -75,6 +78,7 @@ export class HomePageComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   public closeAlbumPopup(): void {
+    document.querySelector('html').classList.remove('no-scroll');
     setTimeout(() => {
       this._popupContainer.clear();
     }, 500);

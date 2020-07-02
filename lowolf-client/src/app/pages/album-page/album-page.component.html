@@ -11,9 +11,9 @@
             <div class="album-info">
                 <span class="album-title">
                     {{album.title}}
-                    <em>{{album.year}}</em>
+                    <em>({{album.year}})</em>
                 </span>
-                <div class="album-links-container">
+                <!-- <div class="album-links-container">
                     <a
                         class="album-link"
                         href="#"
@@ -32,7 +32,7 @@
                     >
                         <fa-icon [icon]="['fab', 'itunes']"></fa-icon>
                     </a>
-                </div>
+                </div> -->
                 <div class="tracklist">
                     <span
                         *ngFor="let track of album.tracklist"

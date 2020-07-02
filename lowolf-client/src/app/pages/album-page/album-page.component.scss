@@ -35,6 +35,10 @@ img.album-cover-img {
 span.album-title {
     display: inline-block;
     font-size: 1.5rem;
+    border-bottom: 4px solid $teal;
+    padding-right: 2rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 span.track-title {
     display: block;
