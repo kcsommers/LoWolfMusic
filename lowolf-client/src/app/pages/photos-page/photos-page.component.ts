@@ -28,6 +28,7 @@ export class PhotosPageComponent implements OnInit {
   constructor(private _http: HttpClient, @Inject('ENVIRONMENT') private environment: any) { }
 
   ngOnInit() {
+    window.scrollTo({ top: 0 });
     this.getPhotos();
   }
 

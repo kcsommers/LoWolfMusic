@@ -20,6 +20,8 @@ router.post('/', (req: Request, res: Response) => {
     text: message
   };
   mg.messages().send(emailData, (err: Mailgun.Error, body: Mailgun.messages.SendResponse) => {
+    console.log('ERR:::: ', err);
+    console.log('RES:::: ', body)
     if (err) {
       return res.status(500).json({ error: err });
     }

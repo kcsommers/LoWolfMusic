@@ -22,6 +22,8 @@ router.post('/', (req, res) => {
         text: message
     };
     mg.messages().send(emailData, (err, body) => {
+        console.log('ERR:::: ', err);
+        console.log('RES:::: ', body);
         if (err) {
             return res.status(500).json({ error: err });
         }
