@@ -18,7 +18,7 @@ import { BehaviorSubject } from 'rxjs';
 export class PhotoComponent implements OnInit {
 
   @Input()
-  private src: string;
+  public src: string;
 
   public loaded$ = new BehaviorSubject(false);
 

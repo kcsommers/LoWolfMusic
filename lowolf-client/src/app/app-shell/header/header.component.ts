@@ -16,7 +16,7 @@ export class HeaderComponent {
   @HostListener('window:scroll')
   public onScroll() {
     if (window.scrollY > 50 && !this.headerSolid$.value) {
-      this.headerSolid$.next(true)
+      this.headerSolid$.next(true);
     }
     if (window.scrollY <= 50 && this.headerSolid$.value) {
       this.headerSolid$.next(false);
@@ -31,6 +31,7 @@ export class HeaderComponent {
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderSolidComponent {
+  public mobileNavOpen = false;
   public headerSolid$ = new BehaviorSubject(true);
 }
 
