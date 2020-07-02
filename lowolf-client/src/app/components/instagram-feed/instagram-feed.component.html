@@ -8,15 +8,12 @@
     <ng-container *ngFor="let img of (images$ | async); let i = index">
         <a
             *ngIf="i <= indexLimit"
-            class="instagram-img-wrap"
+            class="instagram-img-tag"
+            [ngStyle]="{backgroundImage: 'url(' + img.media_url + ')'}"
+            title="{{img.caption}}"
             href="{{img.permalink}}"
         >
-            <img
-                class="instagram-img"
-                src="{{img.media_url}}"
-                alt="{{img.caption}}"
-                title="{{img.caption}}"
-            >
+            <span class="instagram-img-inner"></span>
         </a>
     </ng-container>
 </ng-container>

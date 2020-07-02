@@ -15,6 +15,8 @@ export class ShowsComponent implements OnInit {
 
   public loading$ = new BehaviorSubject(true);
 
+  public modalOpen = false;
+
   constructor() { }
 
   ngOnInit() {
@@ -22,6 +24,10 @@ export class ShowsComponent implements OnInit {
       this.shows$.next(shows);
       this.loading$.next(false);
     }, 2000)
+  }
+
+  public infoModal(): void {
+
   }
 
 }

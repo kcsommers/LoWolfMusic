@@ -1,3 +1,9 @@
+export { SpinnerComponentModule } from './spinner/spinner.component.module';
+export { SpinnerComponent } from './spinner/spinner.component';
+
+export { PhotoModule } from './photo/photo.module';
+export { PhotoComponent } from './photo/photo.component';
+
 export { VideoComponentModule } from './video/video.component.module';
 export { VideoComponent } from './video/video.component';
 export { VideoSliderComponent } from './video-slider/video-slider.component';

@@ -24,6 +24,14 @@
         class="header-nav"
         [class.open]="mobileNavOpen"
     >
+        <a
+            class="header-nav-link"
+            [routerLink]="'/'"
+            [fragment]="'music'"
+            (click)="mobileNavOpen = false"
+        >
+            Music
+        </a>
         <span class="header-nav-parent">
             <fa-icon
                 class="angle-down"
@@ -36,9 +44,7 @@
             <div class="header-sub-menu">
                 <a
                     class="header-nav-link"
-                    [routerLink]="'/'"
-                    [fragment]="'videos'"
-                    [state]="{smooth: false}"
+                    [routerLink]="'/videos'"
                     (click)="mobileNavOpen = false"
                 >
                     Videos
@@ -55,15 +61,7 @@
         <a
             class="header-nav-link"
             [routerLink]="'/'"
-            [fragment]="'music'"
-            (click)="mobileNavOpen = false"
-        >
-            Music
-        </a>
-        <a
-            class="header-nav-link"
-            [routerLink]="'/'"
-            [fragment]="'shows'"
+            [fragment]="'events'"
             (click)="mobileNavOpen = false"
         >
             Events
@@ -84,14 +82,14 @@
         </a>
         <a
             class="header-nav-link header-social-link"
-            [routerLink]="'/'"
+            [routerLink]="'https://www.facebook.com/lowolfmusic/'"
             (click)="mobileNavOpen = false"
         >
             <fa-icon [icon]="['fab', 'facebook-f']"></fa-icon>
         </a>
         <a
             class="header-nav-link header-social-link"
-            [routerLink]="'/'"
+            [routerLink]="'https://www.instagram.com/lowolfmusic/'"
             (click)="mobileNavOpen = false"
         >
             <fa-icon [icon]="['fab', 'instagram']"></fa-icon>

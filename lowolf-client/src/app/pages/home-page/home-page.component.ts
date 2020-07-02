@@ -28,15 +28,6 @@ export class HomePageComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('PopupContainer', { static: true, read: ViewContainerRef })
   private _popupContainer: ViewContainerRef;
 
-  @ViewChild('VideosTag', { static: true, read: ElementRef })
-  private _videosTag: ElementRef;
-
-  @ViewChild('MusicTag', { static: true, read: ElementRef })
-  private _musicTag: ElementRef;
-
-  @ViewChild('ShowsTag', { static: true, read: ElementRef })
-  private _showsTag: ElementRef;
-
   constructor(private _cfr: ComponentFactoryResolver, private _router: Router, private _route: ActivatedRoute) {
     this._router.events
       .pipe(
@@ -55,6 +46,7 @@ export class HomePageComponent implements OnInit, AfterViewInit, OnDestroy {
               const toTop = distanceToTop(scrollMark);
               window.scrollBy({ top: toTop, left: 0, behavior: this._onHomePage ? 'smooth' : 'auto' })
             }
+
           })
       });
   }

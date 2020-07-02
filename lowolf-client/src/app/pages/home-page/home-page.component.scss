@@ -59,20 +59,25 @@ section.music-section {
     width: 100%;
     background-size: cover;
     position: relative;
+    background-position: right;
 }
 div.albums-wrap {
-    display: flex;
-    flex-direction: column;
+    padding: 0 2rem;
 }
 img.album-cover-img {
     width: 100%;
+    box-shadow: $box-shadow;
 }
-div.album-title-wrap {
-    text-align: center;
+span.album-title {
+    display: inline-block;
     padding: 0.25rem 0;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
 }
-div.album-title {
-    font-size: 1.2rem;
+div.album-wrap {
+    width: 45%;
+    min-width: 300px;
+    margin-bottom: 4rem;
 }
 
 section.shows-section {
@@ -85,6 +90,7 @@ section.shows-section {
     >div.max-width-container {
         position: relative;
         z-index: 800;
+        padding: 0 2rem;
     }
 }
 section.signup-section {
@@ -133,9 +139,35 @@ a.hidden-tag {
         transform: translate(-20%, 0);
     }
 }
+@media only screen and (max-width: 560px) {
+    div.album-wrap {
+        width: 100%;
+    }
+    div.albums-wrap {
+        padding: 0rem;
+    }
+    span.album-title {
+        background-color: rgba(#fff, 0.85);
+        padding: 0.25rem;
+        width: 100%;
+    }
+    section.shows-section {
+        >div.max-width-container {
+            padding: 0rem;
+        }
+    }
+}
 @media only screen and (min-width: 1250px) {
     img.landing-bg-img,
     img.signup-bg {
         width: auto;
+    }
+    section.shows-section {
+        >div.max-width-container {
+            padding: 0rem;
+        }
+    }
+    div.albums-wrap {
+        padding: 0rem;
     }
 }

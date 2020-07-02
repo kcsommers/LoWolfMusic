@@ -39,31 +39,40 @@ p.bio {
     padding: 0 2rem;
     transition: all 0.2s ease;
 }
-div.review-carousel-wrap {
-    width: 85%;
-    height: 300px;
+
+section.press-section {
+    padding: 3rem 2rem;
+    background-color: $light;
 }
 div.review-wrap {
     position: relative;
     padding: 1rem 3rem;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    margin-bottom: 2rem;
     >fa-icon {
         position: absolute;
-        top: 12%;
+        top: 0;
         left: 2rem;
         font-size: 4rem;
         color: $dark;
         opacity: 0.2;
     }
+    >a.lo-btn {
+        align-self: flex-start;
+    }
 }
 p.review-content {
     line-height: 2rem;
 }
+img.review-img {
+    float: right;
+    width: 200px;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+}
 p.review-author {
     text-align: right;
+    margin-right: 1rem;
 }
 
 @media only screen and (max-width: 812px) {

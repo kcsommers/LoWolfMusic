@@ -8,8 +8,18 @@
                     <em>Singe</em>
                     Available Now
                 </h3>
-                <button class="lo-btn-outline lo-btn-sm lo-btn-full-width">Buy/Listen</button>
-                <button class="lo-btn-sm lo-btn-full-width">Donate</button>
+                <a
+                    href="https://lowolf.bandcamp.com/"
+                    class="lo-btn lo-btn-outline lo-btn-sm lo-btn-full-width"
+                >
+                    Buy/Listen
+                </a>
+                <a
+                    href="https://www.paypal.me/lowolfmusic"
+                    class="lo-btn lo-btn-sm lo-btn-full-width"
+                >
+                    Donate
+                </a>
             </div>
         </div>
         <img
@@ -49,12 +59,10 @@
                 *ngFor="let album of albums"
                 class="album-wrap"
             >
-                <div class="album-title-wrap">
-                    <div class="album-title">{{album.title}}</div>
-                    <div class="album-year">
-                        <em>{{album.year}}</em>
-                    </div>
-                </div>
+                <span class="album-title">
+                    {{album.title}}
+                    <em>({{album.year}})</em>
+                </span>
                 <a [routerLink]="'albums/' + album.id">
                     <img
                         class="album-cover-img"
@@ -62,14 +70,19 @@
                         alt="{{album.title}}"
                     >
                 </a>
-                <button class="lo-btn-sm lo-btn-full-width">Buy/Listen</button>
+                <a
+                    href="https://lowolf.bandcamp.com/"
+                    class="lo-btn lo-btn-sm lo-btn-full-width"
+                >
+                    Buy/Listen
+                </a>
             </div>
         </div>
     </div>
 </section>
 <section class="shows-section">
     <div
-        id="shows"
+        id="events"
         class="scroll-mark"
     ></div>
     <div class="max-width-container">

@@ -6,10 +6,41 @@
     <input
         type="text"
         placeholder="Name"
+        [(ngModel)]="name"
     >
     <input
         type="text"
         placeholder="Email Address"
+        [(ngModel)]="email"
     >
-    <button class="lo-btn-outline submit-btn">Submit</button>
+    <div
+        *ngIf="invalid$ | async"
+        class="msg-wrap error-wrap"
+    >
+        *Missing required fields
+    </div>
+    <div
+        *ngIf="loading$ | async"
+        class="msg-wrap"
+    >
+        <lo-spinner></lo-spinner>
+    </div>
+    <div
+        *ngIf="success$ | async"
+        class="msg-wrap success-wrap"
+    >
+        Thank You!
+    </div>
+    <div
+        *ngIf="error$ | async"
+        class="msg-wrap error-wrap"
+    >
+        Unexpected Error. Please try again later!
+    </div>
+    <button
+        class="lo-btn-outline submit-btn"
+        (click)="signup()"
+    >
+        Submit
+    </button>
 </div>

@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { AppShellModule } from './app-shell/app-shell.module';
 import { HttpClientModule } from '@angular/common/http';
 import { environment } from '../environments/environment';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { environment } from '../environments/environment';
     BrowserModule,
     AppRoutingModule,
     AppShellModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    BrowserAnimationsModule
   ],
   providers: [
     {

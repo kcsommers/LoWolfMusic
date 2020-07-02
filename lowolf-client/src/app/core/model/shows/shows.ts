@@ -1,7 +1,7 @@
 export interface ShowModel {
   date: string;
   venue: string;
-  link: string;
+  link?: string;
   city: string;
   id: string;
 }

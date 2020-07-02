@@ -24,17 +24,32 @@
                 <span class="show-venue">{{show.venue}}</span>
                 <span class="show-city">{{show.city}}</span>
             </span>
-
-            <!-- <div class="color-light show-date">{{show.date}}</div>
-            <div class="color-light show-venue">{{show.venue}}</div>
-            <div class="color-light show-city">{{show.city}}</div> -->
         </a>
-        <button class="lo-btn-sm">
-            <a href="{{show.link}}">Tickets/Info</a>
+        <button
+            class="lo-btn-sm"
+            (click)="modalOpen = true"
+        >
+            Tickets/Info
         </button>
     </div>
     <div class="show-all-btn-wrap">
-        <button>Show All Dates</button>
-
+        <button class="lo-btn lo-btn-disabled">More Dates</button>
+    </div>
+</div>
+<div
+    *ngIf="modalOpen"
+    class="info-modal fade-in"
+    (click)="modalOpen = false"
+>
+    <div class="info-modal-content lo-card">
+        <p>
+            Throughout the COVID-19 pandemic, Lo will be live streaming a full set on the 20th of every month for viewers on a donation basis. To receive a link on the day of the show, please make a donation and add your name to the list using the signup form below
+        </p>
+        <a
+            class="lo-btn"
+            href="https://www.paypal.me/lowolfmusic"
+        >
+            Donate to Lo Wolf
+        </a>
     </div>
 </div>

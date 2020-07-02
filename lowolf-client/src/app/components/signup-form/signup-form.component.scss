@@ -1,0 +1,12 @@
+@import '_variables';
+:host {
+    display: block;
+}
+div.error-wrap {
+    color: $red;
+}
+div.msg-wrap {
+    height: 50px;
+    display: flex;
+    align-items: center;
+}

@@ -1,9 +1,11 @@
 :host {
     display: block;
     padding: calc(3rem + 70px) 0 5rem 0;
-    background-image: url(../../../assets/images/tusk1-2.jpg);
-    background-size: cover;
+    background-image: url(../../../assets/images/paisley4-trans.png);
+    background-size: contain;
     background-attachment: fixed;
+    background-position: left;
+    background-repeat: no-repeat;
 }
 .videos-container {
     display: grid;

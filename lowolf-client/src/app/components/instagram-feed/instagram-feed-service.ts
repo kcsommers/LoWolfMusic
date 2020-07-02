@@ -42,7 +42,7 @@ export class InstagramFeedService implements OnDestroy {
     return this._images$;
   }
 
-  constructor(private _http: HttpClient, @Inject('ENVIRONMENT') private environment) {
+  constructor(private _http: HttpClient, @Inject('ENVIRONMENT') private environment: any) {
     this._refreshInterval = window.setInterval(this.getImages.bind(this), 600000);
   }
 

@@ -38,3 +38,18 @@ div.show-all-btn-wrap {
     text-align: center;
 }
 
+div.info-modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba($dark, 0.85);
+    z-index: 901;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div.info-modal-content {
+    width: 65%;
+}

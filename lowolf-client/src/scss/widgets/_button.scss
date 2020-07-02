@@ -1,7 +1,7 @@
 @import '_variables';
 
 button,
-a.ada-btn {
+a.lo-btn {
     display: inline-block;
     border: none;
     padding: 1rem 2rem;
@@ -16,9 +16,6 @@ a.ada-btn {
     font-size: 1.2rem;
     cursor: pointer;
     text-align: center;
-    // transition: background 250ms ease-in-out,
-    //             transform 150ms ease,
-    //             border-color 250ms ease-in-out;
     transition: all 0.2s ease;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -33,6 +30,28 @@ a.lo-btn-sm {
     padding: 0.5rem 1.5rem;
 }
 
+button.lo-btn-brown,
+a.lo-btn-brown {
+    background-color: $brown;
+    color: $light;
+}
+
+button.lo-btn-full-width,
+a.lo-btn-full-width {
+  width: 100%;
+}
+button:hover,
+button:focus,
+a.lo-btn:hover,
+a.lo-btn:focus {
+    background-color: lighten($teal, 5%);
+    box-shadow: $box-shadow;
+}
+
+button:active,
+a.lo-btn:active {
+    transform: scale(0.95);
+}
 button.lo-btn-outline,
 a.lo-btn-outline {
     border: 2px solid $dark;
@@ -45,33 +64,9 @@ a.lo-btn-outline {
         box-shadow: $box-shadow;
     }
 }
-
-button.lo-btn-brown,
-a.lo-btn-brown {
-    background-color: $brown;
-    color: $light;
-}
-
- button.lo-btn-full-width,
- a.lo-btn-full-width {
-    width: 100%;
- }
-
-button:hover,
-button:focus,
-a.ada-btn:hover,
-a.ada-btn:focus {
-    background-color: lighten($teal, 5%);
-    box-shadow: $box-shadow;
-}
-
-button:active,
-a.ada-btn:active {
-    transform: scale(0.95);
-}
 @media only screen and (max-width: 560px) {
-    button.kk-btn-responsive,
-    a.kk-btn-responsive {
+    button.lo-btn-responsive,
+    a.lo-btn-responsive {
         font-size: 1rem;
         padding: 0.75rem 1.5rem;
     }

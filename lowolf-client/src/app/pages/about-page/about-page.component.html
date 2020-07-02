@@ -6,8 +6,37 @@
         </p>
     </div>
 </section>
-<section class="reviews-section">
-    <div class="review-carousel-wrap max-width-container">
+<section class="press-section">
+    <h2 class="section-title">Press</h2>
+    <div class="reviews-wrap max-width-container">
+        <div
+            *ngFor="let review of reviews"
+            class="review-wrap lo-card"
+        >
+            <fa-icon [icon]="'quote-left'"></fa-icon>
+            <img
+                class="review-img"
+                *ngIf="review.imgUrl"
+                src="{{review.imgUrl}}"
+                alt={{review.author}}
+            >
+            <p class="review-content">{{review.content}}</p>
+            <p class="review-author">
+                <em>-{{review.author}}</em>
+            </p>
+            <a
+                *ngIf="review.link"
+                href="{{review.link}}"
+                class="lo-btn lo-btn-sm"
+            >
+                Full Article
+            </a>
+            <div style="clear:both"></div>
+        </div>
+    </div>
+</section>
+<!-- <section class="reviews-section">
+    <div class="reviews-wrap max-width-container">
         <lo-carousel [context]="reviews">
             <ng-template
                 #CarouselItemTemplate
@@ -23,4 +52,4 @@
             </ng-template>
         </lo-carousel>
     </div>
-</section>
+</section> -->

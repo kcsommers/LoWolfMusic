@@ -6,4 +6,11 @@
 }
 main.app-main-wrap {
     flex: 1;
+    min-height: calc(100vh - 330px);
+}
+@media only screen and (min-width: 812px) {
+    main.app-main-wrap {
+        flex: 1;
+        min-height: calc(100vh - 400px);
+    }
 }

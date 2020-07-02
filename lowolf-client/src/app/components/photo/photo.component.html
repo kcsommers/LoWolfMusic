@@ -1,0 +1,14 @@
+<img
+    #Image
+    [attr.src]="src"
+    [attr.alt]="'Lo Wolf Music'"
+    [class.image-loading]="!(loaded$ | async)"
+    [@fadeIn]="loaded$ | async"
+    (load)="onLoad()"
+>
+<div
+    *ngIf="!(loaded$ | async)"
+    class="img-placeholder"
+>
+    <lo-spinner></lo-spinner>
+</div>

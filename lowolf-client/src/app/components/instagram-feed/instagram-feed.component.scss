@@ -19,6 +19,13 @@
     justify-content: center;
     padding: 2rem 0;
 }
-img.instagram-img {
-    width: 100%;
+a.instagram-img-tag {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+}
+span.instagram-img-inner {
+    height: 0;
+    padding-bottom: 100%;
+    display: inline-block;
 }
