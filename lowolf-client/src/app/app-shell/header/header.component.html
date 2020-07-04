@@ -24,62 +24,62 @@
         class="header-nav"
         [class.open]="mobileNavOpen"
     >
-        <a
-            class="header-nav-link"
-            [routerLink]="'/'"
-            [fragment]="'music'"
-            (click)="mobileNavOpen = false"
-        >
-            Music
-        </a>
-        <span class="header-nav-parent">
-            <fa-icon
-                class="angle-down"
-                [icon]="'angle-down'"
-            ></fa-icon>
-            <span class="angle-left-wrap">
-                <fa-icon [icon]="'angle-left'"></fa-icon>
+        <ng-container *ngFor="let item of navItems">
+            <ng-container *ngIf="!item.children || !item.children.length">
+                <a
+                    *ngIf="item.fragment"
+                    class="header-nav-link"
+                    [routerLink]="item.link"
+                    [fragment]="item.fragment"
+                    (click)="mobileNavOpen = false"
+                >
+                    {{item.name}}
+                </a>
+                <a
+                    *ngIf="!item.fragment"
+                    class="header-nav-link"
+                    [routerLink]="item.link"
+                    (click)="mobileNavOpen = false"
+                >
+                    {{item.name}}
+                </a>
+            </ng-container>
+            <span
+                *ngIf="item.children && item.children.length"
+                class="header-nav-parent"
+                (click)="openChildNav($event)"
+            >
+                <fa-icon
+                    class="angle-down"
+                    [icon]="'angle-down'"
+                ></fa-icon>
+                <span class="angle-left-wrap">
+                    <fa-icon [icon]="'angle-left'"></fa-icon>
+                </span>
+                {{item.name}}
+                <div class="header-sub-menu">
+                    <ng-container *ngFor="let child of item.children">
+                        <a
+                            *ngIf="child.fragment"
+                            class="header-nav-link"
+                            [routerLink]="child.link"
+                            [fragment]="child.fragment"
+                            (click)="mobileNavOpen = false"
+                        >
+                            {{child.name}}
+                        </a>
+                        <a
+                            *ngIf="!child.fragment"
+                            class="header-nav-link"
+                            [routerLink]="child.link"
+                            (click)="mobileNavOpen = false"
+                        >
+                            {{child.name}}
+                        </a>
+                    </ng-container>
+                </div>
             </span>
-            Media
-            <div class="header-sub-menu">
-                <a
-                    class="header-nav-link"
-                    [routerLink]="'/videos'"
-                    (click)="mobileNavOpen = false"
-                >
-                    Videos
-                </a>
-                <a
-                    class="header-nav-link"
-                    [routerLink]="'/photos'"
-                    (click)="mobileNavOpen = false"
-                >
-                    Photos
-                </a>
-            </div>
-        </span>
-        <a
-            class="header-nav-link"
-            [routerLink]="'/'"
-            [fragment]="'events'"
-            (click)="mobileNavOpen = false"
-        >
-            Events
-        </a>
-        <a
-            class="header-nav-link"
-            [routerLink]="'/about'"
-            (click)="mobileNavOpen = false"
-        >
-            About
-        </a>
-        <a
-            class="header-nav-link"
-            [routerLink]="'/contact'"
-            (click)="mobileNavOpen = false"
-        >
-            Contact
-        </a>
+        </ng-container>
         <a
             class="header-nav-link header-social-link"
             href="https://www.facebook.com/lowolfmusic/"

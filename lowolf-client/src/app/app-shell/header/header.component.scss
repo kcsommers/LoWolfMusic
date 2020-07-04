@@ -41,7 +41,7 @@ span.header-nav-parent {
     >fa-icon {
         margin-right: 0.25rem;
     }
-    &:hover {
+    &.child-nav-open {
         color: lighten($dark, 15%);
         >div.header-sub-menu {
             display: block;

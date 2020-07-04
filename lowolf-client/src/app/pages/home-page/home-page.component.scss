@@ -2,6 +2,10 @@
 :host {
     display: block;
     background-color: $white;
+    >section {
+        position: relative;
+        z-index: 100;
+    }
 }
 section.landing-section {
     background-color: $light;
@@ -46,20 +50,25 @@ img.landing-bg {
 
 section.videos-section {
     padding: 3rem 0;
-    position: relative;
+    background-color: #fff;
 }
 div.video-slider-wrap {
     text-align: center;
 }
-
 section.music-section {
     padding: 3rem 0;
-    background-image: url(../../../assets/images/lo-white.jpg);
-    background-attachment: fixed;
-    width: 100%;
-    background-size: cover;
     position: relative;
+}
+div.music-section-bg {
+    background-image: url(../../../assets/images/lo-white.jpg);
+    background-size: cover;
     background-position: right;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0;
 }
 div.albums-wrap {
     padding: 0 2rem;
@@ -81,12 +90,9 @@ div.album-wrap {
 }
 
 section.shows-section {
+    background-color: #fff;
     padding: 3rem 0;
-    background-attachment: fixed;
     width: 100%;
-    background-size: cover;
-    background-position: center;
-    position: relative;
     >div.max-width-container {
         position: relative;
         z-index: 800;
@@ -95,6 +101,7 @@ section.shows-section {
 }
 section.signup-section {
     padding: 4rem 2rem 6rem 2rem;
+    background-color: #fff;
     >div.max-width-container {
         position: relative;
     }
