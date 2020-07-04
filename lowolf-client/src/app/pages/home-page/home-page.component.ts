@@ -11,7 +11,7 @@ import { Subject } from 'rxjs';
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss']
 })
-export class HomePageComponent implements OnInit, AfterViewInit, OnDestroy {
+export class HomePageComponent implements OnInit, OnDestroy {
 
   public reviews = reviews;
 
@@ -67,9 +67,6 @@ export class HomePageComponent implements OnInit, AfterViewInit, OnDestroy {
         .subscribe(isOpen => this.closeAlbumPopup());
     }
 
-  }
-
-  ngAfterViewInit() {
   }
 
   ngOnDestroy() {

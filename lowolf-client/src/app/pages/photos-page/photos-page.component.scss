@@ -2,11 +2,10 @@
 :host {
     display: block;
     padding-top: calc(3rem + 70px);
-    background-image: url(../../../assets/images/paisley4-trans.png);
-    background-size: contain;
-    background-attachment: fixed;
-    background-position: left;
-    background-repeat: no-repeat;
+}
+div.photos-page-wrap {
+    position: relative;
+    z-index: 100;
 }
 section.photos-section {
     padding: 3rem 2rem 5rem 2rem;
@@ -27,4 +26,13 @@ div.error-wrap {
 }
 div.spinner-wrap {
     justify-content: center;
+}
+div.page-bg-fixed {
+    background-image: url(../../../assets/images/paisley4-trans.png);
+    background-size: contain;
+}
+@media only screen and (max-width: 812px) {
+    div.page-bg-fixed {
+        background-size: cover;
+    }
 }

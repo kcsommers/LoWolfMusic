@@ -21,10 +21,10 @@ export class ShowsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    setTimeout(() => {
-      this.shows$.next(shows);
-      this.loading$.next(false);
-    }, 2000);
+    // setTimeout(() => {
+    this.shows$.next(shows);
+    this.loading$.next(false);
+    // }, 2000);
   }
 
 }

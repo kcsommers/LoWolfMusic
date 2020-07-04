@@ -3,11 +3,6 @@
     display: block;
     padding: calc(70px + 4rem) 2rem 4rem 2rem;
     position: relative;
-    background-image: url(../../../assets/images/lo-bw.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
 }
 div.contact-page-wrap {
     width: 60%;
@@ -57,6 +52,12 @@ div.submit-btn-wrap {
 button.submit-btn {
     margin-top: 0.5rem;
 }
+
+div.page-bg-fixed {
+    background-image: url(../../../assets/images/lo-bw.jpg);
+    background-position: top;
+}
+
 @media only screen and (max-width: 812px) {
     div.contact-page-wrap {
         width: 100%;

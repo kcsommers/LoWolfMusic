@@ -1,87 +1,31 @@
-// @import '_variables';
-// :host {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: center;
-//     position: fixed;
-//     top: 0;
-//     bottom: 0;
-//     left: 0;
-//     right: 0;
-//     background-color: rgba($brown, .95);
-//     z-index: 1000;
-//     opacity: 1;
-//     transition: opacity 0.5s linear;
-//     padding: 0 2rem;
-//     &.hidden {
-//         opacity: 0;
-//     }
-// }
-// .album-wrap {
-//     width: 100%;
-//     max-width: 700px;
-//     max-height: 75vh;
-//     display: flex;
-//     padding: 1rem;
-//     align-items: center;
-//     justify-content: center;
-//     background-color: rgba($light, 0.75);
-//     background-image: url(../../../assets/images/singe-cover-zoom.jpg);
-//     background-size: cover;
-//     box-shadow: $box-shadow;
-// }
-// img.album-cover {
-//     max-width: 50%;
-//     max-height: 100%;
-// }
-// span.album-details {
-//     flex: 1;
-//     padding: 1rem 2rem;
-// }
-// p.tagline {
-//     font-size: 1.2rem;
-//     margin-top: 0.75rem;
-// }
-// h4.continue {
-//     cursor: pointer;
-//     margin-top: 1rem;
-//     transition: color 0.3s ease;
-//     &:hover {
-//         color: $pink;
-//     }
-// }
-// @media only screen and (max-width: 560px) {
-//     span.album-details {
-//         padding: 1rem;
-//     }
-//     p.tagline {
-//         font-size: 1rem;
-//     }
-// }
 @import '_variables';
 :host {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 0 2rem;
     position: fixed;
     top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba($beige, 0.9);
+    height: 100vh;
+    width: 100%;
+    background-color: rgba($beige, 0.95);
     z-index: 1000;
     opacity: 1;
     transition: opacity 0.5s linear;
-    padding: 0 2rem;
-    overflow: auto;
+    overflow-y: auto;
+    text-align: center;
     &.hidden {
         opacity: 0;
     }
 }
+div.popup-content-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 500px;
+}
 div.album-cover-wrap {
-    width: 300px;
+    display: inline-block;
+    min-width: 300px;
+    width: 35%;
     transition: all 0.2s ease;
 }
 img.album-cover {
@@ -95,6 +39,4 @@ h4.continue {
     &:hover {
         color: lighten($pink, 5%);
     }
-}
-@media only screen and (max-width: 812px) {
 }

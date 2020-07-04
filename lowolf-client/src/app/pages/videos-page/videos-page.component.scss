@@ -1,11 +1,10 @@
 :host {
     display: block;
     padding: calc(3rem + 70px) 0 5rem 0;
-    background-image: url(../../../assets/images/paisley4-trans.png);
-    background-size: contain;
-    background-attachment: fixed;
-    background-position: left;
-    background-repeat: no-repeat;
+}
+div.videos-page-wrap {
+    position: relative;
+    z-index: 100;
 }
 .videos-container {
     display: grid;
@@ -30,4 +29,12 @@
         right: 0;
     }
 }
-
+div.page-bg-fixed {
+    background-image: url(../../../assets/images/paisley4-trans.png);
+    background-size: contain;
+}
+@media only screen and (max-width: 812px) {
+    div.page-bg-fixed {
+        background-size: cover;
+    }
+}

@@ -61,14 +61,7 @@ section.music-section {
 }
 div.music-section-bg {
     background-image: url(../../../assets/images/lo-white.jpg);
-    background-size: cover;
     background-position: right;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 0;
 }
 div.albums-wrap {
     padding: 0 2rem;
@@ -89,10 +82,11 @@ div.album-wrap {
     margin-bottom: 4rem;
 }
 
-section.shows-section {
+section.events-section {
     background-color: #fff;
     padding: 3rem 0;
     width: 100%;
+    position: relative;
     >div.max-width-container {
         position: relative;
         z-index: 800;
@@ -175,7 +169,7 @@ div.info-modal-content {
         padding: 0.25rem;
         width: 100%;
     }
-    section.shows-section {
+    section.events-section {
         >div.max-width-container {
             padding: 0rem;
         }
@@ -186,7 +180,7 @@ div.info-modal-content {
     img.signup-bg {
         width: auto;
     }
-    section.shows-section {
+    section.events-section {
         >div.max-width-container {
             padding: 0rem;
         }
