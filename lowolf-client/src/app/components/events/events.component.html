@@ -15,16 +15,11 @@
         *ngFor="let event of (events$ | async)"
         class="event-wrap"
     >
-        <a
-            href="{{event.link}}"
-            class="event-info-tag"
-        >
-            <span class="event-info-wrap">
-                <span class="event-date">{{event.date}}</span>
-                <span class="event-venue">{{event.venue}}</span>
-                <span class="event-city">{{event.city}}</span>
-            </span>
-        </a>
+        <span class="event-info-wrap">
+            <span class="event-date">{{event.date}}</span>
+            <span class="event-venue">{{event.venue}}</span>
+            <span class="event-city">{{event.city}}</span>
+        </span>
         <button
             class="lo-btn-sm"
             (click)="infoClick.emit(true)"

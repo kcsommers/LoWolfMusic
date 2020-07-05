@@ -64,7 +64,6 @@ export class HomePageComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
 
-
     if (!localStorage.getItem(AlbumPopupComponent.POPUP_KEY)) {
       localStorage.setItem(AlbumPopupComponent.POPUP_KEY, 'true');
       const albumPopupFactory = this._cfr.resolveComponentFactory(AlbumPopupComponent);

@@ -123,6 +123,7 @@ div.info-modal {
 div.info-modal-content {
     position: relative;
     z-index: 903;
+    max-width: 940px;
 }
 @media only screen and (max-width: 1024px) {
     div.landing-cta-wrap {
@@ -161,6 +162,9 @@ div.info-modal-content {
         background-color: rgba(#fff, 0.85);
         padding: 0.25rem;
         width: 100%;
+    }
+    div.info-modal-content {
+        padding: 1rem;
     }
 }
 @media only screen and (min-width: 1250px) {

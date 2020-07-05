@@ -94,7 +94,11 @@
         </div>
         <div class="signup-wrap">
             <div class="signup-form-wrap width-85">
-                <lo-signup-form></lo-signup-form>
+                <lo-contact-form
+                    [title]="'Join the Wolf Pack'"
+                    [blurb]="'Stay up to date with upcoming events, new music and the latest news from Lo Wolf.'"
+                    [outlineBtn]="true"
+                ></lo-contact-form>
             </div>
         </div>
         <img
@@ -115,11 +119,11 @@
         class="info-modal-content lo-card"
         (click)="$event.stopPropagation()"
     >
-        <p>
+        <p class="live-stream-info">
             Throughout the COVID-19 pandemic, Lo will be live streaming a full set on the 20th of every month for viewers on a donation basis. To receive a link on the day of the show, please make a donation and add your name to the list using the signup form below.
         </p>
         <a
-            class="lo-btn"
+            class="lo-btn lo-btn-responsive"
             target="_blank"
             href="https://www.paypal.me/lowolfmusic"
         >
