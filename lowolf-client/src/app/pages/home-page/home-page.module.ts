@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomePageComponent } from './home-page.component';
 import { HomePageRoutingModule } from './home-page-routing.module';
-import { VideoSliderComponentModule, SignupFormComponentModule, ShowsComponentModule, SocialNavModule } from '@lo/components';
+import { VideoSliderComponentModule, SignupFormComponentModule, EventsComponentModule, SocialNavModule } from '@lo/components';
 import { AlbumPopupModule } from '../../components/album-popup/album-popup.component.module';
 
 @NgModule({
@@ -12,7 +12,7 @@ import { AlbumPopupModule } from '../../components/album-popup/album-popup.compo
     HomePageRoutingModule,
     VideoSliderComponentModule,
     SignupFormComponentModule,
-    ShowsComponentModule,
+    EventsComponentModule,
     AlbumPopupModule,
     SocialNavModule
   ]

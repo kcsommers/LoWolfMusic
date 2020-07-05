@@ -14,8 +14,8 @@ export { InstagramFeedComponentModule } from './instagram-feed/instagram-feed.co
 export { InstagramFeedComponent } from './instagram-feed/instagram-feed.component';
 export { ParallaxBgComponent } from './parallax-bg/parallax-bg.component';
 export { ParallaxBgComponentModule } from './parallax-bg/parallax-bg.module';
-export { ShowsComponent } from './shows/shows.component';
-export { ShowsComponentModule } from './shows/shows.component.module';
+export { EventsComponent } from './events/events.component';
+export { EventsComponentModule } from './events/events.component.module';
 export { CarouselComponentModule } from './carousel/carousel.component.module';
 export { CarouselComponent } from './carousel/carousel.component';
 export { SocialNavComponent } from './social-nav/social-nav.component';

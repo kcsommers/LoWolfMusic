@@ -81,15 +81,15 @@
     </div>
 </section>
 <section class="events-signup-section">
+    <div
+        id="events"
+        class="scroll-mark"
+    ></div>
     <div class="max-width-container">
         <div class="events-wrap">
-            <div
-                id="events"
-                class="scroll-mark"
-            ></div>
             <h2 class="section-title">Events</h2>
             <div class="events-calendar-wrap width-85">
-                <lo-shows (infoClick)="modalOpen=true"></lo-shows>
+                <lo-events (infoClick)="modalOpen=true"></lo-events>
             </div>
         </div>
         <div class="signup-wrap">

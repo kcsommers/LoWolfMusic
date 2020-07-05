@@ -1,4 +1,4 @@
-export interface ShowModel {
+export interface EventModel {
   date: string;
   venue: string;
   link?: string;

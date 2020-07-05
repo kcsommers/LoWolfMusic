@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ShowsComponent } from './shows.component';
+import { EventsComponent } from './events.component';
 import { SpinnerComponentModule } from '../spinner/spinner.component.module';
 
 @NgModule({
-  declarations: [ShowsComponent],
+  declarations: [EventsComponent],
   imports: [
     CommonModule,
     SpinnerComponentModule
   ],
-  exports: [ShowsComponent]
+  exports: [EventsComponent]
 })
-export class ShowsComponentModule { }
+export class EventsComponentModule { }

@@ -1,17 +1,17 @@
 import { Component, OnInit, ChangeDetectionStrategy, Output, EventEmitter } from '@angular/core';
-import { ShowModel, shows } from '@lo/core';
+import { EventModel, events } from '@lo/core';
 import { BehaviorSubject } from 'rxjs';
 
 @Component({
-  selector: 'lo-shows',
-  templateUrl: './shows.component.html',
-  styleUrls: ['./shows.component.scss'],
+  selector: 'lo-events',
+  templateUrl: './events.component.html',
+  styleUrls: ['./events.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ShowsComponent implements OnInit {
-  public shows$ = new BehaviorSubject<ShowModel[]>(null);
+export class EventsComponent implements OnInit {
+  public events$ = new BehaviorSubject<EventModel[]>(null);
 
-  public noShows$ = new BehaviorSubject(false);
+  public noEvents$ = new BehaviorSubject(false);
 
   public loading$ = new BehaviorSubject(true);
 
@@ -21,10 +21,8 @@ export class ShowsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    // setTimeout(() => {
-    this.shows$.next(shows);
+    this.events$.next(events);
     this.loading$.next(false);
-    // }, 2000);
   }
 
 }

@@ -1,6 +1,6 @@
 import { ReviewModel } from '../model/reviews/reviews';
 import { AlbumModel } from '../model/music/albums';
-import { ShowModel } from '../model/shows/shows';
+import { EventModel } from '../model/events/events';
 
 export const reviews: ReviewModel[] = [
   {
@@ -48,7 +48,7 @@ export const reviews: ReviewModel[] = [
   }
 ];
 
-export const shows: ShowModel[] = [
+export const events: EventModel[] = [
   {
     date: '07/20/2020',
     venue: 'Lo Wolf Live Stream',

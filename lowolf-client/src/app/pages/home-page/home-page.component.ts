@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, ViewChild, ViewContainerRef, ComponentFactoryResolver, HostListener, OnDestroy, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ViewContainerRef, ComponentFactoryResolver, HostListener, OnDestroy, ElementRef } from '@angular/core';
 import { reviews, albums, videoUrls, distanceToTop } from '@lo/core';
 import { AlbumPopupComponent } from '../../components/album-popup/album-popup.component';
 import { take, takeUntil, filter } from 'rxjs/operators';
@@ -45,8 +45,17 @@ export class HomePageComponent implements OnInit, OnDestroy {
             }
             const scrollMark = document.querySelector(`#${hash}`);
             if (scrollMark) {
-              const toTop = distanceToTop(scrollMark);
-              window.scrollBy({ top: toTop, left: 0, behavior: this._onHomePage ? 'smooth' : 'auto' });
+              if (hash === 'events') {
+                setTimeout(() => {
+                  const toTop = distanceToTop(scrollMark);
+                  window.scrollBy({ top: toTop, left: 0, behavior: this._onHomePage ? 'smooth' : 'auto' });
+                  this._onHomePage = true;
+                });
+              } else {
+                const toTop = distanceToTop(scrollMark);
+                window.scrollBy({ top: toTop, left: 0, behavior: this._onHomePage ? 'smooth' : 'auto' });
+                this._onHomePage = true;
+              }
             }
 
           });
@@ -55,7 +64,6 @@ export class HomePageComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
 
-    this._onHomePage = true;
 
     if (!localStorage.getItem(AlbumPopupComponent.POPUP_KEY)) {
       localStorage.setItem(AlbumPopupComponent.POPUP_KEY, 'true');
