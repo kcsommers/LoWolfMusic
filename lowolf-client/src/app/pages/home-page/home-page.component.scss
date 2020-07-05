@@ -56,15 +56,12 @@ div.video-slider-wrap {
     text-align: center;
 }
 section.music-section {
-    padding: 3rem 0;
     position: relative;
+    padding: 3rem;
 }
 div.music-section-bg {
     background-image: url(../../../assets/images/lo-white.jpg);
     background-position: right;
-}
-div.albums-wrap {
-    padding: 0 2rem;
 }
 img.album-cover-img {
     width: 100%;
@@ -82,35 +79,30 @@ div.album-wrap {
     margin-bottom: 4rem;
 }
 
-section.events-section {
+section.events-signup-section {
     background-color: #fff;
-    padding: 3rem 0;
-    width: 100%;
-    position: relative;
-    >div.max-width-container {
-        position: relative;
-        z-index: 800;
-        padding: 0 2rem;
-    }
-}
-section.signup-section {
-    padding: 4rem 2rem 6rem 2rem;
-    background-color: #fff;
-    >div.max-width-container {
+    padding: 3rem;
+    >.max-width-container {
         position: relative;
     }
 }
-div.signup-form-wrap {
+img.paisley-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-height: 812px;
+    opacity: 0.7;
+    z-index: 200;
+    top: 55%;
+    left: -14rem;
+}
+div.signup-wrap {
+    padding: 6rem 0;
+}
+div.signup-wrap,
+div.events-wrap {
     position: relative;
     z-index: 201;
-}
-img.signup-bg {
-    position: absolute;
-    top: -13rem;
-    left: -14rem;
-    z-index: 200;
-    opacity: 0.7;
-    max-height: 812px;
 }
 a.hidden-tag {
     display: none;
@@ -156,23 +148,19 @@ div.info-modal-content {
         width: auto;
         transform: translate(-20%, 0);
     }
+    section.music-section,
+    section.events-signup-section {
+        padding: 3rem 0;
+    }
 }
 @media only screen and (max-width: 560px) {
     div.album-wrap {
         width: 100%;
     }
-    div.albums-wrap {
-        padding: 0rem;
-    }
     span.album-title {
         background-color: rgba(#fff, 0.85);
         padding: 0.25rem;
         width: 100%;
-    }
-    section.events-section {
-        >div.max-width-container {
-            padding: 0rem;
-        }
     }
 }
 @media only screen and (min-width: 1250px) {
@@ -180,15 +168,8 @@ div.info-modal-content {
     img.signup-bg {
         width: auto;
     }
-    section.events-section {
-        >div.max-width-container {
-            padding: 0rem;
-        }
-    }
-    section.signup-section {
-        padding: 4rem 0rem 6rem 0rem;
-    }
-    div.albums-wrap {
-        padding: 0rem;
+    section.music-section,
+    section.events-signup-section {
+        padding: 3rem 0;
     }
 }

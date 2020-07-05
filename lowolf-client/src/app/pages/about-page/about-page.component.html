@@ -18,16 +18,22 @@
             class="review-wrap lo-card"
         >
             <fa-icon [icon]="'quote-left'"></fa-icon>
-            <img
-                class="review-img"
-                *ngIf="review.imgUrl"
-                src="{{review.imgUrl}}"
-                alt={{review.author}}
-            >
-            <p class="review-content">{{review.content}}</p>
-            <p class="review-author">
-                <em>-{{review.author}}</em>
-            </p>
+            <div class="review-wrap-inner">
+                <div class="review-img-wrap">
+                    <img
+                        *ngIf="review.imgUrl"
+                        class="review-img"
+                        src="{{review.imgUrl}}"
+                        alt={{review.author}}
+                    >
+                </div>
+                <div class="review-content-wrap">
+                    <p class="review-content">{{review.content}}</p>
+                    <p class="review-author">
+                        <em>-{{review.author}}</em>
+                    </p>
+                </div>
+            </div>
             <a
                 *ngIf="review.link"
                 href="{{review.link}}"

@@ -65,11 +65,14 @@ div.review-wrap {
 p.review-content {
     line-height: 2rem;
 }
-img.review-img {
+div.review-img-wrap {
     float: right;
     width: 200px;
-    margin-left: 0.5rem;
-    margin-bottom: 0.5rem;
+    padding-left: 0.75rem;
+    padding-bottom: 0.75rem;
+    >img {
+        width: 100%;
+    }
 }
 p.review-author {
     text-align: right;
@@ -99,5 +102,15 @@ p.review-author {
         padding: 2rem 1rem;
         width: 100%;
         font-size: 1rem;
+    }
+    div.review-wrap-inner {
+        display: flex;
+        flex-direction: column;
+    }
+    div.review-img-wrap {
+        float: none;
+        order: 2;
+        padding: 0;
+        margin-top: 1rem;
     }
 }

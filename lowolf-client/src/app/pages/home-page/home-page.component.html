@@ -80,28 +80,28 @@
         </div>
     </div>
 </section>
-<section class="events-section">
-    <div
-        id="events"
-        class="scroll-mark"
-    ></div>
+<section class="events-signup-section">
     <div class="max-width-container">
-        <h2 class="section-title">Events</h2>
-        <div class="events-calendar-wrap width-85">
-            <lo-shows (infoClick)="modalOpen=true"></lo-shows>
+        <div class="events-wrap">
+            <div
+                id="events"
+                class="scroll-mark"
+            ></div>
+            <h2 class="section-title">Events</h2>
+            <div class="events-calendar-wrap width-85">
+                <lo-shows (infoClick)="modalOpen=true"></lo-shows>
+            </div>
         </div>
-    </div>
-</section>
-<section class="signup-section">
-    <div class="max-width-container">
+        <div class="signup-wrap">
+            <div class="signup-form-wrap width-85">
+                <lo-signup-form></lo-signup-form>
+            </div>
+        </div>
         <img
-            class="signup-bg"
+            class="paisley-bg"
             src="assets/images/paisley2_yellow.png"
-            alt="Lo Paisley"
+            alt="paisley"
         >
-        <div class="signup-form-wrap width-85">
-            <lo-signup-form></lo-signup-form>
-        </div>
     </div>
 </section>
 <lo-social-nav [class.visible]="socialNavVisible"></lo-social-nav>
