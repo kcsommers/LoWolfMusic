@@ -2,6 +2,7 @@ import { Component, OnInit, ChangeDetectionStrategy, Inject } from '@angular/cor
 import { HttpClient } from '@angular/common/http';
 import { take } from 'rxjs/operators';
 import { BehaviorSubject } from 'rxjs';
+import { HtmlMetaService, BasePage } from '@lo/core';
 
 interface PhotosResponse {
   data: {
@@ -17,7 +18,7 @@ interface PhotosResponse {
   styleUrls: ['./photos-page.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class PhotosPageComponent implements OnInit {
+export class PhotosPageComponent extends BasePage implements OnInit {
 
   public loading$ = new BehaviorSubject(true);
 
@@ -25,7 +26,16 @@ export class PhotosPageComponent implements OnInit {
 
   public urls$ = new BehaviorSubject<string[]>([]);
 
-  constructor(private _http: HttpClient, @Inject('ENVIRONMENT') private environment: any) { }
+  constructor(
+    @Inject('ENVIRONMENT') private environment: any,
+    private _http: HttpClient,
+    private __metaService: HtmlMetaService
+  ) {
+    super(__metaService, {
+      title: 'Lo Wolf Music / Photos',
+      description: 'Images of Lo Wolf | Lo Wolf Music'
+    })
+  }
 
   ngOnInit() {
     window.scrollTo({ top: 0 });

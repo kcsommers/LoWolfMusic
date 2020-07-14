@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy, OnDestroy } from '@angular/core';
-import { reviews, distanceToTop } from '@lo/core';
+import { reviews, distanceToTop, HtmlMetaService, BasePage } from '@lo/core';
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 import { takeUntil, filter } from 'rxjs/operators';
 import { Subject } from 'rxjs';
@@ -10,7 +10,7 @@ import { Subject } from 'rxjs';
   styleUrls: ['./about-page.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AboutPageComponent implements OnInit, OnDestroy {
+export class AboutPageComponent extends BasePage implements OnInit, OnDestroy {
 
   public reviews = reviews;
 
@@ -18,7 +18,13 @@ export class AboutPageComponent implements OnInit, OnDestroy {
 
   private _onPage = false;
 
-  constructor(private _router: Router, private _route: ActivatedRoute) {
+  constructor(private _router: Router, private _route: ActivatedRoute, private __metaService: HtmlMetaService) {
+
+    super(__metaService, {
+      title: 'Lo Wolf Music / About',
+      description: 'Bio and Press | Lo Wolf'
+    });
+
     this._router.events
       .pipe(
         takeUntil(this._unsubscribe),

@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ViewContainerRef, ComponentFactoryResolver, HostListener, OnDestroy, ElementRef } from '@angular/core';
-import { reviews, albums, videoUrls, distanceToTop } from '@lo/core';
+import { reviews, albums, videoUrls, distanceToTop, BasePage, HtmlMetaService } from '@lo/core';
 import { AlbumPopupComponent } from '../../components/album-popup/album-popup.component';
 import { take, takeUntil, filter } from 'rxjs/operators';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
@@ -11,7 +11,7 @@ import { Subject } from 'rxjs';
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss']
 })
-export class HomePageComponent implements OnInit, OnDestroy {
+export class HomePageComponent extends BasePage implements OnInit, OnDestroy {
 
   public reviews = reviews;
 
@@ -30,7 +30,16 @@ export class HomePageComponent implements OnInit, OnDestroy {
   @ViewChild('PopupContainer', { static: true, read: ViewContainerRef })
   private _popupContainer: ViewContainerRef;
 
-  constructor(private _cfr: ComponentFactoryResolver, private _router: Router, private _route: ActivatedRoute) {
+  constructor(
+    private _cfr: ComponentFactoryResolver,
+    private _router: Router,
+    private _route: ActivatedRoute,
+    private __metaService: HtmlMetaService
+  ) {
+    super(__metaService, {
+      title: 'Lo Wolf Music',
+      description: 'New album Singe available now'
+    });
     this._router.events
       .pipe(
         takeUntil(this._unsubscribe),
