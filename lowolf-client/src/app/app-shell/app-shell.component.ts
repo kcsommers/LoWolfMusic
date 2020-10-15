@@ -1,4 +1,4 @@
-import { Component, HostBinding } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'lo-app-shell',
@@ -12,18 +12,4 @@ import { Component, HostBinding } from '@angular/core';
   `,
 })
 export class AppShellComponent {
-}
-
-@Component({
-  selector: 'lo-app-shell-solid-header',
-  styleUrls: ['./app-shell.component.scss'],
-  template: `
-    <lo-header-solid></lo-header-solid>
-    <main class="app-main-wrap">
-      <router-outlet></router-outlet>
-    </main>
-    <lo-footer></lo-footer>
-  `,
-})
-export class AppShellSolidHeaderComponent {
 }

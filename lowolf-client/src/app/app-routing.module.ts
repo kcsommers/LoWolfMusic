@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { AppShellComponent, AppShellSolidHeaderComponent } from './app-shell/app-shell.component';
-import { HomePageComponent } from './pages/home-page/home-page.component';
+import { RouterModule, Routes } from '@angular/router';
+
+import { AppShellComponent } from './app-shell/app-shell.component';
 
 const routes: Routes = [
   {
@@ -11,32 +11,6 @@ const routes: Routes = [
       {
         path: '',
         loadChildren: () => import('./pages/home-page/home-page.module').then(m => m.HomePageModule)
-      }
-    ]
-  },
-  {
-    path: '',
-    component: AppShellSolidHeaderComponent,
-    children: [
-      {
-        path: 'albums/:id',
-        loadChildren: () => import('./pages/album-page/album-page.module').then(m => m.AlbumPageModule)
-      },
-      {
-        path: 'videos',
-        loadChildren: () => import('./pages/videos-page/videos-page.module').then(m => m.VideosPageModule)
-      },
-      {
-        path: 'photos',
-        loadChildren: () => import('./pages/photos-page/photos-page.module').then(m => m.PhotosPageModule)
-      },
-      {
-        path: 'about',
-        loadChildren: () => import('./pages/about-page/about-page.module').then(m => m.AboutPageModule)
-      },
-      {
-        path: 'contact',
-        loadChildren: () => import('./pages/contact-page/contact-page.module').then(m => m.ContactPageModule)
       }
     ]
   }

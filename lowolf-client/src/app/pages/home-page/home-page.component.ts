@@ -1,9 +1,8 @@
-import { Component, OnInit, ViewChild, ViewContainerRef, ComponentFactoryResolver, HostListener, OnDestroy, ElementRef } from '@angular/core';
-import { reviews, albums, videoUrls, distanceToTop } from '@lo/core';
-import { AlbumPopupComponent } from '../../components/album-popup/album-popup.component';
-import { take, takeUntil, filter } from 'rxjs/operators';
-import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
+import { Component, ComponentFactoryResolver, OnDestroy, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { distanceToTop } from '@lo/core';
 import { Subject } from 'rxjs';
+import { filter, takeUntil } from 'rxjs/operators';
 
 
 @Component({
@@ -13,19 +12,9 @@ import { Subject } from 'rxjs';
 })
 export class HomePageComponent implements OnInit, OnDestroy {
 
-  public reviews = reviews;
-
-  public videoUrls = videoUrls;
-
-  public albums = albums;
-
-  public socialNavVisible = false;
-
   private _unsubscribe = new Subject();
 
   private _onHomePage = false;
-
-  public modalOpen = false;
 
   @ViewChild('PopupContainer', { static: true, read: ViewContainerRef })
   private _popupContainer: ViewContainerRef;
@@ -64,44 +53,11 @@ export class HomePageComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
 
-    if (!localStorage.getItem(AlbumPopupComponent.POPUP_KEY)) {
-      localStorage.setItem(AlbumPopupComponent.POPUP_KEY, 'true');
-      const albumPopupFactory = this._cfr.resolveComponentFactory(AlbumPopupComponent);
-      document.querySelector('html').classList.add('no-scroll');
-      const albumPopupRef = this._popupContainer.createComponent(albumPopupFactory);
-      albumPopupRef.instance.isOpenChange
-        .pipe(take(1))
-        .subscribe(isOpen => this.closeAlbumPopup());
-    }
-
   }
 
   ngOnDestroy() {
     this._unsubscribe.next(false);
     this._unsubscribe.complete();
-  }
-
-  public closeAlbumPopup(): void {
-    document.querySelector('html').classList.remove('no-scroll');
-    setTimeout(() => {
-      this._popupContainer.clear();
-    }, 500);
-  }
-
-  @HostListener('window:beforeunload')
-  public onUnload() {
-    localStorage.removeItem(AlbumPopupComponent.POPUP_KEY);
-  }
-
-  @HostListener('window:scroll')
-  public onScroll() {
-    if (window.scrollY > 200) {
-      if (!this.socialNavVisible) {
-        this.socialNavVisible = true;
-      }
-    } else {
-      this.socialNavVisible = false;
-    }
   }
 }
 
