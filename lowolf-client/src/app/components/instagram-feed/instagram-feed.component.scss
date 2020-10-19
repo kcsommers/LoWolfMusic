@@ -1,0 +1,31 @@
+@import 'variables';
+:host {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: left;
+    width: 100%;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+    z-index: 800;
+}
+.spinner-wrap,
+.instagram-img-wrap {
+    flex: 1;
+}
+.spinner-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+}
+a.instagram-img-tag {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+}
+span.instagram-img-inner {
+    height: 0;
+    padding-bottom: 100%;
+    display: inline-block;
+}
