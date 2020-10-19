@@ -2,4 +2,72 @@
 :host {
     display: block;
     width: 100%;
+    background-color: $primary;
+}
+
+lo-nav,
+lo-social-nav {
+    position: fixed;
+    top: 1rem;
+}
+
+lo-nav {
+    right: 1rem;
+}
+
+lo-social-nav {
+    left: 1rem;
+}
+
+section.landing-section {
+    min-height: 100vh;
+    position: relative;
+}
+
+span.arrow-down-wrap {
+    position: absolute;
+    display: inline-block;
+    padding: 1rem;
+    cursor: pointer;
+    bottom: 0;
+    >fa-icon {
+        opacity: 0.7;
+        transition: 0.2s ease;
+    }
+    &:hover>fa-icon {
+        opacity: 1;
+    }
+}
+
+div.intro-wrap {
+    max-width: 600px;
+    margin: 0 auto;
+    >img:last-child {
+        width: 70%;
+        margin-top: -5rem;
+    }
+}
+
+section.new-album-section {
+    padding: 4rem 0;
+}
+
+div.album-links-wrap {
+    text-align: center;
+    margin: 1rem 0 2rem 0;
+    >a.lo-btn {
+        margin: 0 0.25rem;
+    }
+}
+
+div.album-cover-wrap {
+    width: 35%;
+    margin: 0 auto;
+    min-width: 300px;
+}
+
+section.video-section {
+    >iframe {
+        border: 4px solid #fff;
+    }
 }

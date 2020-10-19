@@ -4,7 +4,19 @@ import {
   faSpinner,
   faQuoteLeft,
   faBars,
-  faAngleDown
+  faAngleDown,
+  faAngleDoubleDown,
+  faChevronDown,
+  faCameraRetro,
+  faVideo,
+  faMusic,
+  faTshirt,
+  faNewspaper,
+  faBook,
+  faBookDead,
+  faMicrophoneAlt,
+  faMobileAlt,
+  faRecordVinyl
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faFacebook,
@@ -38,7 +50,19 @@ export class FaIcons {
       faQuoteLeft,
       faBars,
       faAngleDown,
-      faAngleLeft
+      faAngleLeft,
+      faAngleDoubleDown,
+      faChevronDown,
+      faCameraRetro,
+      faVideo,
+      faMusic,
+      faTshirt,
+      faBook,
+      faBookDead,
+      faNewspaper,
+      faMicrophoneAlt,
+      faMobileAlt,
+      faRecordVinyl
     );
   }
 }

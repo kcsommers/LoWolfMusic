@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-    <lo-app-shell-root></lo-app-shell-root>
+    <router-outlet></router-outlet>
   `
 })
 export class AppComponent {

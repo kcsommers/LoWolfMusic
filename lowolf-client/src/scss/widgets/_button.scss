@@ -2,20 +2,23 @@
 
 button,
 a.lo-btn {
-    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     border: none;
-    padding: 1rem 2rem;
+    padding: 0rem 2rem;
+    height: 2.5rem;
     margin: 0;
-    margin-top: 1rem;
     text-decoration: none;
     background: none;
-    background-color: $teal;
     border-radius: 3px;
-    color: $light;
     font-family: $font-primary;
     font-size: 1.2rem;
-    cursor: pointer;
-    text-align: center;
+    border: 3px solid #000;
+    background-color: rgba(0,0,0,0);
+    color: #000;
     transition: all 0.2s ease;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -24,51 +27,16 @@ a.lo-btn {
     }
 }
 
-button.lo-btn-sm,
-a.lo-btn-sm {
-    font-size: 1rem;
-    padding: 0.5rem 1.5rem;
-}
-
-button.lo-btn-brown,
-a.lo-btn-brown {
-    background-color: $brown;
-    color: $light;
-}
-
 button.lo-btn-full-width,
 a.lo-btn-full-width {
   width: 100%;
 }
+
 button:hover,
 button:focus,
 a.lo-btn:hover,
 a.lo-btn:focus {
-    background-color: lighten($teal, 5%);
+    background-color: #fff;
+    border-color: #fff;
     box-shadow: $box-shadow;
 }
-
-button:active,
-a.lo-btn:active {
-    transform: scale(0.95);
-}
-button.lo-btn-outline,
-a.lo-btn-outline {
-    border: 2px solid $dark;
-    background-color: rgba(0,0,0,0);
-    color: $dark;
-    &:hover,
-    &:focus {
-        background: $white;
-        border-color: rgba($dark, 0);
-        box-shadow: $box-shadow;
-    }
-}
-@media only screen and (max-width: 560px) {
-    button.lo-btn-responsive,
-    a.lo-btn-responsive {
-        font-size: 1rem;
-        padding: 0.75rem 1.5rem;
-    }
-}
-

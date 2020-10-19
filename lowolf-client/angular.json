@@ -11,7 +11,9 @@
         },
         "@schematics/angular:component": {
           "style": "scss",
-          "spec": false
+          "spec": false,
+          "changeDetection": "OnPush",
+          "export": true
         },
         "@schematics/angular:service": {
           "spec": false

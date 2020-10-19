@@ -1,5 +1,12 @@
 .fade-in {
-    animation: fadeIn 0.5s linear;
+    opacity: 0;
+    animation: fadeIn 1s linear forwards;
+}
+
+.fade-in-delay {
+    opacity: 0;
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 1s;
 }
 
 @keyframes fadeIn {
@@ -8,6 +15,23 @@
   }
   100% {
       opacity: 1;
+  }
+}
+
+.fade-in-down-delay {
+    opacity: 0;
+    animation: fadeInDown 0.5s linear forwards;
+    animation-delay: 1.5s;
+}
+
+@keyframes fadeInDown {
+  0% {
+      opacity: 0;
+      transform: translateY(-30%);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0%);
   }
 }
 
