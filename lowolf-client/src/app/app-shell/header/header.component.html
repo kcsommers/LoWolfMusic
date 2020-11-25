@@ -1,105 +1,67 @@
-<header
-    class="header"
-    [class.header-solid]="headerSolid$ | async"
->
-    <div
-        class="mobile-nav-clickout"
-        [class.open]="mobileNavOpen"
-        [class.fade-in]="mobileNavOpen"
-        (click)="mobileNavOpen = false"
-    ></div>
-    <a
-        class="header-logo-link"
-        [routerLink]="'/'"
-    >
-        Lo Wolf
-    </a>
-    <span
-        class="mobile-nav-trigger"
-        (click)="mobileNavOpen = true"
-    >
-        <fa-icon [icon]="'bars'"></fa-icon>
-    </span>
-    <nav
-        class="header-nav"
-        [class.open]="mobileNavOpen"
-    >
-        <ng-container *ngFor="let item of navItems">
-            <ng-container *ngIf="!item.children || !item.children.length">
-                <a
-                    *ngIf="item.fragment"
-                    class="header-nav-link"
-                    [routerLink]="item.link"
-                    [fragment]="item.fragment"
-                    (click)="mobileNavOpen = false"
-                >
-                    {{item.name}}
-                </a>
-                <a
-                    *ngIf="!item.fragment"
-                    class="header-nav-link"
-                    [routerLink]="item.link"
-                    (click)="mobileNavOpen = false"
-                >
-                    {{item.name}}
-                </a>
-            </ng-container>
-            <span
-                *ngIf="item.children && item.children.length"
-                class="header-nav-parent"
-                (click)="openChildNav($event)"
-            >
-                <fa-icon
-                    class="angle-down"
-                    [icon]="'angle-down'"
-                ></fa-icon>
-                <span class="angle-left-wrap">
-                    <fa-icon [icon]="'angle-left'"></fa-icon>
-                </span>
-                {{item.name}}
-                <div class="header-sub-menu">
-                    <ng-container *ngFor="let child of item.children">
-                        <a
-                            *ngIf="child.fragment"
-                            class="header-nav-link"
-                            [routerLink]="child.link"
-                            [fragment]="child.fragment"
-                            (click)="mobileNavOpen = false"
-                        >
-                            {{child.name}}
-                        </a>
-                        <a
-                            *ngIf="!child.fragment"
-                            class="header-nav-link"
-                            [routerLink]="child.link"
-                            (click)="mobileNavOpen = false"
-                        >
-                            {{child.name}}
-                        </a>
-                    </ng-container>
-                </div>
-            </span>
-        </ng-container>
+<nav>
+    <div class="nav-left">
         <a
-            class="header-nav-link header-social-link"
-            href="https://www.facebook.com/lowolfmusic/"
-            (click)="mobileNavOpen = false"
-        >
-            <fa-icon [icon]="['fab', 'facebook-f']"></fa-icon>
-        </a>
-        <a
-            class="header-nav-link header-social-link"
-            href="https://www.instagram.com/lowolfmusic/"
-            (click)="mobileNavOpen = false"
+            [routerLink]="'/'"
+            class="flex-inline flex-center"
         >
             <fa-icon [icon]="['fab', 'instagram']"></fa-icon>
         </a>
         <a
-            class="header-nav-link header-social-link"
-            href="https://twitter.com/Andhowitworks"
-            (click)="mobileNavOpen = false"
+            [routerLink]="'/'"
+            class="flex-inline flex-center"
         >
             <fa-icon [icon]="['fab', 'twitter']"></fa-icon>
         </a>
-    </nav>
-</header>
+        <a
+            [routerLink]="'/'"
+            class="flex-inline flex-center"
+        >
+            <fa-icon [icon]="['fab', 'spotify']"></fa-icon>
+        </a>
+        <a
+            [routerLink]="'/'"
+            class="flex-inline flex-center"
+        >
+            <fa-icon [icon]="['fab', 'bandcamp']"></fa-icon>
+        </a>
+    </div>
+    <div class="nav-right">
+        <a
+            [routerLink]="'/'"
+            class="flex-inline flex-center"
+        >
+            Shows
+        </a>
+        <a
+            [routerLink]="'/'"
+            class="flex-inline flex-center"
+        >
+            Photos
+        </a>
+        <a
+            [routerLink]="'/'"
+            class="flex-inline flex-center"
+        >
+            Videos
+        </a>
+        <a
+            [routerLink]="'/'"
+            class="flex-inline flex-center"
+        >
+            Blog
+        </a>
+        <a
+            [routerLink]="'/'"
+            class="flex-inline flex-center"
+        >
+            Merch
+        </a>
+        <a
+            [routerLink]="'/'"
+            class="flex-inline flex-center"
+        >
+            Contact
+        </a>
+    </div>
+
+</nav>

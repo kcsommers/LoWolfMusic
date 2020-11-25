@@ -6,6 +6,7 @@
 html,
 body {
     overflow-x: hidden;
+    background-color: $primary;
 }
 html.no-scroll {
     overflow: hidden;
@@ -41,11 +42,17 @@ div {
     transition: all 0.2s ease;
 }
 
+p {
+    font-family: $font-secondary;
+    font-weight: 300;
+}
+
 section {
     margin: 0 auto;
 }
 
 a {
+    font-family: $font-secondary;
     text-decoration: none;
     display: inline-block;
     &:focus,

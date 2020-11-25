@@ -1,8 +1,17 @@
+@import '_variables';
 :host {
     z-index: 900;
+    display: block;
+    width: 100%;
+}
+
+nav {
     display: flex;
-    flex-direction: column;
-    width: 4rem;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
 }
 
 a {
@@ -11,7 +20,6 @@ a {
     padding: 0.5rem 0;
 
     &:hover {
-        transform: scale(1.2) translateX(-10%);
         opacity: 1;
     }
 }

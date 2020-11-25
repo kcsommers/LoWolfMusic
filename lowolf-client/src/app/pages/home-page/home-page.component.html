@@ -1,56 +1,26 @@
-<lo-nav class="fade-in-delay"></lo-nav>
-<lo-social-nav class="fade-in-delay"></lo-social-nav>
-<section class="landing-section flex flex-center">
-    <div class="intro-wrap flex-1">
-        <img
-            class="fade-in"
-            src="assets/images/lowolf.svg"
-            alt="Lo Wolf"
-        >
-        <img
-            class="fade-in-delay"
-            src="assets/images/singe.svg"
-            alt="Singe"
-        >
+<section class="landing-section">
+    <div class="landing-title-wrap">
+        <div class="landing-img-wrap">
+            <div class="landing-img-bg"></div>
+            <img
+                class="lowolf"
+                src="assets/images/lowolf.svg"
+                alt="Lo Wolf"
+            >
+        </div>
+        <div class="landing-img-wrap">
+            <div class="landing-img-bg"></div>
+            <img
+                class="singe"
+                src="assets/images/singe.svg"
+                alt="Singe"
+            >
+        </div>
     </div>
-    <span class="arrow-down-wrap fade-in-down-delay">
-        <fa-icon
-            [icon]="'chevron-down'"
-            [size]="'2x'"
-        ></fa-icon>
-    </span>
-</section>
-<section class="new-album-section">
-    <h2 class="text-align-center">New Album Available Now</h2>
-    <div class="album-links-wrap">
-        <a
-            [routerLink]="'/'"
-            class="lo-btn"
-        >
-            Spotify
-        </a>
-        <a
-            [routerLink]="'/'"
-            class="lo-btn"
-        >
-            Itunes
-        </a>
-        <a
-            [routerLink]="'/'"
-            class="lo-btn"
-        >
-            Bandcamp
-        </a>
-    </div>
-    <div class="album-cover-wrap">
+    <div class="landing-main-wrap">
         <img
-            class="box-shadow"
-            src="assets/images/singe-cover.jpg"
-            alt="Singe Album Cover"
+            src="assets/images/lo-car.jpg"
+            alt="Lo Wolf Face"
         >
     </div>
 </section>
-<section class="video-section">
-    <lo-video [src]="'https://www.youtube.com/embed/Spn0v-EiR_Q'"></lo-video>
-</section>
-<section class="instagram-section"></section>

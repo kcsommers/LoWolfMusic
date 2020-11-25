@@ -17,6 +17,14 @@ router.get('/', (req, res) => {
         .catch(err => {
         res.status(500).json(err);
     });
+    // axios
+    //   .get(`${apiBaseUrl}/me/media?fields=id,username,media_url,caption,permalink&access_token=${process.env.INSTAGRAM_TOKEN}`)
+    //   .then(response => {
+    //     res.status(200).json(response.data);
+    //   })
+    //   .catch(err => {
+    //     res.status(500).json(err);
+    //   });
 });
 module.exports = router;
 //# sourceMappingURL=instagram.router.js.map

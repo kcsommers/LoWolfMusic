@@ -5,6 +5,7 @@ import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HeaderComponent } from './header/header.component';
+import { InstagramFeedComponentModule } from '../components/instagram-feed/instagram-feed.module';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { HeaderComponent } from './header/header.component';
     CommonModule,
     RouterModule,
     FontAwesomeModule,
+    InstagramFeedComponentModule
   ],
   exports: [
   ]

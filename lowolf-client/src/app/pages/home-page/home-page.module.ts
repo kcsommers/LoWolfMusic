@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HomePageComponent } from './home-page.component';
 import { HomePageRoutingModule } from './home-page-routing.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { NavComponentModule, SocialNavComponentModule, VideoComponentModule } from '@lo/components';
+import { InstagramFeedComponentModule, NavComponentModule, SocialNavComponentModule, VideoComponentModule } from '@lo/components';
 
 @NgModule({
   declarations: [HomePageComponent],
@@ -13,7 +13,8 @@ import { NavComponentModule, SocialNavComponentModule, VideoComponentModule } fr
     FontAwesomeModule,
     NavComponentModule,
     SocialNavComponentModule,
-    VideoComponentModule
+    VideoComponentModule,
+    InstagramFeedComponentModule
   ]
 })
 export class HomePageModule { }

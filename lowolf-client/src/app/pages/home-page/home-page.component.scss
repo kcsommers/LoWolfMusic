@@ -1,79 +1,55 @@
-@import '_variables';
 :host {
     display: block;
     width: 100%;
-    background-color: $primary;
-}
-
-lo-nav,
-lo-social-nav {
-    position: fixed;
-    top: 1rem;
-}
-
-lo-nav {
-    right: 0;
-}
-
-lo-social-nav {
-    left: 0;
+    min-width: 800px;
 }
 
 section.landing-section {
-    min-height: 100vh;
+    display: flex;
+}
+
+div.landing-title-wrap {
+    flex: 0.25;
     position: relative;
+    padding-top: calc(70px + 5rem);
 }
 
-span.arrow-down-wrap {
-    position: absolute;
-    display: inline-block;
-    padding: 1rem;
-    cursor: pointer;
-    bottom: 0;
-    >fa-icon {
-        opacity: 0.7;
-        transition: 0.2s ease;
+div.landing-img-wrap {
+    position: relative;
+
+    >div.landing-img-bg {
+        position: absolute;
+        background-color: #fff;
+        top: 0.5rem;
+        bottom: 1rem;
+        left: 0;
+        z-index: 500;
     }
-    &:hover>fa-icon {
-        opacity: 1;
+
+    &:first-child {
+        padding-left: 0.75rem;
+        width: 120%;
+
+        >div.landing-img-bg {
+            right: -8rem;
+        }
+    }
+
+    &:last-child {
+        padding-left: 1.25rem;
+        width: 140%;
+
+        >div.landing-img-bg {
+            right: -10rem;
+        }
+    }
+
+    img {
+        position: relative;
+        z-index: 501;
     }
 }
 
-div.intro-wrap {
-    max-width: 600px;
-    margin: 0 auto;
-    >img:last-child {
-        width: 70%;
-        margin-top: -5rem;
-    }
-}
-
-section.new-album-section {
-    padding: 4rem 0;
-}
-
-div.album-links-wrap {
-    text-align: center;
-    margin: 1rem 0 2rem 0;
-    >a.lo-btn {
-        margin: 0 0.25rem;
-    }
-}
-
-div.album-cover-wrap {
-    width: 35%;
-    margin: 0 auto;
-    min-width: 300px;
-}
-
-section.video-section {
-    background-color: #fff;
-    padding: 4rem;
-    margin: 0 4rem;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-}
-
-section.instagram-section {
-    padding: 4rem 0;
+div.landing-main-wrap {
+    flex: 1;
 }

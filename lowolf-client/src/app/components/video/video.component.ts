@@ -12,6 +12,12 @@ export class VideoComponent implements OnInit {
   @Input()
   public src: string;
 
+  @Input()
+  public poster: string;
+
+  @Input()
+  public autoplay: false;
+
   public safeSrc: SafeResourceUrl;
 
   constructor(private _sanitizer: DomSanitizer) { }

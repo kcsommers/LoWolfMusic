@@ -1,19 +1,19 @@
-<ng-container *ngIf="!(instagramService?.error$ | async)">
-    <div
-        *ngIf="!(images$ | async)"
-        class="spinner-wrap"
+<!-- <ng-container *ngIf="!(instagramService?.error$ | async)"> -->
+<div
+    *ngIf="!(images$ | async)"
+    class="spinner-wrap"
+>
+    <lo-spinner></lo-spinner>
+</div>
+<ng-container *ngFor="let img of (images$ | async); let i = index">
+    <a
+        *ngIf="i <= indexLimit"
+        class="instagram-img-tag"
+        [ngStyle]="{backgroundImage: 'url(' + img.media_url + ')'}"
+        title="{{img.caption}}"
+        href="{{img.permalink}}"
     >
-        <lo-spinner [color]="'dark'"></lo-spinner>
-    </div>
-    <ng-container *ngFor="let img of (images$ | async); let i = index">
-        <a
-            *ngIf="i <= indexLimit"
-            class="instagram-img-tag"
-            [ngStyle]="{backgroundImage: 'url(' + img.media_url + ')'}"
-            title="{{img.caption}}"
-            href="{{img.permalink}}"
-        >
-            <span class="instagram-img-inner"></span>
-        </a>
-    </ng-container>
+        <span class="instagram-img-inner"></span>
+    </a>
 </ng-container>
+<!-- </ng-container> -->

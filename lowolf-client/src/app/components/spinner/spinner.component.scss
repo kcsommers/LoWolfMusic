@@ -1,0 +1,20 @@
+@import '_variables';
+
+fa-icon {
+    display: inline-block;
+    animation: spinPulse 1s linear infinite;
+    color: #000;
+}
+
+
+@keyframes spinPulse {
+    0% {
+        transform: rotate(0deg) scale(0.75);
+    }
+    50% {
+        transform: rotate(180deg) scale(1.25);
+    }
+    100% {
+        transform: rotate(360deg) scale(0.75);
+    }
+}
