@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, Input, ViewChild, ElementRef } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
@@ -18,12 +18,32 @@ export class VideoComponent implements OnInit {
   @Input()
   public autoplay: false;
 
+  @ViewChild('Video', { static: false })
+  private videoEl: ElementRef;
+
   public safeSrc: SafeResourceUrl;
 
-  constructor(private _sanitizer: DomSanitizer) { }
+  public videoPlaying = false;
+
+  constructor(private sanitizer: DomSanitizer) { }
 
   ngOnInit() {
-    this.safeSrc = this._sanitizer.bypassSecurityTrustResourceUrl(this.src);
+    this.safeSrc = this.sanitizer.bypassSecurityTrustResourceUrl(this.src);
+  }
+
+  public togglePlay(): void {
+
+    console.log('VIDEO:::: ', this.videoEl)
+
+    this.videoPlaying = !this.videoPlaying;
+
+    if (this.videoPlaying) {
+      this.videoEl.nativeElement.play();
+    }
+    else {
+      this.videoEl.nativeElement.pause();
+    }
+
   }
 
 }

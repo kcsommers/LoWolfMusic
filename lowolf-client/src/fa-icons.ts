@@ -7,6 +7,7 @@ import {
   faAngleDown,
   faAngleDoubleDown,
   faChevronDown,
+  faChevronRight,
   faCameraRetro,
   faVideo,
   faMusic,
@@ -16,7 +17,9 @@ import {
   faBookDead,
   faMicrophoneAlt,
   faMobileAlt,
-  faRecordVinyl
+  faRecordVinyl,
+  faQuoteRight,
+  faPlay
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faFacebook,
@@ -48,11 +51,13 @@ export class FaIcons {
       faBandcamp,
       faItunes,
       faQuoteLeft,
+      faQuoteRight,
       faBars,
       faAngleDown,
       faAngleLeft,
       faAngleDoubleDown,
       faChevronDown,
+      faChevronRight,
       faCameraRetro,
       faVideo,
       faMusic,
@@ -62,7 +67,8 @@ export class FaIcons {
       faNewspaper,
       faMicrophoneAlt,
       faMobileAlt,
-      faRecordVinyl
+      faRecordVinyl,
+      faPlay
     );
   }
 }

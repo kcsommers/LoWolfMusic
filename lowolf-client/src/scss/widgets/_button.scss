@@ -2,41 +2,49 @@
 
 button,
 a.lo-btn {
+    display: inline-block;
+    min-width: 200px;
+    padding: 0.3rem 5rem 0.3rem 0.3rem;
     cursor: pointer;
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+    color: $dark;
     border: none;
-    padding: 0rem 2rem;
-    height: 2.5rem;
-    margin: 0;
     text-decoration: none;
     background: none;
-    border-radius: 3px;
-    font-family: $font-primary;
-    font-size: 1.2rem;
-    border: 3px solid #000;
-    background-color: rgba(0,0,0,0);
-    color: #000;
-    transition: all 0.2s ease;
+    background-color: darken(#fff, 5%);
+    text-align: left;
     -webkit-appearance: none;
     -moz-appearance: none;
+
     >a {
         color: inherit;
     }
-}
 
-button.lo-btn-full-width,
-a.lo-btn-full-width {
-  width: 100%;
-}
+    >fa-icon {
+        color: inherit;
+        margin-left: 0.25rem;
+        font-size: 0.9rem;
+        transition: all 0.2s ease;
+        opacity: 0.75;
+    }
 
-button:hover,
-button:focus,
-a.lo-btn:hover,
-a.lo-btn:focus {
-    background-color: #fff;
-    border-color: #fff;
-    box-shadow: $box-shadow;
+    &:hover,
+    &:focus {
+        background-color: #fff;
+
+        >fa-icon {
+            transform: translateX(5px) scale(1.6, 1.1);
+            opacity: 1;
+            color: $primary;
+        }
+    }
+
+    &.lo-btn-primary {
+        color: #fff;
+        background-color: $primary;
+
+        &:hover,
+        &:focus {
+            background-color: lighten($primary, 5%);
+        }
+    }
 }

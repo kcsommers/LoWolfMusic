@@ -1,15 +1,17 @@
 <div class="video-wrap">
     <video
+        #Video
         *ngIf="autoplay"
         [attr.src]="safeSrc"
         [attr.poster]="poster"
         autoplay
     ></video>
     <video
+        #Video
         *ngIf="!autoplay"
         [attr.src]="safeSrc"
         [attr.poster]="poster"
-        controls
+        (click)="togglePlay()"
     ></video>
     <!-- <iframe
         [attr.src]="safeSrc"
@@ -17,4 +19,8 @@
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
     ></iframe> -->
+    <fa-icon
+        *ngIf="!videoPlaying"
+        [icon]="'play'"
+    ></fa-icon>
 </div>

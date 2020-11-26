@@ -1,26 +1,117 @@
 <section class="landing-section">
-    <div class="landing-title-wrap">
-        <div class="landing-img-wrap">
-            <div class="landing-img-bg"></div>
+    <div class="max-width-container">
+        <div class="landing-title-wrap">
+            <div class="landing-img-wrap">
+                <div class="landing-img-bg"></div>
+                <img
+                    class="lowolf"
+                    src="assets/images/lowolf.svg"
+                    alt="Lo Wolf"
+                >
+            </div>
+            <div class="landing-img-wrap">
+                <div class="landing-img-bg"></div>
+                <img
+                    class="singe"
+                    src="assets/images/singe.svg"
+                    alt="Singe"
+                >
+            </div>
+            <button
+                class="lo-btn"
+                (click)="setModalOpen(true)"
+            >
+                New Album Available Now
+                <fa-icon
+                    class="slide-in-right"
+                    [icon]="'chevron-right'"
+                ></fa-icon>
+            </button>
+        </div>
+        <div class="landing-main-wrap">
             <img
-                class="lowolf"
-                src="assets/images/lowolf.svg"
-                alt="Lo Wolf"
+                src="assets/images/lo-car.jpg"
+                alt="Lo Wolf Face"
             >
         </div>
-        <div class="landing-img-wrap">
-            <div class="landing-img-bg"></div>
-            <img
-                class="singe"
-                src="assets/images/singe.svg"
-                alt="Singe"
-            >
-        </div>
-    </div>
-    <div class="landing-main-wrap">
-        <img
-            src="assets/images/lo-car.jpg"
-            alt="Lo Wolf Face"
-        >
     </div>
 </section>
+<section class="intro-section">
+    <div class="max-width-container flex-container-75">
+        <div></div>
+        <div class="intro-section-inner">
+            <div class="flex">
+                <div class="quotes-container flex-1">
+                    <div class="quote-wrap">
+                        <h2 class="quote">
+                            <fa-icon
+                                class="quote-left"
+                                [icon]="'quote-left'"
+                            ></fa-icon>
+                            <fa-icon
+                                class="quote-right"
+                                [icon]="'quote-right'"
+                            ></fa-icon>
+                            <span>
+                                Poetry, grit and wit are all effortlessly woven throughout a record that feels equal parts timeless and modern
+                            </span>
+                        </h2>
+                        <p class="quote-author">- Heroin Chic</p>
+                    </div>
+                    <div class="quote-wrap">
+                        <h2 class="quote">
+                            <fa-icon
+                                class="quote-left"
+                                [icon]="'quote-left'"
+                            ></fa-icon>
+                            <fa-icon
+                                class="quote-right"
+                                [icon]="'quote-right'"
+                            ></fa-icon>
+                            <span>
+                                Lo Wolf is a fearless artist who puts it all out there and lives authentically to her art
+                            </span>
+                        </h2>
+                        <p class="quote-author">- Songs Worth Downloading</p>
+                    </div>
+                </div>
+                <div class="flex-1">
+                    <p style="padding: 0 4rem;">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente vitae, aut ipsa minima dicta impedit libero amet est, natus consequatur hic incidunt inventore nostrum. Animi tempora illo ut cupiditate laborum!
+                        <br>
+                        <br>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero odit eveniet quae temporibus inventore neque, doloribus placeat sapiente atque obcaecati.
+                    </p>
+                </div>
+            </div>
+            <a
+                [routerLink]="'/'"
+                class="lo-btn margin-top-2"
+            >
+                More Lo Wolf Press
+                <fa-icon
+                    class="slide-in-right"
+                    [icon]="'chevron-right'"
+                ></fa-icon>
+            </a>
+        </div>
+    </div>
+</section>
+<section class="video-section">
+    <lo-video
+        [src]="'assets/videos/rape-city.mp4'"
+        [poster]="'assets/images/rape-city-poster.png'"
+    ></lo-video>
+</section>
+
+
+
+<div
+    *ngIf="modalOpen"
+    class="fade-in-quick modal"
+    (click)="setModalOpen(false)"
+>
+
+
+
+</div>

@@ -1,3 +1,5 @@
+@import '_variables';
+
 :host {
     display: block;
     width: 100%;
@@ -5,13 +7,22 @@
 }
 
 section.landing-section {
-    display: flex;
+    margin-bottom: 6rem;
+    >div.max-width-container {
+        display: flex;
+    }
 }
 
 div.landing-title-wrap {
     flex: 0.25;
     position: relative;
     padding-top: calc(70px + 5rem);
+
+    >button.lo-btn {
+        position: absolute;
+        left: 0;
+        width: 300px;
+    }
 }
 
 div.landing-img-wrap {
@@ -35,7 +46,7 @@ div.landing-img-wrap {
         }
     }
 
-    &:last-child {
+    &:nth-child(2) {
         padding-left: 1.25rem;
         width: 140%;
 
@@ -52,4 +63,45 @@ div.landing-img-wrap {
 
 div.landing-main-wrap {
     flex: 1;
+}
+
+section.intro-section {
+    background-color: #fff;
+    padding: 6rem 0;
+}
+
+div.quote-wrap {
+    &:first-child {
+        margin-bottom: 2rem;
+    }
+}
+
+h2.quote {
+    position: relative;
+
+    >span {
+        z-index: 201;
+    }
+
+    >fa-icon {
+        position: absolute;
+        font-size: 2.5rem;
+        opacity: 0.2;
+        z-index: 200;
+
+        &.quote-left {
+            top: -0.75rem;
+            left: -0.75rem;
+        }
+        &.quote-right {
+            bottom: -1rem;
+            right: 1rem;
+        }
+    }
+}
+
+p.quote-author {
+    text-align: right;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
 }

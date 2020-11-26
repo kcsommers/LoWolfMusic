@@ -3,6 +3,11 @@
     animation: fadeIn 1s linear forwards;
 }
 
+.fade-in-quick {
+    opacity: 0;
+    animation: fadeIn 0.2s linear forwards;
+}
+
 .fade-in-delay {
     opacity: 0;
     animation: fadeIn 1s linear forwards;
