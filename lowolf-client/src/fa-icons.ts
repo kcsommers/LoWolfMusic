@@ -19,7 +19,8 @@ import {
   faMobileAlt,
   faRecordVinyl,
   faQuoteRight,
-  faPlay
+  faPlay,
+  faShoppingCart
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faFacebook,
@@ -68,7 +69,8 @@ export class FaIcons {
       faMicrophoneAlt,
       faMobileAlt,
       faRecordVinyl,
-      faPlay
+      faPlay,
+      faShoppingCart
     );
   }
 }

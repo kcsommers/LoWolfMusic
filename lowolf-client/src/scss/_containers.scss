@@ -25,6 +25,17 @@ $box-shadow-left: -5px 0px 10px -1px rgba(0,0,0,0.25);
     flex-wrap: wrap;
 }
 
+.flex-inline {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.flex-space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .flex-col {
     flex-direction: column;
 }
@@ -34,7 +45,7 @@ $box-shadow-left: -5px 0px 10px -1px rgba(0,0,0,0.25);
     align-items: center;
 }
 
-div.flex-container-75 {
+.flex-container-75 {
     display: flex;
 
     >div:first-child {
@@ -49,11 +60,6 @@ div.flex-container-75 {
     flex: 1;
 }
 
-.flex-inline {
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .text-align-center {
     text-align: center;
 }
@@ -64,9 +70,22 @@ div.flex-container-75 {
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: rgba($dark, 0.9);
+    background-color: rgba(#000, 0.9);
     z-index: 1000;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.padding-1 {
+    padding: 1rem;
+}
+
+*.max-width-container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+*.margin-top-2 {
+    margin-top: 2rem;
 }
