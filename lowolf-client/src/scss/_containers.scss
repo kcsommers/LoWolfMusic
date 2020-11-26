@@ -66,4 +66,7 @@ div.flex-container-75 {
     right: 0;
     background-color: rgba($dark, 0.9);
     z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

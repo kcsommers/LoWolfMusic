@@ -105,3 +105,18 @@ p.quote-author {
     font-size: 0.8rem;
     margin-top: 0.5rem;
 }
+
+div.modal-album-wrap {
+    width: 400px;
+    height: 90vh;
+    min-height: 300px;
+    overflow: auto;
+    background-color: #fff;
+}
+
+div.album-links {
+    >a {
+        display: block;
+        text-align: center;
+    }
+}

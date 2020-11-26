@@ -103,15 +103,20 @@
         [poster]="'assets/images/rape-city-poster.png'"
     ></lo-video>
 </section>
-
-
-
 <div
     *ngIf="modalOpen"
     class="fade-in-quick modal"
     (click)="setModalOpen(false)"
 >
-
-
-
+    <div class="modal-album-wrap">
+        <img
+            src="assets/images/singe-cover.jpg"
+            alt="Singe"
+        >
+        <div class="album-links">
+            <a href="/">Bandcamp</a>
+            <a href="/">Spotify</a>
+            <a href="/">Itunes</a>
+        </div>
+    </div>
 </div>
