@@ -1,0 +1,28 @@
+<div class="section-container">
+    <div></div>
+    <div class="bg-white">
+        <div
+            *ngIf="loading$ | async"
+            class="spinner-wrap"
+        >
+            <lo-spinner></lo-spinner>
+        </div>
+        <div
+            *ngIf="!(loading$ | async) && (error$ | async)"
+            class="error-wrap"
+        >
+            <h4>There was a problem loading photos...</h4>
+        </div>
+        <section
+            *ngIf="!(loading$ | async) && !(error$ | async)"
+            class="photos-section"
+        >
+            <div class="photos-grid-wrap">
+                <lo-image
+                    *ngFor="let url of (urls$ | async)"
+                    [src]="url"
+                ></lo-image>
+            </div>
+        </section>
+    </div>
+</div>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BasePage, HtmlMetaService } from '@lo/core';
+import { albums, BasePage, HtmlMetaService } from '@lo/core';
 
 
 @Component({
@@ -9,17 +9,13 @@ import { BasePage, HtmlMetaService } from '@lo/core';
 })
 export class HomePageComponent extends BasePage {
 
-  public modalOpen = false;
+  public albums = albums;
 
   constructor(private metaService: HtmlMetaService) {
     super(metaService, {
       title: 'Lo Wolf Music',
       description: 'New album Singe available now'
     });
-  }
-
-  public setModalOpen(isOpen: boolean): void {
-    this.modalOpen = isOpen;
   }
 
 }

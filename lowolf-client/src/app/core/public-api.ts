@@ -1,6 +1,6 @@
 export { HtmlMetaService } from './services/html-meta.service';
 
-export { AlbumModel } from './model/music/albums';
+export { IAlbum, albums } from './data/albums';
 export { ReviewModel } from './model/reviews/reviews';
 export { EventModel } from './model/events/events';
 export { ContactService, SignupRequest, MessageRequest } from './services/contact.service';

@@ -1,5 +1,5 @@
 <section class="landing-section">
-    <div class="max-width-container">
+    <div class="section-container">
         <div class="landing-title-wrap">
             <div class="landing-img-wrap">
                 <div class="landing-img-bg"></div>
@@ -19,7 +19,7 @@
             </div>
             <button
                 class="lo-btn"
-                (click)="setModalOpen(true)"
+                (click)="AlbumModal.open()"
             >
                 New Album Available Now
                 <fa-icon
@@ -29,15 +29,16 @@
             </button>
         </div>
         <div class="landing-main-wrap">
-            <img
-                src="assets/images/lo-car.jpg"
-                alt="Lo Wolf Face"
-            >
+            <lo-image
+                [src]="'assets/images/lo-car.jpg'"
+                [alt]="'Lo Wolf'"
+                [showSpinner]="false"
+            ></lo-image>
         </div>
     </div>
 </section>
 <section class="intro-section">
-    <div class="max-width-container flex-container-75">
+    <div class="section-container">
         <div></div>
         <div class="intro-section-inner">
             <div class="flex">
@@ -103,101 +104,8 @@
         [poster]="'assets/images/rape-city-poster.png'"
     ></lo-video>
 </section>
-<div
-    *ngIf="modalOpen"
-    class="fade-in-quick modal"
-    (click)="setModalOpen(false)"
->
-    <div class="modal-album-wrap">
-        <div class="album-title-wrap padding-1">
-            <p>Lo Wolf</p>
-            <p>
-                Singe
-                <em>(2020)</em>
-            </p>
-        </div>
-        <div class="padding-1">
-            <img
-                src="assets/images/singe-cover.jpg"
-                alt="Singe"
-            >
-        </div>
-        <div class="padding-1">
-            <div class="album-links">
-                <div class="flex-space-between">
-                    <div>
-                        <img
-                            src="assets/images/logos/bandcamp.png"
-                            alt="Bandcamp Logo"
-                        >
-                        <span>Bandcamp</span>
-                    </div>
-                    <a
-                        [routerLink]="'/'"
-                        class="lo-btn"
-                    >
-                        Buy/Listen
-                        <fa-icon
-                            class="slide-in-right"
-                            [icon]="'chevron-right'"
-                        ></fa-icon>
-                    </a>
-                </div>
-                <div class="flex-space-between">
-                    <div>
-                        <img
-                            src="assets/images/logos/spotify.png"
-                            alt="Spotify Logo"
-                        >
-                        <span>Spotify</span>
-                    </div>
-                    <a
-                        [routerLink]="'/'"
-                        class="lo-btn"
-                    >
-                        Buy/Listen
-                        <fa-icon
-                            class="slide-in-right"
-                            [icon]="'chevron-right'"
-                        ></fa-icon>
-                    </a>
-                </div>
-                <div class="flex-space-between">
-                    <div>
-                        <img
-                            src="assets/images/logos/itunes.png"
-                            alt="Itunes Logo"
-                        >
-                        <span>Itunes</span>
-                    </div>
-                    <a
-                        [routerLink]="'/'"
-                        class="lo-btn"
-                    >
-                        Buy/Listen
-                        <fa-icon
-                            class="slide-in-right"
-                            [icon]="'chevron-right'"
-                        ></fa-icon>
-                    </a>
-                </div>
-                <div class="flex-space-between">
-                    <div>
-                        <fa-icon [icon]="'shopping-cart'"></fa-icon>
-                        <span>Lo Wolf Store</span>
-                    </div>
-                    <a
-                        [routerLink]="'/'"
-                        class="lo-btn"
-                    >
-                        Buy/Listen
-                        <fa-icon
-                            class="slide-in-right"
-                            [icon]="'chevron-right'"
-                        ></fa-icon>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<lo-modal #AlbumModal>
+    <ng-template #ModalTemplate>
+        <lo-modal-album [album]="albums[0]"></lo-modal-album>
+    </ng-template>
+</lo-modal>

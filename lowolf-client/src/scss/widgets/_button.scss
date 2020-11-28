@@ -3,6 +3,8 @@
 button,
 a.lo-btn {
     display: inline-block;
+    position: relative;
+    z-index: 700;
     min-width: 200px;
     padding: 0.3rem 5rem 0.3rem 0.3rem;
     cursor: pointer;
@@ -46,5 +48,9 @@ a.lo-btn {
         &:focus {
             background-color: lighten($primary, 5%);
         }
+    }
+
+    &.lo-btn-full-width {
+        width: 100%;
     }
 }

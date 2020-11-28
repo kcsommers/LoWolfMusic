@@ -16,7 +16,13 @@ export class VideoComponent implements OnInit {
   public poster: string;
 
   @Input()
-  public autoplay: false;
+  public autoplay = false;
+
+  @Input()
+  public useBorder = false;
+
+  @Input()
+  public useIframe = false;
 
   @ViewChild('Video', { static: false })
   private videoEl: ElementRef;
@@ -32,8 +38,6 @@ export class VideoComponent implements OnInit {
   }
 
   public togglePlay(): void {
-
-    console.log('VIDEO:::: ', this.videoEl)
 
     this.videoPlaying = !this.videoPlaying;
 

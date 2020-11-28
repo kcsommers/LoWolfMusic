@@ -1,0 +1,86 @@
+<section class="page-title-section max-width">
+    <!-- <lo-image [src]="'assets/images/lo-sign-bw.jpg'"></lo-image> -->
+    <div class="section-container">
+        <div></div>
+        <div class="page-title-wrap">
+            <h1 class="bg-white">Music</h1>
+        </div>
+    </div>
+</section>
+<section class="section-container">
+    <div></div>
+    <div class="music-container bg-white">
+        <div class="music-container-inner">
+            <div class="divider"></div>
+            <div
+                *ngFor="let album of albums"
+                class="album-wrap"
+            >
+                <div class="flex">
+                    <div class="flex-1 album-info-wrap">
+                        <h2 class="album-title">
+                            {{album.title}}
+                            <em>({{album.year}})</em>
+                        </h2>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        </p>
+                        <button
+                            class="lo-btn-full-width"
+                            (click)="openAlbumModal(album)"
+                        >
+                            Buy/Listen
+                            <fa-icon
+                                class="slide-in-right"
+                                [icon]="'chevron-right'"
+                            ></fa-icon>
+                        </button>
+                        <button
+                            class="lo-btn"
+                            (click)="setModalOpen(true)"
+                        >
+                            View Tracklist
+                            <fa-icon
+                                class="slide-in-right"
+                                [icon]="'chevron-right'"
+                            ></fa-icon>
+                        </button>
+                    </div>
+                    <div class="flex-1 flex flex-center album-cover-wrap">
+                        <lo-image
+                            class="album-cover"
+                            [src]="album.coverUrl"
+                            [alt]="album.title + ' Cover'"
+                        ></lo-image>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <!-- <div class="tracklist-wrap">
+                    <div
+                        *ngFor="let track of album.tracklist"
+                        class="track"
+                    >
+                        {{track}}
+                    </div>
+                </div> -->
+            </div>
+            <div
+                *ngFor="let video of videos"
+                class="video-wrap"
+            >
+                <lo-video
+                    [src]="video.url"
+                    [poster]="video.poster"
+                    [useIframe]="video.external"
+                ></lo-video>
+                <h2 class="margin-1">{{video.title}}</h2>
+                <div class="divider"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<lo-modal #AlbumModal>
+    <ng-template #ModalTemplate>
+        <lo-modal-album [album]="selectedAlbum"></lo-modal-album>
+    </ng-template>
+</lo-modal>

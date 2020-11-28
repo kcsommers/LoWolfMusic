@@ -1,1 +1,14 @@
-<p>image works!</p>
+<img
+    #Image
+    [attr.src]="safeSrc"
+    [attr.alt]="alt"
+    [class.image-loading]="!(loaded$ | async)"
+    [@fadeIn]="loaded$ | async"
+    (load)="onLoad()"
+>
+<div
+    *ngIf="!(loaded$ | async)"
+    class="img-placeholder"
+>
+    <lo-spinner *ngIf="showSpinner"></lo-spinner>
+</div>

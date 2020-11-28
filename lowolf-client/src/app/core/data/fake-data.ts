@@ -1,5 +1,4 @@
 import { ReviewModel } from '../model/reviews/reviews';
-import { AlbumModel } from '../model/music/albums';
 import { EventModel } from '../model/events/events';
 
 export const reviews: ReviewModel[] = [
@@ -75,34 +74,3 @@ export const events: EventModel[] = [
   }
 ];
 
-export const albums: AlbumModel[] = [
-  {
-    title: 'Singe',
-    year: '2020',
-    coverUrl: 'assets/images/singe-cover.jpg',
-    id: '1',
-    tracklist: [
-      '01. Alabama',
-      '02. Nicotine Wet Dream',
-      '03. Room at the Table',
-      '04. Singe',
-      '05. Sex',
-      '06. Sailor',
-      '07. Rape City, USA',
-      '08. Pay Me',
-      '09. Tryin'
-    ]
-  },
-  {
-    title: 'Country Pop Hit EP',
-    year: '2018',
-    coverUrl: 'assets/images/country-pop-hit-cover.png',
-    id: '2',
-    tracklist: [
-      '01. Kill No More',
-      '02. Plug in the Iron',
-      '03. Dog 1',
-      '04. Gone are the Days'
-    ]
-  }
-];

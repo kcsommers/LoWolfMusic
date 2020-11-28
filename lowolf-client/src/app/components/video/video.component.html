@@ -1,26 +1,30 @@
-<div class="video-wrap">
+<div
+    class="video-wrap"
+    [class.bordered]="useBorder"
+>
     <video
         #Video
-        *ngIf="autoplay"
+        *ngIf="autoplay && useIframe"
         [attr.src]="safeSrc"
         [attr.poster]="poster"
         autoplay
     ></video>
     <video
         #Video
-        *ngIf="!autoplay"
+        *ngIf="!autoplay && !useIframe"
         [attr.src]="safeSrc"
         [attr.poster]="poster"
         (click)="togglePlay()"
     ></video>
-    <!-- <iframe
+    <iframe
+        *ngIf="useIframe"
         [attr.src]="safeSrc"
         frameborder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
-    ></iframe> -->
+    ></iframe>
     <fa-icon
-        *ngIf="!videoPlaying"
+        *ngIf="!videoPlaying && !useIframe"
         [icon]="'play'"
     ></fa-icon>
 </div>

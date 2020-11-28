@@ -23,6 +23,10 @@ div.video-wrap {
         font-size: 3rem;
     }
 
+    &.bordered {
+        border: 10px solid #fff;
+    }
+
     &:hover {
         >fa-icon {
             opacity: 0.85;
