@@ -3,23 +3,10 @@
 :host {
     display: block;
     width: 100%;
-    padding-top: 70px;
+    min-width: 800px;
 }
 
-h1.bg-white {
-    margin: 2rem 0 1rem 0;
-}
-
-section.page-title-section {
-    position: relative;
-
-    lo-image {
-        position: absolute;
-        z-index: 399;
-    }
-}
-
-.section-container {
+section.music-section {
     position: relative;
     z-index: 400;
 }

@@ -17,3 +17,15 @@ div.img-placeholder {
     align-items: center;
     justify-content: center;
 }
+
+div.square-gallery-img {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+
+    &.ready {
+        display: block;
+    }
+}

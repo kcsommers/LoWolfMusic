@@ -1,5 +1,5 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { Component, ChangeDetectionStrategy, OnInit, Input } from '@angular/core';
+import { Component, ChangeDetectionStrategy, OnInit, Input, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { BehaviorSubject } from 'rxjs';
 
@@ -16,7 +16,7 @@ import { BehaviorSubject } from 'rxjs';
   ],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ImageComponent implements OnInit {
+export class ImageComponent implements OnInit, AfterViewInit {
 
   @Input()
   public src: string;
@@ -27,14 +27,32 @@ export class ImageComponent implements OnInit {
   @Input()
   public showSpinner = true;
 
+  @Input()
+  public isGallery = false;
+
   public safeSrc: SafeResourceUrl;
 
   public loaded$ = new BehaviorSubject(false);
+
+  @ViewChild('GalleryImg', { static: false, read: ElementRef })
+  private galleryImg: ElementRef<HTMLDivElement>;
 
   constructor(private sanitizer: DomSanitizer) { }
 
   ngOnInit() {
     this.safeSrc = this.sanitizer.bypassSecurityTrustResourceUrl(this.src);
+  }
+
+  ngAfterViewInit() {
+    if (this.isGallery) {
+      const img = new Image();
+      img.onload = () => {
+        console.log('Loaded:::: ');
+        // this.galleryImg.nativeElement.style.backgroundImage = `url(${this.src})`;
+        this.loaded$.next(true);
+      };
+      img.src = this.src;
+    }
   }
 
   public onLoad(): void {

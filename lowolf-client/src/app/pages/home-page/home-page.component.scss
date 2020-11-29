@@ -10,50 +10,12 @@ section.landing-section {
     margin-bottom: 6rem;
 }
 
-div.landing-title-wrap {
-    position: relative;
-    padding-top: calc(70px + 5rem);
+div.singe-img-wrap {
+    padding-left: 1.25rem;
+    width: 140%;
 
-    >button.lo-btn {
-        position: absolute;
-        left: 0;
-        width: 300px;
-    }
-}
-
-div.landing-img-wrap {
-    position: relative;
-
-    >div.landing-img-bg {
-        position: absolute;
-        background-color: #fff;
-        top: 0.5rem;
-        bottom: 1rem;
-        left: 0;
-        z-index: 500;
-    }
-
-    &:first-child {
-        padding-left: 0.75rem;
-        width: 120%;
-
-        >div.landing-img-bg {
-            right: -8rem;
-        }
-    }
-
-    &:nth-child(2) {
-        padding-left: 1.25rem;
-        width: 140%;
-
-        >div.landing-img-bg {
-            right: -10rem;
-        }
-    }
-
-    img {
-        position: relative;
-        z-index: 501;
+    >div.title-img-bg {
+        right: -10rem;
     }
 }
 

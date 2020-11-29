@@ -1,5 +1,6 @@
 <img
     #Image
+    *ngIf="!isGallery"
     [attr.src]="safeSrc"
     [attr.alt]="alt"
     [class.image-loading]="!(loaded$ | async)"
@@ -12,3 +13,10 @@
 >
     <lo-spinner *ngIf="showSpinner"></lo-spinner>
 </div>
+<div
+    #GalleryImg
+    *ngIf="isGallery"
+    class="square-gallery-img"
+    [class.ready]="loaded$ | async"
+    [ngStyle]="{backgroundImage: 'url(' + src + ')'}"
+></div>

@@ -50,7 +50,6 @@ export class GalleryPageComponent extends BasePage implements OnInit {
         res => {
 
           this.loading$.next(false);
-          console.log('Res;::: ', res);
 
           if (!res || !res.data || !res.data.resources || !res.data.resources.length) {
             this.error$.next(true);

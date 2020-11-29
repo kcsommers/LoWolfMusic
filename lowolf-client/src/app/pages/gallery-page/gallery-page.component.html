@@ -1,28 +1,63 @@
-<div class="section-container">
-    <div></div>
-    <div class="bg-white">
-        <div
-            *ngIf="loading$ | async"
-            class="spinner-wrap"
-        >
-            <lo-spinner></lo-spinner>
+<!-- <section class="page-title-section max-width">
+    <div class="section-container">
+        <div class="title-section">
+            <div class="title-img-wrap">
+                <div class="title-img-bg"></div>
+                <img
+                    class="lowolf"
+                    src="assets/images/lowolf.svg"
+                    alt="Lo Wolf"
+                >
+            </div>
+            <h1 class="title">Photos</h1>
         </div>
-        <div
-            *ngIf="!(loading$ | async) && (error$ | async)"
-            class="error-wrap"
-        >
-            <h4>There was a problem loading photos...</h4>
+        <div class="page-title-wrap">
+            <div class="intro-main-wrap">
+                <lo-image
+                    [src]="'assets/images/lo-bw.jpg'"
+                    [alt]="'Lo Wolf'"
+                    [showSpinner]="false"
+                ></lo-image>
+            </div>
         </div>
-        <section
-            *ngIf="!(loading$ | async) && !(error$ | async)"
-            class="photos-section"
-        >
-            <div class="photos-grid-wrap">
+    </div>
+</section> -->
+<section class="section-container photos-section">
+    <div class="title-section">
+        <div class="title-img-wrap">
+            <div class="title-img-bg"></div>
+            <img
+                class="lowolf"
+                src="assets/images/lowolf.svg"
+                alt="Lo Wolf"
+            >
+        </div>
+        <h1 class="title">Photos</h1>
+    </div>
+    <div class="bg-white photos-container">
+        <div class="photos-container-inner">
+            <div
+                *ngIf="loading$ | async"
+                class="spinner-wrap"
+            >
+                <lo-spinner></lo-spinner>
+            </div>
+            <div
+                *ngIf="!(loading$ | async) && (error$ | async)"
+                class="error-wrap"
+            >
+                <h4>There was a problem loading photos...</h4>
+            </div>
+            <div
+                *ngIf="!(loading$ | async) && !(error$ | async)"
+                class="photos-grid-wrap"
+            >
                 <lo-image
                     *ngFor="let url of (urls$ | async)"
                     [src]="url"
+                    [isGallery]="true"
                 ></lo-image>
             </div>
-        </section>
+        </div>
     </div>
-</div>
+</section>
