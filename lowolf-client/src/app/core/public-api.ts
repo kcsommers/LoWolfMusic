@@ -1,3 +1,5 @@
+import { BlogService } from './services/blog.service';
+
 export { HtmlMetaService } from './services/html-meta.service';
 
 export { IAlbum, albums } from './data/albums';
@@ -10,3 +12,7 @@ export * from './utils';
 
 export { PageMeta } from './model/pages/page-meta';
 export { BasePage } from './model/pages/base-page';
+
+export { BlogService } from './services/blog.service';
+
+export * from './model/blog/blog';

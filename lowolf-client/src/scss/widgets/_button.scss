@@ -12,7 +12,7 @@ a.lo-btn {
     border: none;
     text-decoration: none;
     background: none;
-    background-color: darken(#fff, 5%);
+    background-color: $light-gray;
     text-align: left;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -34,7 +34,7 @@ a.lo-btn {
         background-color: #fff;
 
         >fa-icon {
-            transform: translateX(5px) scale(1.6, 1.1);
+            transform: translateX(5px) scale(1.6, 1);
             opacity: 1;
             color: $primary;
         }

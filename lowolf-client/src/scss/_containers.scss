@@ -68,34 +68,6 @@ $box-shadow-left: -5px 0px 10px -1px rgba(0,0,0,0.25);
     padding: 1rem;
 }
 
-*.section-container {
-    max-width: 1280px;
-    margin: 0 auto;
-    display: flex;
-
-    >div:first-child {
-        flex: 0.25;
-    }
-
-    >div:last-child {
-        flex: 1;
-    }
-}
-
-*.section-container-inverse {
-    max-width: 1280px;
-    margin: 0 auto;
-    display: flex;
-
-    >div:first-child {
-        flex: 1;
-    }
-
-    >div:last-child {
-        flex: 0.25;
-    }
-}
-
 *.margin-top-2 {
     margin-top: 2rem;
 }

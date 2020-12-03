@@ -16,6 +16,7 @@ app.use(body_parser_1.default.urlencoded({ extended: true }));
 app.use('/instagram', require('./controllers/instagram.router'));
 app.use('/photos', require('./controllers/photos.router'));
 app.use('/contact', require('./controllers/contact.router'));
+app.use('/blog', require('./controllers/blog.router'));
 app.get('/sitemap', (req, res) => {
     console.log('Hit sitemap');
     res.sendFile(path_1.default.join(__dirname, '../sitemap.xml'));

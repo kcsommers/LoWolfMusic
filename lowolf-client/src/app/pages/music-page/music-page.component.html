@@ -1,4 +1,4 @@
-<section class="page-title-section max-width">
+<section class="landing-section">
     <div class="section-container">
         <div class="title-section">
             <div class="title-img-wrap">
@@ -11,22 +11,19 @@
             </div>
             <h1 class="title">Music</h1>
         </div>
-        <div class="page-title-wrap">
-            <!-- <h1 class="bg-white">Music</h1> -->
-            <div class="intro-main-wrap">
-                <lo-image
-                    [src]="'assets/images/lo-air.jpg'"
-                    [alt]="'Lo Wolf'"
-                    [showSpinner]="false"
-                ></lo-image>
-            </div>
+        <div class="intro-main-wrap">
+            <lo-image
+                [src]="'assets/images/lo-air.jpg'"
+                [alt]="'Lo Wolf'"
+                [showSpinner]="false"
+            ></lo-image>
         </div>
     </div>
 </section>
-<section class="section-container music-section">
-    <div></div>
-    <div class="music-container bg-white">
-        <div class="music-container-inner">
+<section class="music-section bg-white">
+    <div class="section-container">
+        <div></div>
+        <div class="music-container">
             <div class="divider"></div>
             <div
                 *ngFor="let album of albums"
@@ -81,7 +78,7 @@
                 </div> -->
             </div>
             <div
-                *ngFor="let video of videos"
+                *ngFor="let video of videos; let i = index;"
                 class="video-wrap"
             >
                 <lo-video

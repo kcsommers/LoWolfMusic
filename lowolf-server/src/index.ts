@@ -12,6 +12,7 @@ app.use(bp.urlencoded({ extended: true }));
 app.use('/instagram', require('./controllers/instagram.router'));
 app.use('/photos', require('./controllers/photos.router'));
 app.use('/contact', require('./controllers/contact.router'));
+app.use('/blog', require('./controllers/blog.router'));
 
 app.get('/sitemap', (req: express.Request, res: express.Response) => {
   console.log('Hit sitemap')
