@@ -1,5 +1,5 @@
-<section class="section-container">
-    <div class="title-section">
+<section class="intro-section section-container">
+    <div class="title-section ">
         <div class="title-img-wrap">
             <div class="title-img-bg"></div>
             <img
@@ -12,22 +12,26 @@
     </div>
     <div></div>
 </section>
-<section class="bg-white blog-section">
-    <div class="max-width">
-        <div
-            *ngIf="loading$ | async"
-            class="spinner-wrap"
-        >
-            <lo-spinner></lo-spinner>
-        </div>
-        <div
-            *ngIf="!(loading$ | async) && (error$ | async)"
-            class="error-wrap"
-        >
-            <h4>
-                There was a problem loading blog posts...
-            </h4>
-        </div>
+<section class="bg-dark blog-section max-width box-shadow">
+    <div
+        *ngIf="loading$ | async"
+        class="spinner-wrap"
+    >
+        <lo-spinner></lo-spinner>
+    </div>
+    <div
+        *ngIf="!(loading$ | async) && (error$ | async)"
+        class="error-wrap"
+    >
+        <h4>
+            There was a problem loading blog posts...
+        </h4>
+    </div>
+    <div
+        *ngIf="!(loading$ | async) && !(error$ | async)"
+        class="section-container"
+    >
+        <div></div>
         <div
             *ngIf="!(loading$ | async) && !(error$ | async)"
             class="posts-container"
@@ -40,7 +44,7 @@
                 <p class="post-details">
                     {{post.date | date}} | {{post.commentCount}} comments
                 </p>
-                <p class="margin-1">{{post.snippet}}...</p>
+                <p class="margin-1 snippet">{{post.snippet}}...</p>
                 <a
                     class="lo-btn"
                     [routerLink]="'/blog/' + post._id"

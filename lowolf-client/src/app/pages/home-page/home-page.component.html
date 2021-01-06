@@ -41,7 +41,6 @@
     <div class="section-container">
         <div></div>
         <div class="intro-section-inner">
-            <div class="divider"></div>
             <div class="flex">
                 <div class="quotes-container flex-1">
                     <div class="quote-wrap">
@@ -55,7 +54,7 @@
                                 [icon]="'quote-right'"
                             ></fa-icon>
                             <span>
-                                Poetry, grit and wit are all effortlessly woven throughout a record that feels equal parts timeless and modern
+                                Lo Wolf is a fearless artist who puts it all out there and lives authentically to her art
                             </span>
                         </h2>
                         <p class="quote-author">- Heroin Chic</p>
@@ -71,7 +70,7 @@
                                 [icon]="'quote-right'"
                             ></fa-icon>
                             <span>
-                                Lo Wolf is a fearless artist who puts it all out there and lives authentically to her art
+                                Poetry, grit and wit are all effortlessly woven throughout a record that feels equal parts timeless and modern
                             </span>
                         </h2>
                         <p class="quote-author">- Songs Worth Downloading</p>
@@ -100,10 +99,12 @@
     </div>
 </section>
 <section class="video-section">
-    <lo-video
-        [src]="'assets/videos/rape-city.mp4'"
-        [poster]="'assets/images/rape-city-poster.png'"
-    ></lo-video>
+    <div class="max-width">
+        <lo-video
+            [src]="'assets/videos/rape-city.mp4'"
+            [poster]="'assets/images/rape-city-poster.png'"
+        ></lo-video>
+    </div>
 </section>
 <lo-modal #AlbumModal>
     <ng-template #ModalTemplate>

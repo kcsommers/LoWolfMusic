@@ -71,7 +71,7 @@ img {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     color: $dark;
 }
 
@@ -139,3 +139,14 @@ fa-icon {
     z-index: 1;
 }
 
+div.spinner-wrap,
+div.error-wrap {
+    padding: 0 2rem;
+    height: 200px;
+    display: flex;
+    align-items: center;
+}
+
+div.spinner-wrap {
+    justify-content: center;
+}

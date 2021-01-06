@@ -1,4 +1,4 @@
-<section class="landing-section">
+<!-- <section class="landing-section">
     <div class="section-container">
         <div class="title-section">
             <div class="title-img-wrap">
@@ -19,12 +19,25 @@
             ></lo-image>
         </div>
     </div>
+</section> -->
+<section class="intro-section section-container">
+    <div class="title-section ">
+        <div class="title-img-wrap">
+            <div class="title-img-bg"></div>
+            <img
+                class="lowolf"
+                src="assets/images/lowolf.svg"
+                alt="Lo Wolf"
+            >
+        </div>
+        <h1 class="title">Music</h1>
+    </div>
+    <div></div>
 </section>
-<section class="music-section bg-white">
-    <div class="section-container">
+<section class="music-section">
+    <div class="section-container bg-dark box-shadow">
         <div></div>
         <div class="music-container">
-            <div class="divider"></div>
             <div
                 *ngFor="let album of albums"
                 class="album-wrap"
@@ -87,7 +100,10 @@
                     [useIframe]="video.external"
                 ></lo-video>
                 <h2 class="margin-1">{{video.title}}</h2>
-                <div class="divider"></div>
+                <div
+                    *ngIf="i !== videos.length - 1"
+                    class="divider"
+                ></div>
             </div>
         </div>
     </div>

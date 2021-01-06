@@ -16,7 +16,7 @@ div.singe-img-wrap {
 }
 
 section.intro-section {
-    padding: 2rem 0 6rem 0;
+    padding: 6rem 0;
 }
 
 div.quote-wrap {
@@ -53,5 +53,9 @@ p.quote-author {
     text-align: right;
     font-size: 0.8rem;
     margin-top: 0.5rem;
+}
+
+section.video-section>div {
+    padding: 2rem;
 }
 

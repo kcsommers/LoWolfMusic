@@ -23,7 +23,10 @@ export class InstagramFeedComponent implements OnInit, OnDestroy {
     this.setIndexLimit();
     this.instagramService.images$
       .pipe(takeUntil(this._unsubscribe))
-      .subscribe(imgs => this.images$.next(imgs.slice(0, 8)));
+      .subscribe(
+        imgs => this.images$.next(imgs.slice(0, 8)),
+        err => console.error(err)
+      );
   }
 
   ngOnDestroy() {

@@ -24,7 +24,6 @@ export class BlogPageComponent implements OnInit {
       .pipe(take(1))
       .subscribe(
         res => {
-          console.log('RES:::: ', res)
 
           this.loading$.next(false);
           if (!res) {
